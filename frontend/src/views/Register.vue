@@ -39,7 +39,7 @@
       <input type="radio" id="beer-lover" class="form-control" value="Beer Lover" v-model="user.role">
         <label for="beer-lover">Beer Lover</label>
         <br>
-      <input type="radio" id="admin" class="form-control" value="Admin" v-model="user.role">
+      <input type="radio" id="admin" class="form-control" value="Admin" v-model="user.role" hidden>
         <label for="admin">Administrator</label>
         <br>
       <span>Picked: {{ user.role }}</span>
