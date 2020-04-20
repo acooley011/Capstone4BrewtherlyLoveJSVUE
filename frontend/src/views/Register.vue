@@ -32,6 +32,18 @@
         v-model="user.confirmPassword"
         required
       />
+      <br>
+      <input type="radio" id="brewer" class="form-control" value="Brewer" v-model="user.role">
+        <label for="brewer">Brewer</label>
+        <br>
+      <input type="radio" id="beer-lover" class="form-control" value="Beer Lover" v-model="user.role">
+        <label for="beer-lover">Beer Lover</label>
+        <br>
+      <input type="radio" id="admin" class="form-control" value="Admin" v-model="user.role">
+        <label for="admin">Administrator</label>
+        <br>
+      <span>Picked: {{ user.role }}</span>
+      <br>
       <router-link :to="{ name: 'login' }">
         Have an account?
       </router-link>
@@ -81,4 +93,6 @@ export default {
 </script>
 
 <style>
+
+
 </style>
