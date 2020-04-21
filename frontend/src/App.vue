@@ -5,7 +5,7 @@
       <img alt="BrewMap logo" src="./assets/images/beermapplaceholder.png">
       <li><router-link :to="{name: 'home'}" exact>Home</router-link></li>
       <li><router-link :to="{name: 'brewery-list'}">Brewery List</router-link></li>
-      <li><router-link :to="{name: 'beer-list'}">Beer List</router-link></li>
+      <li><router-link :to="{name: 'beer-list'}">Reviews</router-link></li>
       </ul>
       <ul class="nav-right">
       <li><router-link :to="{name: 'login'}" class="home">Login/Register</router-link></li>
