@@ -5,7 +5,7 @@ import Home from './views/Home.vue'
 import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import BreweryList from './views/BreweryList.vue'
-import BeerList from './views/BeerList.vue'
+import Reviews from './views/Reviews.vue'
 
 Vue.use(Router)
 
@@ -55,9 +55,9 @@ const router = new Router({
       }
     },
     {
-    path: "/beer-list",
-    name: "beer-list",
-    component: BeerList,
+    path: "/reviews",
+    name: "reviews",
+    component: Reviews,
     meta: {
       requiresAuth: false
     }

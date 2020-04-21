@@ -4,7 +4,7 @@
     <ul class="nav">
       <li><router-link :to="{name: 'home'}" exact class="home">Home</router-link></li>
       <li><router-link :to="{name: 'brewery-list'}" class="home">Brewery List</router-link></li>
-      <li><router-link :to="{name: 'beer-list'}" class="home">Beer List</router-link></li>
+      <li><router-link :to="{name: 'reviews'}" class="home">Reviews</router-link></li>
       <li><router-link :to="{name: 'login'}" class="home">Login/Register</router-link></li>
       </ul>
     </header>
