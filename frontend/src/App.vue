@@ -31,6 +31,15 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+header {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(247, 247, 247);
+
+}
+
 .nav {
   padding:14px;
   margin:0;
@@ -45,6 +54,12 @@ body {
 
 .nav li a:hover {
   text-decoration: underline;
+}
+.nav li a, .nav li a:visited {
+  text-decoration: none;
+  color: rgb(56, 56, 146);
+  text-transform: uppercase;
+  font-size: 13px;
 }
 
 .content {
