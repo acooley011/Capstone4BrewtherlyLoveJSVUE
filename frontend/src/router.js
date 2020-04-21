@@ -6,6 +6,9 @@ import Login from './views/Login.vue'
 import Register from './views/Register.vue'
 import BreweryList from './views/BreweryList.vue'
 import Reviews from './views/Reviews.vue'
+import Administrator from './views/Administrator.vue'
+import Brewer from './views/Brewer.vue'
+import BeerLover from './views/BeerLover.vue'
 
 Vue.use(Router)
 
@@ -61,7 +64,33 @@ const router = new Router({
     meta: {
       requiresAuth: false
     }
-  }
+  },
+  {
+    path: "/beer-lover",
+    name: "beer-lover",
+    component: BeerLover,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: "/brewer",
+    name: "brewer",
+    component: Brewer,
+    meta: {
+      requiresAuth: true
+    }
+  },
+  {
+    path: "/admin",
+    name: "admin",
+    component: Administrator,
+    meta: {
+      requiresAuth: true
+    }
+  },
+
+
   ]
 })
 
