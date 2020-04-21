@@ -2,21 +2,11 @@
   <div id="app">
 <header>
     <ul class="nav">
-<<<<<<< HEAD
       <li><router-link :to="{name: 'home'}" exact class="home">Home</router-link></li>
       <li><router-link :to="{name: 'brewery-list'}" class="home">Brewery List</router-link></li>
       <li><router-link :to="{name: 'reviews'}" class="home">Reviews</router-link></li>
-=======
-      <img alt="BrewMap logo" src="./assets/images/beermapplaceholder.png">
-      <li><router-link :to="{name: 'home'}" exact>Home</router-link></li>
-      <li><router-link :to="{name: 'brewery-list'}">Brewery List</router-link></li>
-      <li><router-link :to="{name: 'beer-list'}">Beer List</router-link></li>
-      </ul>
-      <ul class="nav-right">
->>>>>>> 49618676a5284736e1e40661e9b7878ebb400927
       <li><router-link :to="{name: 'login'}" class="home">Login/Register</router-link></li>
       </ul>
-      
     </header>
     <div class="content">
     <router-view />
@@ -56,8 +46,6 @@ header {
 
 .nav {
   padding:14px;
-  height: auto;
-  width: 80vw;
   margin:0;
   flex:1;
   list-style-type: none;
@@ -68,12 +56,6 @@ header {
   padding-right: 20px;
 }
 
-.nav img {
-  height: 110%;
-  width: 10%;
-  padding-right: 30px;
-}
-
 .nav li a:hover {
   text-decoration: underline;
 }
@@ -82,29 +64,6 @@ header {
   color: rgb(56, 56, 146);
   text-transform: uppercase;
   font-size: 13px;
-}
-
-.nav-right {
-  height: auto;
-  flex: 1;
-  list-style-type: none;
-  padding: 14px;
-  margin: 0;
-  text-align: right;
-}
-.nav-right li {
-  display: inline;
-  padding-right: 20px;
-  vertical-align: text-top;
-}
-.nav-right li a, .nav-right li a:visited {
-  text-decoration: none;
-  color: rgb(56, 56, 146);
-  text-transform: uppercase;
-  font-size: 13px;
-}
-.nav-right li a:hover {
-  text-decoration: underline;
 }
 
 .content {
