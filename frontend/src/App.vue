@@ -18,6 +18,19 @@
 
 <style>
 
+body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  font-family: 'Roboto', sans-serif;
+}
+
 .nav {
   padding:14px;
   margin:0;
