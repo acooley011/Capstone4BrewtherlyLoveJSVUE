@@ -31,6 +31,12 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+/*#app {
+  width: 80vw;
+  height: 100%;
+  background-color: white;
+}*/
+
 header {
   height: 50px;
   width: 100%;
