@@ -1,17 +1,55 @@
 
 <template>
   <div class="admin"><h1>Administrator</h1>
-  <button>Add Brewery</button>
- 
-  </div>
+  <div class='container'>
+    <h2>Add New Brewery</h2>  
+    <div class='form'>
+      <form v-on:submit.prevent="saveBrewery">
+         <div class="form-group">
+           <label for="name">Brewery Name</label>
+            <input
+              type="text"
+              class="form-control"
+              id="name"
+              placeholder="Enter brewery name"
+              v-model="brewery.name"
+            />
+         </div>  
+
+
+        <button type="submit" class="btn btn-primary">Add New Brewery</button>
+      </form>
+    </div>    
+ </div>
+ </div>
 </template>
 
 <script>
 export default {
-  name: 'admin'
+  name: 'admin',
+
+  data () {
+    return {
+      brewery: {
+        name:   '',
+        brewer: '',
+        neighborhood: ''
+      }
+    };
+  },
+  methods: {
+    saveBrewery(){
+       // note that JSON.stringify is a built in function which takes a javascript object
+      // and turns it into a json string!
+      const json = JSON.stringify(this.brewery);
+      //TODO issue a fetch request to submit the data to the server
+      console.log(`We submitted the data to the server: ${json}`);
+    }
+  }
 }
 </script>
 
 <style scoped>
 
 </style>
+
