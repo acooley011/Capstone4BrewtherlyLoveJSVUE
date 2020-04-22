@@ -100,6 +100,7 @@ header {
   text-decoration: underline;
 }
 
+
 .content {
   padding: 20px;
 }
