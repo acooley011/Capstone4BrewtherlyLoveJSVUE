@@ -2,8 +2,7 @@
 <template>
   <div class="beer-lover"><h1>Beer Lover</h1>
   <button>Go to Brewery List</button>
- 
-  </div>
+ </div>
 </template>
 
 <script>
