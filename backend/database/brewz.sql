@@ -1,3 +1,4 @@
+/* /*
 /* DROPPING TABLES */
 DROP TABLE beer;
 DROP TABLE brewery;
@@ -42,4 +43,5 @@ ALTER TABLE beer
 ADD CONSTRAINT fk_beer_brewery foreign key (beerId) references brewery (brewerId);
 
 /* RESTORE OR COMMIT ?? */
-COMMIT;
+/*COMMIT;
+*/
