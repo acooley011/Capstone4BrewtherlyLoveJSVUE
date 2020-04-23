@@ -1,34 +1,49 @@
 <template>
+<container>
   <div id="app">
 <header>
-    <nav class="breadcrumb is-centered has-dot-separator " aria-label="breadcrumbs">
-      <div id ="navbarBasicExample" class="navbar-menu ">
-        <div class="navbar-start is-size-5">
-      <li><router-link :to="{name: 'home'}">
-        <span class="icon is-small"><i class="fa fa-home" aria-hidden="true"></i></span><span>Home</span></router-link></li>
-      <li><router-link :to="{name: 'brewery-list'}">
-        <span class="icon is-small"><i class="fa fa-beer" aria-hidden="true"></i></span><span>Brewery List</span></router-link></li>
-      <li><router-link :to="{name: 'reviews'}">
-        <span class="icon is-small"><i class="fa fa-envelope-open" aria-hidden="true"></i></span><span>Reviews</span></router-link></li>
-     <li><router-link :to="{name: 'login'}">
-      <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span><span>Login/Register</span></router-link></li>
-        </div>
-        </div>
-      </nav>
-    </header>
-    <section>
-      <div>
-        </div>
-        </section>
-    <router-view />
+  <nav class="level has-background-info" role="navigation" aria-label="main navigation">
+		<div class="level-item has-text-centered">
+      <a role="button" class="navbar-burger burger" aria-label="menu"
+				aria-expanded="false" data-target="navbarBasicExample"> <span
+				aria-hidden="true"></span> 
+				<span aria-hidden="true"></span> <span
+				aria-hidden="true"></span>
+			</a>
+      </div>
+    <div id="navbarBasicExample" class="navbar-menu">
+			<div class="navbar-start is-size-5">
+      <a class="navbar-item"><router-link :to="{name: 'home'}">
+        <span class="icon is-small"><i class="fa fa-home" aria-hidden="true"></i></span><span> Home</span></router-link></a>
+      <a class="navbar-item"><router-link :to="{name: 'brewery-list'}">
+        <span class="icon is-small"><i class="fa fa-beer" aria-hidden="true"></i></span><span> Brewery List</span></router-link></a>
+      <a class="navbar-item"><router-link :to="{name: 'reviews'}">
+        <span class="icon is-small"><i class="fa fa-envelope-open" aria-hidden="true"></i></span><span> Reviews</span></router-link></a>
+      <a class="navbar-item"><router-link :to="{name: 'login'}">
+      <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span><span> Login/Register</span></router-link></a>
     </div>
-  
+    </div>
+  </nav>
+</header>
+    <router-view />
+</div>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <p>
+      <strong>COBL</strong> by <a href="#">TE Capstone Team One PHL 2020</a> 
+    </p>
+  </div>
+</footer>
+</container>
 </template>
 
 <style>
 
-/*
-body {
+h1 {
+  font-size: 2.5em;
+}
+
+/*body {
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -37,15 +52,24 @@ body {
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  background-image: linear-gradient(120deg, #a1c4fd 0%, #c2e9fb 100%);
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Philadelphia_cityscape_BW_20150328.jpg/1200px-Philadelphia_cityscape_BW_20150328.jpg");
   font-family: 'Roboto', sans-serif;
+  opacity: 0.6;
 }
 */
+section {
+justify-content: center;
+align-items: center;
+background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Philadelphia_cityscape_BW_20150328.jpg/1200px-Philadelphia_cityscape_BW_20150328.jpg");
+background-repeat: no-repeat;
+height: 100%;
+}
+
 /*#app {
   width: 80vw;
   height: 100%;
   background-color: white;
-}*/
+}
 
 /*header {
   height: 50px;
