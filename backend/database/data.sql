@@ -15,7 +15,7 @@ VALUES (1,
 'Northern Liberties',
 'info@yardsbrewing.com',
 'Sun: 11am to 10pm. Mon-Fri: 11:30am to 11pm. Sat: 11am to 11pm.',
-'Yards has been brewing Philly`s beer since 1994. Weâ€™ve grown from a garage-sized operation in Manayunk all the way up to our current location at 500 Spring Garden Street in Northern Liberties. And we couldn`t have done it without your support through the years. Our beers always have and always will be brewed, bottled, kegged, and canned for the hard working people of Philadelphia and beyond.', 
+'Yards has been brewing Philly`s beer since 1994. We’ve grown from a garage-sized operation in Manayunk all the way up to our current location at 500 Spring Garden Street in Northern Liberties. And we couldn`t have done it without your support through the years. Our beers always have and always will be brewed, bottled, kegged, and canned for the hard working people of Philadelphia and beyond.', 
 'https://imgur.com/mIfGksv');
 
 -- PBC --
@@ -28,7 +28,7 @@ VALUES (2,
 'Fishtown',
 '215-427-2739',
 'Mon-Sun: 1pm to 8pm',
-'Decades of brewing experience and an unwavering passion for the science of brewing are what define us best. We skillfully create our recipes by using only the best ingredients available. By adapting old world beer styles with modern brewing techniques, we have developed unique flavors that represent Philadelphia proudly. With more than a dozen different styles of ales and lagers brewed annually we have a beer for every discerning palate. In addition to operating the oldest and largest brewing facility in Philadelphia we are also fiercely independent. We brew fresh beer daily and deliver fresh beer daily — directly to our loyal customers. We also believe that there is more than just great beer behind a successful brewery.  It’s our company’s values that put our community, environment and people right up there with the bottom line.  Come for a visit and see for yourself how our commitment and independence sets us apart from the rest.',
+'Decades of brewing experience and an unwavering passion for the science of brewing are what define us best. We skillfully create our recipes by using only the best ingredients available. By adapting old world beer styles with modern brewing techniques, we have developed unique flavors that represent Philadelphia proudly. With more than a dozen different styles of ales and lagers brewed annually we have a beer for every discerning palate. In addition to operating the oldest and largest brewing facility in Philadelphia we are also fiercely independent. We brew fresh beer daily and deliver fresh beer daily directly to our loyal customers. We also believe that there is more than just great beer behind a successful brewery.  Its our companys values that put our community, environment and people right up there with the bottom line.  Come for a visit and see for yourself how our commitment and independence sets us apart from the rest.',
 'https://imgur.com/EhsXVNF');
 
 -- EVIL GENIUS --
@@ -54,7 +54,8 @@ VALUES (4,
 'Fishtown',
 '267-930-8645',
 'Seasonal',
-'Philly-based fans of Tired Hands Brewing Company won’t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer’s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts — from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary — plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com', 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am',
+'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am',
+'Philly-based fans of Tired Hands Brewing Company won?t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer?s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts ? from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary ? plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com',
 'https://imgur.com/yjas3QW');
 
 --SEPARATIST BEER PROJECT--
@@ -80,7 +81,7 @@ VALUES (6,
 '215-398-1900',
 'Callowhill',
 'Mon-Fri: 4pm to 12am. Sat: 12pm to 12am. Sun: 12pm to 10pm.',
-'We’ve found a home here in Philadelphia, a city that’s reclaiming its space on the national stage, but isn’t afraid to be itself. As we got to know Philly, we fell in love with its rich brewing history. We were amazed by the number of breweries that existed here (nearly 700 before Prohibition was enacted). Each neighborhood had a brewery that served the local residents, and beer was a part of every table. We want to make that a reality for our neighbors today. We think you should know your brewer and be able to watch your beer being made.WE THINK BEER SHOULD STILL BE AT THE CENTER OF EVERY TABLE.',
+'We?ve found a home here in Philadelphia, a city that?s reclaiming its space on the national stage, but isn?t afraid to be itself. As we got to know Philly, we fell in love with its rich brewing history. We were amazed by the number of breweries that existed here (nearly 700 before Prohibition was enacted). Each neighborhood had a brewery that served the local residents, and beer was a part of every table. We want to make that a reality for our neighbors today. We think you should know your brewer and be able to watch your beer being made.WE THINK BEER SHOULD STILL BE AT THE CENTER OF EVERY TABLE.',
 'https://imgur.com/UCA2laD');
 
 --ORIGINAL XIII--
@@ -93,7 +94,7 @@ VALUES (7,
 '215-765-7000',
 'Northern Liberties',
 'Mon-Thurs: 4pm to 10pm. Fri: 4pm to 12am. Sat: 11am - 12am. Sun: 11am to 10pm.',
-'Kowchak is an experienced businessman and brewer who received his MBA in Entrepreneurship from Drexel University. Additionally, he graduated from the Cider and Perry Academy in the UK. He plans for his brewery to be registered as a B-corporation, which means they’re pressing cider as environmentally friendly as possible. They’re doing this by distributing their product in cans as opposed to bottles, and have the vision of their new site being completely solar powered. They’re also keeping their produce local, are using apples from PA, and also have plans to create a cider using NJ blueberries.',
+'Kowchak is an experienced businessman and brewer who received his MBA in Entrepreneurship from Drexel University. Additionally, he graduated from the Cider and Perry Academy in the UK. He plans for his brewery to be registered as a B-corporation, which means they?re pressing cider as environmentally friendly as possible. They?re doing this by distributing their product in cans as opposed to bottles, and have the vision of their new site being completely solar powered. They?re also keeping their produce local, are using apples from PA, and also have plans to create a cider using NJ blueberries.',
 'https://imgur.com/9DOh39T');
 
 --DOCK STREET--
@@ -106,7 +107,7 @@ VALUES (8,
 'West Philadelphia',
 '215-337-3103',
 'Tues-F 4pm -11pm, Sat & Sun 12pm-12am',
-'Come by Dock Street Brewpub for a great, laid-back spot to hang out with friends and family, enjoy hand-tossed, wood-fired pizza, fresh beer poured direct from the tanks, or a brewery tour. (Or all of the above.) Check back often for updates like new additions to the menu for game days, parties and holidays. Then, swing by Dock Street Cannery + Tasting Lounge, voted Philadelphia Magazine’s Best New Bar, located right next door to the main brewpub but with a separate entrance. There, you’ll find craft cocktails with house-made syrups and Pennsylvania spirits, and of course, Dock Street Beer. We`re also known to throw a mean party over there, featuring any and everything from comedy, prose reading, cheese-making, glass-blowing, mezcal tasting and live tattooing.',
+'Come by Dock Street Brewpub for a great, laid-back spot to hang out with friends and family, enjoy hand-tossed, wood-fired pizza, fresh beer poured direct from the tanks, or a brewery tour. (Or all of the above.) Check back often for updates like new additions to the menu for game days, parties and holidays. Then, swing by Dock Street Cannery + Tasting Lounge, voted Philadelphia Magazine?s Best New Bar, located right next door to the main brewpub but with a separate entrance. There, you?ll find craft cocktails with house-made syrups and Pennsylvania spirits, and of course, Dock Street Beer. We`re also known to throw a mean party over there, featuring any and everything from comedy, prose reading, cheese-making, glass-blowing, mezcal tasting and live tattooing.',
 'https://imgur.com/HQCmw0n');
 
 --CRIME AND PUNISHMENT--
@@ -119,7 +120,7 @@ VALUES (9,
 'Brewerytown',
 '215-235-2739',
 'Mon-Fri: 4pm to 12am. Sat: 11am to 1am. Sun: 11am to 12am.',
-'From ales and lagers, to saisons and IPAs, there’s something on tap for everyone. C+P aims to blend the once-great local brewing tradition with newer craft techniques and international inspirations. They have designed a rotating menu of distinctive brews and Russian-influenced dishes done their way.',
+'From ales and lagers, to saisons and IPAs, there?s something on tap for everyone. C+P aims to blend the once-great local brewing tradition with newer craft techniques and international inspirations. They have designed a rotating menu of distinctive brews and Russian-influenced dishes done their way.',
 'https://imgur.com/L4caNYA');
 
 -- BREWERY ARS --
@@ -132,8 +133,8 @@ VALUES (10,
 'South Philadelphia',
 '215-960-5173',
 'Wed-Fri 4pm to 8pm Sat-Sun: 2pm to 7pm',
-'Brewery ARS is a small garage brewery in South Philadelphia and the brainchild of Andy and Sean Arsenault, who began their brewing career as engineers with curiosity. After spending Friday evenings at the Foodery at 10th and Pine with a 6 pack of Yuengling and one craft beer from around the world each week, the brothers realized that they both were fond of the Belgian styles and grew an affinity for yeast-forward beers. After years of planning and tinkering recipes, the brewery officially opened its doors on December 17, 2016. Since then, the duo have brewed over 70 different batches of 56 different beers, including collaborations with Highway Manor Brewing and Kurant Ciders, exploring the endless flavor profiles craft beer has to offer. 
-'https://imgur.com/EhsXVNF');
+'Brewery ARS is a small garage brewery in South Philadelphia and the brainchild of Andy and Sean Arsenault, who began their brewing career as engineers with curiosity. After spending Friday evenings at the Foodery at 10th and Pine with a 6 pack of Yuengling and one craft beer from around the world each week, the brothers realized that they both were fond of the Belgian styles and grew an affinity for yeast-forward beers. After years of planning and tinkering recipes, the brewery officially opened its doors on December 17, 2016. Since then, the duo have brewed over 70 different batches of 56 different beers, including collaborations with Highway Manor Brewing and Kurant Ciders, exploring the endless flavor profiles craft beer has to offer.',
+'https://imgur.com/Eo9C2F5');
 
 -- YARDS BREWERY --
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -142,7 +143,7 @@ VALUES (1,
 'Philthy', 
 'IPA', 
 6.5,
-'People in Philly donâ€™t have a filter, and neither does our Philthy Hazy IPA. This bold, aromatic ale is loaded with tropical and citrus hops character and has that classic hazy, golden color. And just like the city where itâ€™s brewed, this unapologetic IPA is left unfiltered.',
+'People in Philly don’t have a filter, and neither does our Philthy Hazy IPA. This bold, aromatic ale is loaded with tropical and citrus hops character and has that classic hazy, golden color. And just like the city where it’s brewed, this unapologetic IPA is left unfiltered.',
 'https://imgur.com/OjGdv5d');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -151,7 +152,7 @@ VALUES (2,
 'Loyal Lager', 
 'Lager', 
 5.0,
-'25 years after opening our first garage brewery in Manayunk, weâ€™ve built our dream brewery in the heart of the city â€“ all thanks to our fans who have been loyal since the beginning. As a sign of our gratitude, weâ€™ve used our new world-class brewing system to create Loyal Lager: a crisp, easy-drinking American Craft Lager brewed with two-row malt and aromatic Loral hops. Itâ€™s what a clean, high-quality lager is meant to be.',
+'25 years after opening our first garage brewery in Manayunk, we’ve built our dream brewery in the heart of the city – all thanks to our fans who have been loyal since the beginning. As a sign of our gratitude, we’ve used our new world-class brewing system to create Loyal Lager: a crisp, easy-drinking American Craft Lager brewed with two-row malt and aromatic Loral hops. It’s what a clean, high-quality lager is meant to be.',
 'https://imgur.com/i0GyN0b');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -160,7 +161,7 @@ VALUES (3,
 'Philadelphia Pale Ale', 
 'Pale Ale', 
 4.6, 
-'Not to be boastful, but we believe that all other ales pale in comparison to this Philadelphia favorite. Dry-hopped with an abundance of distinctive Simcoe hops, this straw-colored pale ale is more drinkable than bitter, more aromatic than aggressive. Now in cans, itâ€™s great for poolside. And look for the new 19.2oz cans at the ballpark.',
+'Not to be boastful, but we believe that all other ales pale in comparison to this Philadelphia favorite. Dry-hopped with an abundance of distinctive Simcoe hops, this straw-colored pale ale is more drinkable than bitter, more aromatic than aggressive. Now in cans, it’s great for poolside. And look for the new 19.2oz cans at the ballpark.',
 'https://imgur.com/1rXIv6T');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -196,7 +197,7 @@ VALUES (7,
 'Pynk', 
 'Tart Fruit Beer', 
 5.5, 
-'The people have spoken. We are pleased to announce that PYNK is now available all year-round! Each sip of PYNK starts with a crisp, fruity zing and finishes refreshingly dry. The delightful pink hue comes from heaps of fresh raspberries and cherries in every batch. Itâ€™s no wonder PYNK is called the rosÃ© of beer. So letâ€™s raise our bottles and pints to the good things in life â€” like family, friends, and beer â€” that bring us all together.',
+'The people have spoken. We are pleased to announce that PYNK is now available all year-round! Each sip of PYNK starts with a crisp, fruity zing and finishes refreshingly dry. The delightful pink hue comes from heaps of fresh raspberries and cherries in every batch. It’s no wonder PYNK is called the rosé of beer. So let’s raise our bottles and pints to the good things in life — like family, friends, and beer — that bring us all together.',
 'https://imgur.com/YWNdddk');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -205,21 +206,21 @@ VALUES (8,
 'ESA', 
 'Extra Special Ale', 
 6.0, 
-'Our first-ever and most-beloved brew, ESA helped establish a following for cask-conditioned beer in the United States back in the â€˜90s. East Kent Golding hops give this British-inspired ale a subtle spiciness, which complements the strong malt backbone. ESA is floral, earthy and smooth with hints of chocolate and caramel, rounding out this deep chestnut-colored ale.',
+'Our first-ever and most-beloved brew, ESA helped establish a following for cask-conditioned beer in the United States back in the ‘90s. East Kent Golding hops give this British-inspired ale a subtle spiciness, which complements the strong malt backbone. ESA is floral, earthy and smooth with hints of chocolate and caramel, rounding out this deep chestnut-colored ale.',
 'https://imgur.com/YWNdddk');
 
 -- PBC BEERS --
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1,
+VALUES (9,
 2,
 'Harvest from the Hood',
 'Wet Hopped Ale',
 7.0,
-'Every autumn we release this fresh-hopped beer brewed with hops grown by Philadelphia Brewing Co.® right in our brewery courtyard, along with more hops grown by friends around Philadelphia like Greensgrow Farms. Harvest from the Hood is brewed on the same day that the locally grown hops are hand picked – giving this brew a juicy, bright hop flavor and aroma.',
+'Every autumn we release this fresh-hopped beer brewed with hops grown by Philadelphia Brewing Co.? right in our brewery courtyard, along with more hops grown by friends around Philadelphia like Greensgrow Farms. Harvest from the Hood is brewed on the same day that the locally grown hops are hand picked ? giving this brew a juicy, bright hop flavor and aroma.',
 'https://imgur.com/laYzgAm');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2,
+VALUES (10,
 2,
 'Newbold IPA',
 'IPA',
@@ -229,16 +230,16 @@ VALUES (2,
 );
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3,
+VALUES (11,
 2,
 'Joe Coffee Porter',
 'Coffee Porter',
 5.5,
-'Joe is not your average beer! This ale is brewed with locally-roasted, organic, coffee from Passero’s Coffee Roasters. Dark Munich and chocolate malts combine to create a well-balanced, flavorful porter with a fresh roasted coffee aroma. Savor ’til the last drop!',
+'Joe is not your average beer! This ale is brewed with locally-roasted, organic, coffee from Passero?s Coffee Roasters. Dark Munich and chocolate malts combine to create a well-balanced, flavorful porter with a fresh roasted coffee aroma. Savor ?til the last drop!',
 'https://imgur.com/iRl7iO5');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4,
+VALUES (12,
 2,
 'Rowhouse Red',
 'Philadelphia Style Ale',
@@ -247,7 +248,7 @@ VALUES (4,
 'https://imgur.com/NVyxGnp');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5,
+VALUES (13,
 2,
 'Kenzinger',
 'Golden Ale',
@@ -255,25 +256,25 @@ VALUES (5,
 'https://imgur.com/vQRWeoH');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (6,
+VALUES (14,
 2,
 'Walt Wit',
 'Belgian-Style White Ale',
 4.5,
-'The American poet, Walt Whitman, once portrayed a sunset over Philadelphia as “…a broad tumble of clouds, with much golden haze and profusion of beaming shaft and dazzle”. Pour yourself a bottle of Walt Wit Belgian-Style White Ale and see what he was talking about. A pinch of spice and a whisper of citrus lend complexity to this fragrant and satisfying ale.',
+'The American poet, Walt Whitman, once portrayed a sunset over Philadelphia as ??a broad tumble of clouds, with much golden haze and profusion of beaming shaft and dazzle?. Pour yourself a bottle of Walt Wit Belgian-Style White Ale and see what he was talking about. A pinch of spice and a whisper of citrus lend complexity to this fragrant and satisfying ale.',
 'https://imgur.com/kAfZAoF');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (7,
+VALUES (15,
 2,
 'Working Cat',
 'Pale Ale',
 5.0,
-'Working Cat is an ode to Duke, our very own working brewery cat. It is a double dry hopped pale ale brewed with Amarillo and Falconer’s Flight hops, as well as grapefruit and orange peels, which gives the 5% session-able beer balanced citrus notes with minimal bitterness. This newly-released limited seasonal brew is smooth, citrusy and light bodied, and is packed full of aroma.',
+'Working Cat is an ode to Duke, our very own working brewery cat. It is a double dry hopped pale ale brewed with Amarillo and Falconer?s Flight hops, as well as grapefruit and orange peels, which gives the 5% session-able beer balanced citrus notes with minimal bitterness. This newly-released limited seasonal brew is smooth, citrusy and light bodied, and is packed full of aroma.',
 'https://imgur.com/YxHkxdD');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (8,
+VALUES (16,
 2,
 'Yous Gotta Gose',
 'Gose',
@@ -283,7 +284,7 @@ VALUES (8,
 
 --EVIL GENIUS BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1,
+VALUES (17,
 3,
 'There`s No Crying in Baseball',
 'Mango IPA',
@@ -292,25 +293,25 @@ VALUES (1,
 'https://imgur.com/GhEGTYv');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2,
+VALUES (18,
 3,
 'Purple Monkey Dishwasher',
 'Chocolate Peanut Butter Porter',
 6.7,
-'Purple Monkey Dishwasher is our robust porter made with Chocolate and Peanut Butter. We start with a world-class American-style porter recipe, which is already laden with notes of chocolate, sweet malts, caramel, and molasses, and then take it to the NEXT LEVEL by infusing it with natural chocolate and peanut butter! The final product is like a candy bar in a bottle that is deceptively quaffable despite it’s strength. Just take one sip and you’ll understand why this is our signature, year round porter.',
+'Purple Monkey Dishwasher is our robust porter made with Chocolate and Peanut Butter. We start with a world-class American-style porter recipe, which is already laden with notes of chocolate, sweet malts, caramel, and molasses, and then take it to the NEXT LEVEL by infusing it with natural chocolate and peanut butter! The final product is like a candy bar in a bottle that is deceptively quaffable despite it?s strength. Just take one sip and you?ll understand why this is our signature, year round porter.',
 'https://imgur.com/kyoxCLm');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3,
+VALUES (19,
 3,
 'Stacy`s Mom',
 'Citra Pale Ale',
 7.5,
-'Stacy’s Mom is our American IPA dry-hopped exclusively with Citra hops. Soft on the palate with extremely low bitterness, this is a great example of a new-school American IPA. Citra hops provide an explosive aroma of tropical fruits, lemon peel, peach and mango, complimented by a clean and slightly toasty malt base. Think you don’t like IPAs? Give Stacy’s Mom a try!',
+'Stacy?s Mom is our American IPA dry-hopped exclusively with Citra hops. Soft on the palate with extremely low bitterness, this is a great example of a new-school American IPA. Citra hops provide an explosive aroma of tropical fruits, lemon peel, peach and mango, complimented by a clean and slightly toasty malt base. Think you don?t like IPAs? Give Stacy?s Mom a try!',
 'https://imgur.com/LQBYLbR');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4,
+VALUES (20,
 3,
 '#Adulting',
 'Guava IPA',
@@ -319,34 +320,34 @@ VALUES (4,
 'https://imgur.com/5A3MtbN');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5,
+VALUES (21,
 3,
 'I`ll Have What She`s Having',
 'Chocolate Hazelnut Imperial Stout',
 9.4,
-'I’ll Have What She’s Having is our Imperial Stout made with chocolate and hazelnut. This limited release strong dark beer is something only Evil Genius could come up with – a rich, creamy, over-the-top stout with layered flavors of roasted barley, molasses, chocolate, caramel, and hazelnut. Not too heavy on the palate, and with a surprisingly dry finish, this sturdy yet drinkable stout is perfect for the winter months.',
+'I?ll Have What She?s Having is our Imperial Stout made with chocolate and hazelnut. This limited release strong dark beer is something only Evil Genius could come up with ? a rich, creamy, over-the-top stout with layered flavors of roasted barley, molasses, chocolate, caramel, and hazelnut. Not too heavy on the palate, and with a surprisingly dry finish, this sturdy yet drinkable stout is perfect for the winter months.',
 'https://imgur.com/7HJEz51');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (6,
+VALUES (22,
 3,
 'Santa! I Know Him!',
 'Festive Saison',
 7.2,
-'Santa!! I Know him! is our holiday saison brewed with rose hips, chamomile, black currants and dark Belgian candi syrup. Deep, complex and intriguing, this bone-dry Belgian-style ale is sure to seduce you, or the one you’re with. Roses, chamomile, and currants have long been considered powerful aphrodisiacs, so we decided to combine them with mysterious and beguiling Belgian saison yeast. The result is something very special and sure to help spice up nights spent at home during the cold winter months. Have you been Naughty or Nice this year – or both?',
+'Santa!! I Know him! is our holiday saison brewed with rose hips, chamomile, black currants and dark Belgian candi syrup. Deep, complex and intriguing, this bone-dry Belgian-style ale is sure to seduce you, or the one you?re with. Roses, chamomile, and currants have long been considered powerful aphrodisiacs, so we decided to combine them with mysterious and beguiling Belgian saison yeast. The result is something very special and sure to help spice up nights spent at home during the cold winter months. Have you been Naughty or Nice this year ? or both?',
 'https://imgur.com/OIiyw5R');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (7,
+VALUES (23,
 3,
 '#ICANTEVEN',
 'Watermelon Blonde Ale',
 5.6,
-'Brewed with equal parts 2-row barley and malted winter wheat, hopped ever-so-gently with Warrior, and infused with all-natural watermelon, #ICANTEVEN is the most refreshing and crushable ale in our line-up. Designed to satisfy all beer drinkers, this fruit-infused wheat ale will have you saying “I can’t even..” Perfect for drinking outside!',
+'Brewed with equal parts 2-row barley and malted winter wheat, hopped ever-so-gently with Warrior, and infused with all-natural watermelon, #ICANTEVEN is the most refreshing and crushable ale in our line-up. Designed to satisfy all beer drinkers, this fruit-infused wheat ale will have you saying ?I can?t even..? Perfect for drinking outside!',
 'https://imgur.com/sBqzw9U');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (8,
+VALUES (24,
 3,
 'New Phone, Who Dis?',
 'Caramel Macchiato Porter',
@@ -356,7 +357,7 @@ VALUES (8,
 
 --Tired Hands Beers--	
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1,
+VALUES (25,
 4,
 'Alien Church',
 'IPA', 
@@ -366,49 +367,49 @@ VALUES (1,
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2,
+VALUES (26,
 4, 
 'Helles Other People', 
 'Lager',
  4.8,
- 'Brewed with 100% German Pilsner malt and hopped lightly with Hallertau Mittelfrüh. Fermented with our house lager yeast and cold conditioned for five weeks before its release. Refined and eminently crushable.
+ 'Brewed with 100% German Pilsner malt and hopped lightly with Hallertau Mittelfr?h. Fermented with our house lager yeast and cold conditioned for five weeks before its release. Refined and eminently crushable.
 Notes of white grape, hay, clover honey, white peach, and fresh cut grass.',
 'https://imgur.com/xUBvW60');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3,
+VALUES (27,
 4, 
 'Austere Modular',
  'Lager', 
  4.6, 
- 'Built with a simple grist of German Pilsner malt, and hopped throughout the boil with German Perle, Mittelfrüh, and Spalter Select from our annual trip to Bavaria. Fermented with our house Lager yeast, and cold conditioned for four weeks before packaging. Perhaps our most refined batch to date? Not sure... who remembers Batch #1? =) Austere notes of black peppercorn, lemon pith, 
+ 'Built with a simple grist of German Pilsner malt, and hopped throughout the boil with German Perle, Mittelfr?h, and Spalter Select from our annual trip to Bavaria. Fermented with our house Lager yeast, and cold conditioned for four weeks before packaging. Perhaps our most refined batch to date? Not sure... who remembers Batch #1? =) Austere notes of black peppercorn, lemon pith, 
 fresh dough, loose leaf green tea, Suze spritz, and white grape.',
 'https://imgur.com/9IeNKAD');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4,
+VALUES (28,
 4,
 'Little Log Cabin',
 'Simcoe Oat Double', 
 9.0, 
-'We brewed this one with an absolutely massive amount of wholesome oats and poured in the perfect amount of luscious lactose sugar to round out the comfortable body. Sunny Day was then Double Dry Hopped with mostly Australian Galaxy and a touch of hand selected US Simcoe and Mosaic.'
+'We brewed this one with an absolutely massive amount of wholesome oats and poured in the perfect amount of luscious lactose sugar to round out the comfortable body. Sunny Day was then Double Dry Hopped with mostly Australian Galaxy and a touch of hand selected US Simcoe and Mosaic.',
 'https://imgur.com/lK2CcVH');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5,
+VALUES (29,
  4, 
 'HopHands', 
 'Pale Ale',
  5.5,
- 'Brewed with oats. Hopped intensely with Simcoe, Centennial, and Amarillo. Hazy, juicy, and imminently crushable. Our precious Pale Ale. -Notes of tangelo, kiwi, dank, pine sap, nectarine,'
+ 'Brewed with oats. Hopped intensely with Simcoe, Centennial, and Amarillo. Hazy, juicy, and imminently crushable. Our precious Pale Ale. -Notes of tangelo, kiwi, dank, pine sap, nectarine',
 'https://imgur.com/6WCjP7r');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (6,
+VALUES (30,
  4, 
 'Ourison', 
 'Saison',
@@ -420,42 +421,42 @@ the most simplistic and exciting iterations of Saison that we have ever produced
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 
-VALUES (7,
+VALUES (31,
 4, 
 'Trendler Schwarzbier',
 'Black Lagerbier', 
 5.5, 
-'Brewed with Pilsner malt, as well as a tasteful flurry of German specialty and dark malts.Hopped assertively with German Hersbrucker from our buddies in Bavaria, fermented with our house Lager yeast, and cold conditioned for four weeks. Extremely stark, restrained, and elegant, yet eminently crushable.-Notes of baker’s chocolate, pumpernickel toast, mild peat, and burnt sugar.'
+'Brewed with Pilsner malt, as well as a tasteful flurry of German specialty and dark malts.Hopped assertively with German Hersbrucker from our buddies in Bavaria, fermented with our house Lager yeast, and cold conditioned for four weeks. Extremely stark, restrained, and elegant, yet eminently crushable.-Notes of baker?s chocolate, pumpernickel toast, mild peat, and burnt sugar.',
 'https://imgur.com/ykZkCGS');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 
-VALUES (8,
+VALUES (32,
 4,
 'Banana Split Double Milkshake IPA',
 'Milkshake IPA:',
  9.0, 
  'An unabashedly desserty riff on our hilarious Culinary IPA series, originally conceived with our sincerely magical associates over at Omnipollo. Brewed with a veritable mountain of luscious oats and
  wheat, and a bit of lactose sugar. Conditioned atop a hefty helping of cacao, whole Madagascar vanilla beans and ripe banana puree, then mercilessly dry-hopped with the very choicest Mosaic and Citra. This one really gets at the
-heart of this series.-Notes of banana taffy, strawberry shortcake, vanilla candies, chocolate, and banana.'
+heart of this series.-Notes of banana taffy, strawberry shortcake, vanilla candies, chocolate, and banana.',
 'https://imgur.com/90UmVJA');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (9,
+VALUES (33,
 4, 
 'We Are All Infinite Energy Vibrating At The Same Frequency', 
 'Wheat IPA', 
 6.5, 
-'OG BrewCafé classic triumphantly returns! Brewed with malted wheat and hopped intensely with Centennial and our then, now, and forever favorite: Simcoe.
- Vibrant & drippy & juicy! Notes of tangerine, mango nectar, bubblegum, spruce tips, and candied pineapple.'
+'OG BrewCafe classic triumphantly returns! Brewed with malted wheat and hopped intensely with Centennial and our then, now, and forever favorite Simcoe.
+ Vibrant & drippy & juicy! Notes of tangerine, mango nectar, bubblegum, spruce tips, and candied pineapple.',
 'https://imgur.com/RruKGyi');
 
 --SEPARATIST BEERS--
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1,
+VALUES (34,
 5,
 'Classic Cream Ale',
 'Cream Ale',
@@ -464,7 +465,7 @@ VALUES (1,
 'https://imgur.com/ZxD3Zte');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2,
+VALUES (35,
 5,
 'PineApple Smoosh',
 'Smoothie Pineapple IPA',
@@ -473,7 +474,7 @@ VALUES (2,
 'https://imgur.com/X4me5De');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3,
+VALUES (36,
 5,
 'Good Good',
 'Double IPA',
@@ -482,7 +483,7 @@ VALUES (3,
 'https://imgur.com/lWeJbJz');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4,
+VALUES (37,
 5,
 'Sketches of Cascade',
 'Wild Pale Ale',
@@ -491,16 +492,17 @@ VALUES (4,
 'https://imgur.com/ilMUInU');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5,
+VALUES (38,
 5,
 'Jung Love',
 'German Style Kellerbier',
+5.0,
 'Our young and unfiltered German-Style Kellerbier. Hopped with beautiful Hallertauer hops and cold conditioned for several weeks on a special German yeast strain. Jung Love is everything you could want in a lagerbier, with its clean and crisp flavor high quaffability.',
 'https://imgur.com/0eRxCFW');
 
 --LOVE CITY BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1,
+VALUES (39,
 6,
 'Love City Lager',
 'American Lager',
@@ -509,7 +511,7 @@ VALUES (1,
 'https://imgur.com/EM49UiP');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2,
+VALUES (40,
 6,
 'Unity IPA',
 'American IPA',
@@ -518,16 +520,16 @@ VALUES (2,
 'https://imgur.com/DDUQ03A');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3,
+VALUES (41,
 6,
 'Sylvie Stout',
 'Oatmeal Stout',
-5.0
+5.0,
 'Full-bodied English-style oatmeal stout with rich dark chocolate and espresso character with a very light citrus hop character and round, smooth finish.',
 'https://imgur.com/BcDo1PI');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4,
+VALUES (42,
 6,
 'Earaserhood Hazy IPA',
 'New England Style IPA',
@@ -536,7 +538,7 @@ VALUES (4,
 'https://imgur.com/ZZuAeuZ');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5,
+VALUES (43,
 6,
 'Tart Beats Plum',
 'Sour',
@@ -545,7 +547,7 @@ VALUES (5,
 'https://imgur.com/EJbTEys');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (6,
+VALUES (44,
 6,
 'Totally Wired',
 'Coffee Brown Ale',
@@ -554,7 +556,7 @@ VALUES (6,
 'https://imgur.com/cis2uNW');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (7,
+VALUES (45,
 6,
 'Deep Cut',
 'Pilsner',
@@ -563,7 +565,7 @@ VALUES (7,
 'https://imgur.com/AQXVesw');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (8,
+VALUES (46,
 6,
 'Generator Wheat',
 'Wheate Ale',
@@ -573,7 +575,7 @@ VALUES (8,
 
 --ORIGINAL XIII Ciders--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1,
+VALUES (47,
 7,
 'Sir Charles Original Hard Cider',
 'Semi-Dry Cider',
@@ -582,7 +584,7 @@ VALUES (1,
 'https://imgur.com/A8G0V83');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2,
+VALUES (48,
 7,
 'Sir Charles Deep Blueberry Sea',
 'Fruit Cider',
@@ -591,7 +593,7 @@ VALUES (2,
 'https://imgur.com/pOH99nr');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3,
+VALUES (49,
 7,
 'Sir Charles Strawberry Valkyrie',
 'Fruit Cider',
@@ -600,7 +602,7 @@ VALUES (3,
 'https://imgur.com/LVrAnTR');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4,
+VALUES (50,
 7,
 'Atacama Bone Dry',
 'English Dry',
@@ -609,7 +611,7 @@ VALUES (4,
 'https://imgur.com/lVnMsiq');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5,
+VALUES (51,
 7,
 'Atacama Hopped Dry',
 'Hopped Dry',
@@ -618,35 +620,35 @@ VALUES (5,
 'https://imgur.com/ChPRNyZ');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (6,
+VALUES (52,
 7,
-'Sir Charles Ol’ Scrumpy',
+'Sir Charles Ol? Scrumpy',
 'American Scrumpy',
 11.0,
-'Sir Charles’ original recipe. Made from 16 heirloom apples from my Grandfather’s orchard, aged with raisins and brown sugar.',
+'Sir Charles? original recipe. Made from 16 heirloom apples from my Grandfather?s orchard, aged with raisins and brown sugar.',
 'https://imgur.com/WdHsQnq');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (7,
+VALUES (53,
 7,
 'Sir Charles Irish Scrumpy',
 'American Scrumpy',
 15.0,
-'Our original Sir Charles Scrumpy aged in a New Liberty Distilling Bourbon barrel. XAvailable only on Saint Patrick’s Day',
+'Our original Sir Charles Scrumpy aged in a New Liberty Distilling Bourbon barrel. XAvailable only on Saint Patrick?s Day',
 'https://imgur.com/avX12pU');
 
 --Dock Street BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1, 
+VALUES (54, 
 8, 
 'Dock Street King Juice', 
 'Double IPA', 
 8.5,
-'Double IPA - We're making it reign with this hazy, sticky, double dry hopped, silky smooth, and perfectly balanced DIPA brewed with oats and wheat and chock full of Mosaic, Citra, and Centennial. Strong flavors and aromas of dried apricots, nectarine, and stone fruit. There are lots of big, juicy DIPA's but there can only be one King Juice.',
+'Double IPA - We are making it reign with this hazy, sticky, double dry hopped, silky smooth, and perfectly balanced DIPA brewed with oats and wheat and chock full of Mosaic, Citra, and Centennial. Strong flavors and aromas of dried apricots, nectarine, and stone fruit. There are lots of big, juicy DIPAs but there can only be one King Juice.',
 'https://imgur.com/24BaSyD');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2, 
+VALUES (55, 
 8, 
 'IMPERIAL RED ALE', 
 'Ale', 
@@ -655,9 +657,9 @@ VALUES (2,
 'https://imgur.com/0oD20An');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3, 
+VALUES (56, 
 8, 
-'Prince Myshkin`s Russian Imperial Stout', 
+'Prince Myshkins Russian Imperial Stout', 
 'Stout', 
 4.6, 
 'Pours a deep, opaque, midnight-black, with a dense milk chocolate colored head. Brewed with a large percentage of roasted and chocolate malts for depth and complexity. Flavors are reminiscent of dark fruits, chocolate, and sandalwood, making Prince Myshkin perfect for dessert or a dangerously smooth nightcap. But who is Prince Myshkin, you may be wondering? He is the Idiot-Sauvant from Dostoyevskys novel, The Idiot, who the Russian writer described as entirely positive... with an absolutely beautiful nature.',
@@ -665,25 +667,25 @@ VALUES (3,
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4, 
+VALUES (57, 
 8, 
 'MAN FULL OF TROUBLEABV', 
 'London Style Porter', 
 5.2, 
-'2020 WINNER - FIRST PLACE, PENNSYLVANIA FARM SHOW AWARDS. This London Style Porter was brewed with “Old-World” in mind. Black and chocolate malts create its deep mahogany appearance and creamy espresso-like flavor. A blend of English East Kent Goldings and Fuggles hops lends a delicate earthy presence.',
+'2020 WINNER - FIRST PLACE, PENNSYLVANIA FARM SHOW AWARDS. This London Style Porter was brewed with ?Old-World? in mind. Black and chocolate malts create its deep mahogany appearance and creamy espresso-like flavor. A blend of English East Kent Goldings and Fuggles hops lends a delicate earthy presence.',
 'https://imgur.com/fAAcs0x');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5, 
+VALUES (58, 
 8, 
 'Amber Beer', 
 'Amber Ale', 
 5.0, 
-'The flagship Dock Street recipe from the 1980's, made right here in West Philly. Brewed with American Cascade hops and 2-row pale and caramel malts. It's medium-bodied, exceptionally balanced and always admired for its clean smooth finish.',
+'The flagship Dock Street recipe from the 1980s, made right here in West Philly. Brewed with American Cascade hops and 2-row pale and caramel malts. It is medium-bodied, exceptionally balanced and always admired for its clean smooth finish.',
 'https://imgur.com/cjAAHzu');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (6, 
+VALUES (59, 
 8, 
 'GOLDEN IPA', 
 'IPA', 
@@ -693,7 +695,7 @@ VALUES (6,
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (7, 
+VALUES (60, 
 8, 
 'BEAN2BEAN ESPRESSO STOUT', 
 'Stout', 
@@ -702,7 +704,7 @@ VALUES (7,
 'https://imgur.com/c2Kmsmn');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (8, 
+VALUES (61, 
 8, 
 'RYE IPA',
 'India Pale Ale',
@@ -711,7 +713,7 @@ VALUES (8,
 'https://imgur.com/869WdaL');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (9,
+VALUES (62,
 8,
 'BOTTLE CONDITIONED WILD KING',
 'Double IPA',
@@ -721,16 +723,16 @@ VALUES (9,
 
 --CRIME AND PUNISHMENT Beers--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1,
+VALUES (63,
 9,
 'Space Race IPA',
 'IPA',
 7.0,
-'In the world of IPA’s the sky’s the limit.  Hop on board our house IPA full of Citra, Mosaic, and Simcoe.  Scents of peach, papaya, and wheat grass commingle with flavors of tangelo, melon, and grapefruit rind, ultimately leading to a clean, dry finish. Join us on the IPA journey ahead!',
+'In the world of IPA?s the sky?s the limit.  Hop on board our house IPA full of Citra, Mosaic, and Simcoe.  Scents of peach, papaya, and wheat grass commingle with flavors of tangelo, melon, and grapefruit rind, ultimately leading to a clean, dry finish. Join us on the IPA journey ahead!',
 'https://imgur.com/QN5T6Tw');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2,
+VALUES (64,
 9,
 'Ghost Station',
 'Raspberry Berliner Weisse',
@@ -739,7 +741,7 @@ VALUES (2,
 'https://imgur.com/Z3ZyvL7');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3,
+VALUES (65,
 9,
 'Pretend Winter Happened Stout',
 'Imperial Stout with Chocolate, Vanilla and Tangerine Peel',
@@ -748,7 +750,7 @@ VALUES (3,
 'https://imgur.com/rnIPhKY');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4,
+VALUES (66,
 9,
 'Vandal Vacation',
 'IPA',
@@ -757,94 +759,76 @@ VALUES (4,
 'https://imgur.com/jXiXFXw');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5,
+VALUES (67,
 9,
 'Optimistic Optometrist',
+'Gose',
 4.5,
 'Brewed with wheat and oats, coriander and sea salt in the boil, and dry hopped with Citra and Sultana. Notes of pineapple margarita, fruit loop lemonade, and eucalyptus bath bombs.  Put on those happy glasses and brighten up your day just a little bit more!',
 'https://imgur.com/Nk5PbDR');
 
 --ARS BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (1, 
+VALUES (68, 
 10, 
 'Good Grape IPA', 
 'IPA', 
 7.5,
 'Hazy IPA brewed with gewurztraminer grapes and hopped with mosaic & triumph | 7.5% ABV Tasting Notes: Ripe lychee, passion fruit & peaches',
-'https://imgur.com/OjGdv5d');
+'https://imgur.com/FfJCCOC');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (2, 
+VALUES (69, 
 10, 
 'Showy Spikes Saison', 
 'Saison', 
 5.5,
-'Saison spiced with lemon verbena and hopped with citra | 5.5% ABV Tasting notes: Bright & vibrant floral lemon character with a hint of lime.
-'https://imgur.com/i0GyN0b');
-
-
-INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (3, 
-10, 
-'Two Robbers Hard Seltzer Orange and Mango', 
-'Seltzer', 
-5.2, 
-'Orange and Mango hard seltzer.',
-'https://imgur.com/1rXIv6T');
+'Saison spiced with lemon verbena and hopped with citra | 5.5% ABV Tasting notes: Bright & vibrant floral lemon character with a hint of lime.',
+'https://imgur.com/uMgQRBj');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (4, 
-10, 
-'Two Robbers Hard Seltzer Pineapple and Ginger', 
-'Hard Seltzer', 
-5.2, 
-'Pineapple and ginger hard seltzer.',
-'https://imgur.com/Hzz8FFC');
-
-INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (5, 
+VALUES (70, 
 10, 
 'Speculoos Stout', 
 'Stout', 
 5.8, 
-'Stout with speculoos cookies, spices (cinnamon, ginger, cloves, cardamom & nutmeg) and a touch of lactose. Tasting notes: The almighty speculoos cookie in liquid form
-'https://imgur.com/3LLdenw');
+'Stout with speculoos cookies, spices (cinnamon, ginger, cloves, cardamom & nutmeg) and a touch of lactose. Tasting notes: The almighty speculoos cookie in liquid form.',
+'https://imgur.com/ebaYBFN');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (6, 
+VALUES (71, 
 10, 
 'FUMUS Smoked Black Ale', 
 'Black Ale', 
 6.2, 
 'Maple wood smoked black ale with wildflower honey | 6.2% ABV Tasting notes: smoked cherries drenched in darkness. Available in growler.',
-'https://imgur.com/YWNdddk');
+'https://imgur.com/xl2kJOb');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (7, 
+VALUES (72, 
 10, 
-'Antique'n Pale Ale', 
+'Antiquen Pale Ale', 
 'Pale Ale', 
 6.0, 
-'New England style Pale Ale with simcoe & el dorado hops | 6% ABV Tasting notes: Pungent citrus, intense stone fruit, fresh pears. Available in growler.',
-'https://imgur.com/YWNdddk');
+'New England style Pale Ale with simcoe & el dorado hops. Pungent citrus, intense stone fruit, fresh pears.',
+'https://imgur.com/R4hw7De');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (8, 
+VALUES (73, 
 10, 
 'Zwillinger', 
 'German style pilsner', 
 5.5, 
 'Unfiltered German style pilsner with tettnang, spalt select & saaz hops | 5.5% ABV Tasting notes: Crisp and crushable.',
-'https://imgur.com/YWNdddk');
+'https://imgur.com/6Vx7mmo');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-VALUES (9, 
+VALUES (74, 
 10, 
 'Short Bursts', 
 'Barley wine', 
 8.0, 
-'Barley wine fermented with a few of our preferred Belgian yeast strains | 8% ABV Tasting notes: Sticky caramel & toffee pudding with a gentle dusting of our favorite American hops.
-'https://imgur.com/YWNdddk');
+'Barley wine fermented with a few of our preferred Belgian yeast strains | 8% ABV Tasting notes: Sticky caramel & toffee pudding with a gentle dusting of our favorite American hops.',
+'https://imgur.com/1f7ILrp');
