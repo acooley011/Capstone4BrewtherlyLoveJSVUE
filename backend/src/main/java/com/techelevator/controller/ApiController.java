@@ -2,8 +2,15 @@ package com.techelevator.controller;
 
 import com.techelevator.authentication.AuthProvider;
 import com.techelevator.authentication.UnauthorizedException;
+import com.techelevator.model.Brewery;
+import com.techelevator.model.BreweryDao;
+import com.techelevator.npgeek.model.Park;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
+import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -14,6 +21,9 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("/api")
 public class ApiController {
+	
+	@Autowired
+	private BreweryDao breweryDao;
 
     @Autowired
     private AuthProvider authProvider;
@@ -32,4 +42,17 @@ public class ApiController {
         }
         return "Success";
     }
+    
+    
+	@RequestMapping(value="/breweries", method=RequestMethod.GET)
+	public String displayFavoritesPage(ModelMap model)
+	{
+		List<Brewery> breweries = breweryDao.getAllBreweries();
+		
+		model.put("breweries", breweries);
+		
+		return "breweries";
+	}
+    
+    
 }
