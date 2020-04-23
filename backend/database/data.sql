@@ -83,6 +83,19 @@ VALUES (6,
 'We’ve found a home here in Philadelphia, a city that’s reclaiming its space on the national stage, but isn’t afraid to be itself. As we got to know Philly, we fell in love with its rich brewing history. We were amazed by the number of breweries that existed here (nearly 700 before Prohibition was enacted). Each neighborhood had a brewery that served the local residents, and beer was a part of every table. We want to make that a reality for our neighbors today. We think you should know your brewer and be able to watch your beer being made.WE THINK BEER SHOULD STILL BE AT THE CENTER OF EVERY TABLE.',
 'https://imgur.com/UCA2laD');
 
+--ORIGINAL XIII--
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
+VALUES (7,
+'Original XIII Ciderworks',
+'1526 N. American St',
+'Philadelphia',
+'19122',
+'215-765-7000',
+'Northern Liberties',
+'Mon-Thurs: 4pm to 10pm. Fri: 4pm to 12am. Sat: 11am - 12am. Sun: 11am to 10pm.',
+'Kowchak is an experienced businessman and brewer who received his MBA in Entrepreneurship from Drexel University. Additionally, he graduated from the Cider and Perry Academy in the UK. He plans for his brewery to be registered as a B-corporation, which means they’re pressing cider as environmentally friendly as possible. They’re doing this by distributing their product in cans as opposed to bottles, and have the vision of their new site being completely solar powered. They’re also keeping their produce local, are using apples from PA, and also have plans to create a cider using NJ blueberries.',
+'https://imgur.com/9DOh39T');
+
 
 --YARDS BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -520,3 +533,26 @@ VALUES (8,
 'Wheat beer featuring spices that pay homage to our North Chinatown neighborhood. Generous lemongrass and orange aroma counterbalanced by coriander.',
 'https://imgur.com/WulkQ5e');
 
+--ORIGINAL XIII Ciders--
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (1,
+7,
+'Sir Charles Original Hard Cider',
+'Semi-Dry Cider',
+6.5,
+'Semi-dry hard apple cider made with local, Pennsylvania apples.',
+'https://imgur.com/A8G0V83');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (2,
+7,
+'Sir Charles Deep Blueberry Sea',
+'Fruit Cider',
+6.5,
+'Semi-dry cider flavored with Blueberry.',
+'https://imgur.com/pOH99nr');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (3,
+7,
+'')
