@@ -555,4 +555,44 @@ VALUES (2,
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (3,
 7,
-'')
+'Sir Charles Strawberry Valkyrie',
+'Fruit Cider',
+6.4,
+'Semi-dry hard cider flavored with Strawberry.',
+'https://imgur.com/LVrAnTR');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (4,
+7,
+'Atacama Bone Dry',
+'English Dry',
+7.0,
+'Bone dry hard apple cider, with no added sugar.',
+'https://imgur.com/lVnMsiq');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (5,
+7,
+'Atacama Hopped Dry',
+'Hopped Dry',
+7.0,
+'Hopped dry hard apple cider, with no added sugar.',
+'https://imgur.com/ChPRNyZ');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (6,
+7,
+'Sir Charles Ol’ Scrumpy',
+'American Scrumpy',
+11.0,
+'Sir Charles’ original recipe. Made from 16 heirloom apples from my Grandfather’s orchard, aged with raisins and brown sugar.',
+'https://imgur.com/WdHsQnq');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (7,
+7,
+'Sir Charles Irish Scrumpy',
+'American Scrumpy',
+15.0,
+'Our original Sir Charles Scrumpy aged in a New Liberty Distilling Bourbon barrel. XAvailable only on Saint Patrick’s Day',
+'https://imgur.com/avX12pU');
