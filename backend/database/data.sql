@@ -53,8 +53,23 @@ VALUES (4,
 '19125',
 'Fishtown',
 '267-930-8645',
+'Seasonal'
 'Philly-based fans of Tired Hands Brewing Company won’t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer’s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts — from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary — plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com', 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am'
 'https://imgur.com/OjGdv5d');
+
+--SEPARATIST BEER PROJECT--
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
+VALUES (5,
+'Separatist Beer Project',
+'1646 S 12th St.',
+'Philadelphia',
+'19148',
+'267-534-4879',
+'South Philly',
+'Mon-Thurs: 4pm to 11pm. Fri: 4pm to 12am. Sat: 12pm to 12am. Sun: 12pm to 8pm',
+'If you ask us what we are all about at Separatist Beer Project, the answer is simple: Hops, Lagerbier and Spontaneous Fermentation. From our classic, easy-drinking quintessential Cream Ale to our Wild Ale Blendery series we aim create the best beer possible.',
+'https://imgur.com/CrCY4HD');
+
 
 --YARDS BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -364,7 +379,6 @@ heart of this series.-Notes of banana taffy, strawberry shortcake, vanilla candi
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
-
 VALUES (9,
 4, 
 'We Are All Infinite Energy Vibrating At The Same Frequency', 
@@ -374,8 +388,48 @@ VALUES (9,
  Vibrant & drippy & juicy! Notes of tangerine, mango nectar, bubblegum, spruce tips, and candied pineapple.'
 'https://imgur.com/YWNdddk');
 
+--SEPARATIST BEERS--
 
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (1,
+5,
+'Classic Cream Ale',
+'Cream Ale',
+5.0,
+'Our quintessential American Cream Ale made for drinking any time, and day. Comprised of Bohemian Pilsner malt and flaked maize, hopped gently with Hallertauer, then fermented low and slow for 3 weeks with a very cool ale strain, this beer is as crisp and easy drinking as they come.',
+'https://imgur.com/ZxD3Zte');
 
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (2,
+5,
+'PineApple Smoosh',
+'Smoothie Pineapple IPA',
+8.0,
+'This Smoothie India Pale Ale was double dry-hopped with Mosaic and Centennial hops and then loaded up with tons of Pineapple and a bit of lactose for a sweet, tropical and fruity finish.',
+'https://imgur.com/X4me5De');
 
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (3,
+5,
+'Good Good',
+'Double IPA',
+8.0,
+'A hazed-out, new school, fan favorite DIPA, double dry-hopped with a blend of Simcoe, Citra and Centennial hops. This beer boasts a pillowy mouthfeel with soft lingering bitterness. Its big fruity punches are balanced by pangs of spruce sap, pine and notes of resin',
+'https://imgur.com/lWeJbJz');
 
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (4,
+5,
+'Sketches of Cascade',
+'Wild Pale Ale',
+5.8,
+'Sketches of Cascade is our second dissertation on the effects of dry-hopping a mature stock of wild ale fermented entirely in oak casks with a heavy hand of whole flower Cascade hops. Steeped low and slow, the result is bright and citrus-y with punches of grapefruit perfectly balanced by the herbaceous notes of the hops.',
+'https://imgur.com/ilMUInU');
 
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (5,
+5,
+'Jung Love',
+'German Style Kellerbier',
+'Our young and unfiltered German-Style Kellerbier. Hopped with beautiful Hallertauer hops and cold conditioned for several weeks on a special German yeast strain. Jung Love is everything you could want in a lagerbier, with its clean and crisp flavor high quaffability.',
+'https://imgur.com/0eRxCFW');
