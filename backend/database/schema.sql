@@ -23,7 +23,7 @@ CREATE TABLE breweries (
     description text NOT NULL,
     brewery_logo_url varchar(255),
     business_hours varchar(255),
-    CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id),
+    CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id)
 );
 
 DROP TABLE IF EXISTS beers;
