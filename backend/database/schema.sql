@@ -1,5 +1,7 @@
 BEGIN TRANSACTION;
 
+DROP TABLE IF EXISTS beers;
+DROP TABLE IF EXISTS breweries;
 DROP TABLE IF EXISTS users;
 
 CREATE TABLE users (
@@ -10,7 +12,7 @@ CREATE TABLE users (
   role varchar(255) NOT NULL default('beer-lover')
 );
 
-DROP TABLE IF EXISTS breweries;
+
 
 CREATE TABLE breweries (
     brewery_id serial,
@@ -20,13 +22,13 @@ CREATE TABLE breweries (
     zipcode varchar(15) NOT NULL,
     neighborhood varchar(100) NOT NULL,
     contact varchar(255),
-    description text NOT NULL,
     business_hours varchar(255),
+    description text NOT NULL,
     brewery_img varchar(255),
-    CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id),
+    CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id)
 );
 
-DROP TABLE IF EXISTS beers;
+
 
 CREATE TABLE beers (
     beer_id serial,
