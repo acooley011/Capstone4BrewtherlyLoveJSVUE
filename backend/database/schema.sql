@@ -21,8 +21,8 @@ CREATE TABLE breweries (
     neighborhood varchar(100) NOT NULL,
     contact varchar(255),
     description text NOT NULL,
-    brewery_logo_url varchar(255),
     business_hours varchar(255),
+    brewery_img varchar(255),
     CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id),
 );
 
@@ -32,8 +32,8 @@ CREATE TABLE beers (
     beer_id serial,
     brewery_id integer,
     name varchar(255) NOT NULL,
-    abv decimal,
     type varchar(255) NOT NULL,
+    abv decimal,
     description text NOT NULL,
     img_url varchar(255),
     CONSTRAINT pk_beer_beer_id PRIMARY KEY (beer_id),
