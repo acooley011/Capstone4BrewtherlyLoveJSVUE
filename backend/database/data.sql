@@ -55,7 +55,7 @@ VALUES (4,
 '267-930-8645',
 'Seasonal',
 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am',
-'Philly-based fans of Tired Hands Brewing Company won?t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer?s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts ? from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary ? plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com',
+'Philly-based fans of Tired Hands Brewing Company won?t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer?s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts ? from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary ? plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks',
 'https://imgur.com/yjas3QW');
 
 --SEPARATIST BEER PROJECT--
