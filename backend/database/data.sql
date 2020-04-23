@@ -44,6 +44,17 @@ VALUES (3,
 'Friends Luke Bowen and Trevor Hayward founded Evil Genius Beer Company in 2011. After meeting in College at Villanova, they bonded over their love of beer and wanted to do something more rewarding with their lives than getting a 9-5 job. Starting with only a few dollars in savings, the company now distributes all over the North East. Known for their humorous and witty branding, Evil Genius beers are easy to spot! Evil Genius opened their new Brewery and Beer Garden in Fishtown, Philadelphia in 2017, and are pleased to welcome Jon Defibaugh (Tired Hands, Earth Bread and Brewery) to their team as Head Brewer',
 'https://imgur.com/C9rFcuP');
 
+--Tired Hands Brewery--
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, description, business_hours, brewery_img)
+VALUES (4,
+'Tired Hands Biergarten', 
+'2213 Frankford Avenue',
+'Philadelphia',
+'19125',
+'Fishtown',
+'267-930-8645',
+'Philly-based fans of Tired Hands Brewing Company won’t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer’s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts — from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary — plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com', 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am'
+'https://imgur.com/OjGdv5d');
 
 --YARDS BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -263,3 +274,108 @@ VALUES (8,
 6.0,
 'Your favorite espresso beverage has now become your favorite adult beverage! Brewed with American barley, caramel and chocolate malt, and a touch of dark wheat. Gently hopped with American and German hops, and then infused with caramel and locally roasted La Colombe coffee. Full-bodied, smooth and robust, with notes of sweet caramel, mocha, and chocolate.',
 'https://imgur.com/WgP2SwD');
+
+--Tired Hands Beers--	
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (1,
+4,
+'Alien Church',
+'IPA', 
+6.5,
+'People in Philly don’t have a filter, and neither does our Philthy Hazy IPA. This bold, aromatic ale is loaded with tropical and citrus hops character and has that classic hazy, golden color. And just like the city where it’s brewed, this unapologetic IPA is left unfiltered.',
+'https://imgur.com/OjGdv5d');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (2,
+4, 
+'Helles Other People', 
+'Lager',
+ 4.8,
+ 'Brewed with 100% German Pilsner malt and hopped lightly with Hallertau Mittelfrüh. Fermented with our house lager yeast and cold conditioned for five weeks before its release. Refined and eminently crushable.
+Notes of white grape, hay, clover honey, white peach, and fresh cut grass.',
+'https://imgur.com/i0GyN0b');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (3,
+4, 
+'Austere Modular',
+ 'Lager', 
+ 4.6, 
+ 'Built with a simple grist of German Pilsner malt, and hopped throughout the boil with German Perle, Mittelfrüh, and Spalter Select from our annual trip to Bavaria. Fermented with our house Lager yeast, and cold conditioned for four weeks before packaging. Perhaps our most refined batch to date? Not sure... who remembers Batch #1? =) Austere notes of black peppercorn, lemon pith, 
+fresh dough, loose leaf green tea, Suze spritz, and white grape.',
+'https://imgur.com/1rXIv6T');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (4,
+4,
+'Simcoe Oat Double',
+'Lager', 
+9.0, 
+'We brewed this one with an absolutely massive amount of wholesome oats and poured in the perfect amount of luscious lactose sugar to round out the comfortable body. Sunny Day was then Double Dry Hopped with mostly Australian Galaxy and a touch of hand selected US Simcoe and Mosaic.'
+'https://imgur.com/Hzz8FFC');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (5,
+ 4, 
+'HopHands', 
+'Pale Ale',
+ 5.5,
+ 'Brewed with oats. Hopped intensely with Simcoe, Centennial, and Amarillo. Hazy, juicy, and imminently crushable. Our precious Pale Ale. -Notes of tangelo, kiwi, dank, pine sap, nectarine,'
+'https://imgur.com/3LLdenw');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (6,
+ 4, 
+'Ourison', 
+'Saison',
+ 4.8, 
+'Ourison is Our Saison, SaisonHands, left to condition in oak and then allowed to fully express itself via a lengthy keg conditioning period. The end result is a highly refined snappy and pungent Saison that, I feel, is one of
+the most simplistic and exciting iterations of Saison that we have ever produced.-Notes of lemon zest, pear, barnyard, hay, guava, juicy fruit, and earth.',
+'https://imgur.com/YWNdddk');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+
+VALUES (7,
+4, 
+'Trendler Schwarzbier',
+'Black Lagerbier', 
+5.5, 
+'Brewed with Pilsner malt, as well as a tasteful flurry of German specialty and dark malts.Hopped assertively with German Hersbrucker from our buddies in Bavaria, fermented with our house Lager yeast, and cold conditioned for four weeks. Extremely stark, restrained, and elegant, yet eminently crushable.-Notes of baker’s chocolate, pumpernickel toast, mild peat, and burnt sugar.'
+'https://imgur.com/YWNddd');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+
+VALUES (8,
+4,
+'Banana Split Double Milkshake IPA',
+'Milkshake IPA:',
+ 9.0, 
+ 'An unabashedly desserty riff on our hilarious Culinary IPA series, originally conceived with our sincerely magical associates over at Omnipollo. Brewed with a veritable mountain of luscious oats and
+ wheat, and a bit of lactose sugar. Conditioned atop a hefty helping of cacao, whole Madagascar vanilla beans and ripe banana puree, then mercilessly dry-hopped with the very choicest Mosaic and Citra. This one really gets at the
+heart of this series.-Notes of banana taffy, strawberry shortcake, vanilla candies, chocolate, and banana.'
+'https://imgur.com/YWNdddk');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+
+VALUES (9,
+4, 
+'We Are All Infinite Energy Vibrating At The Same Frequency', 
+'Wheat IPA', 
+6.5, 
+'OG BrewCafé classic triumphantly returns! Brewed with malted wheat and hopped intensely with Centennial and our then, now, and forever favorite: Simcoe.
+ Vibrant & drippy & juicy! Notes of tangerine, mango nectar, bubblegum, spruce tips, and candied pineapple.'
+'https://imgur.com/YWNdddk');
+
+
+
+
+
+

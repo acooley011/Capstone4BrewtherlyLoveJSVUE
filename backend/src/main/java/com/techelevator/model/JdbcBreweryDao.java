@@ -44,5 +44,12 @@ public class JdbcBreweryDao implements BreweryDao{
         return brewery;
     }
 
+	@Override
+	public Brewery getBreweryById(int brewryId) {
+		Brewery brewery = new Brewery();
+		
+		return brewery;
+	}
+
    
 }
