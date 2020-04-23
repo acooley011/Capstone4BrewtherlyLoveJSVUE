@@ -22,8 +22,8 @@ CREATE TABLE breweries (
     zipcode varchar(15) NOT NULL,
     neighborhood varchar(100) NOT NULL,
     contact varchar(255),
-    description text NOT NULL,
     business_hours varchar(255),
+    description text NOT NULL,
     brewery_img varchar(255),
     CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id)
 );
