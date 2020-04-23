@@ -53,8 +53,8 @@ VALUES (4,
 '19125',
 'Fishtown',
 '267-930-8645',
-'Seasonal'
-'Philly-based fans of Tired Hands Brewing Company won’t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer’s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts — from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary — plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com', 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am'
+'Seasonal',
+'Philly-based fans of Tired Hands Brewing Company won’t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer’s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts — from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary — plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com', 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am',
 'https://imgur.com/OjGdv5d');
 
 --SEPARATIST BEER PROJECT--
@@ -95,6 +95,19 @@ VALUES (7,
 'Mon-Thurs: 4pm to 10pm. Fri: 4pm to 12am. Sat: 11am - 12am. Sun: 11am to 10pm.',
 'Kowchak is an experienced businessman and brewer who received his MBA in Entrepreneurship from Drexel University. Additionally, he graduated from the Cider and Perry Academy in the UK. He plans for his brewery to be registered as a B-corporation, which means they’re pressing cider as environmentally friendly as possible. They’re doing this by distributing their product in cans as opposed to bottles, and have the vision of their new site being completely solar powered. They’re also keeping their produce local, are using apples from PA, and also have plans to create a cider using NJ blueberries.',
 'https://imgur.com/9DOh39T');
+
+--DOCK STREET--
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
+VALUES (8, 
+'Dock Street South', 
+'2118 Washington Avenue', 
+'Philadelphia', 
+'19126', 
+'West Philadelphia',
+'215-337-3103',
+'Tues-F 4pm -11pm, Sat & Sun 12pm-12am',
+'Come by Dock Street Brewpub for a great, laid-back spot to hang out with friends and family, enjoy hand-tossed, wood-fired pizza, fresh beer poured direct from the tanks, or a brewery tour. (Or all of the above.) Check back often for updates like new additions to the menu for game days, parties and holidays. Then, swing by Dock Street Cannery + Tasting Lounge, voted Philadelphia Magazine’s Best New Bar, located right next door to the main brewpub but with a separate entrance. There, you’ll find craft cocktails with house-made syrups and Pennsylvania spirits, and of course, Dock Street Beer. We're also known to throw a mean party over there, featuring any and everything from comedy, prose reading, cheese-making, glass-blowing, mezcal tasting and live tattooing.',
+'https://imgur.com/mIfGksv');
 
 
 --YARDS BEERS--
@@ -596,3 +609,88 @@ VALUES (7,
 15.0,
 'Our original Sir Charles Scrumpy aged in a New Liberty Distilling Bourbon barrel. XAvailable only on Saint Patrick’s Day',
 'https://imgur.com/avX12pU');
+
+--Dock Street BEERS--
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (1, 
+8, 
+'Dock Street King Juice', 
+'Double IPA', 
+8.5,
+'Double IPA - We're making it reign with this hazy, sticky, double dry hopped, silky smooth, and perfectly balanced DIPA brewed with oats and wheat and chock full of Mosaic, Citra, and Centennial. Strong flavors and aromas of dried apricots, nectarine, and stone fruit. There are lots of big, juicy DIPA's but there can only be one King Juice.',
+'https://imgur.com/OjGdv5d');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (2, 
+8, 
+'IMPERIAL RED ALE', 
+'Ale', 
+10.0,
+'A style hallmarked by strong bitterness, high alcohol, a rich caramel body, and aggressive hop flavor and aroma - this beer has it all. Hopped frequently and heavily from First Wort to Dry Hop with Comet, Chinook, Centennial, and Citra. The hops are balanced by a strong caramel backbone and sweet boozy finish
+'https://imgur.com/i0GyN0b');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (3, 
+8, 
+'Prince Myshkin's Russian Imperial Stout', 
+'Stout', 
+4.6, 
+'Pours a deep, opaque, midnight-black, with a dense milk chocolate colored head. Brewed with a large percentage of roasted and chocolate malts for depth and complexity. Flavors are reminiscent of dark fruits, chocolate, and sandalwood, making Prince Myshkin perfect for dessert or a dangerously smooth nightcap. "But who's Prince Myshkin," you may be wondering? He's the Idiot-Sauvant from Dostoyevsky's novel, The Idiot, who the Russian writer described as "entirely positive... with an absolutely beautiful nature".',
+'https://imgur.com/1rXIv6T');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (4, 
+8, 
+'MAN FULL OF TROUBLEABV', 
+'London Style Porter', 
+5.2, 
+'2020 WINNER - FIRST PLACE, PENNSYLVANIA FARM SHOW AWARDS. This London Style Porter was brewed with “Old-World” in mind. Black and chocolate malts create its deep mahogany appearance and creamy espresso-like flavor. A blend of English East Kent Goldings and Fuggles hops lends a delicate earthy presence.',
+'https://imgur.com/Hzz8FFC');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (5, 
+8, 
+'Amber Ale', 
+'Ale', 
+5.0, 
+'The flagship Dock Street recipe from the 1980's, made right here in West Philly. Brewed with American Cascade hops and 2-row pale and caramel malts. It's medium-bodied, exceptionally balanced and always admired for its clean smooth finish.'
+'https://imgur.com/3LLdenw');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (6, 
+8, 
+'GOLDEN IPA', 
+'IPA', 
+6.0, 
+'American IPA - We designed this golden-hued, clear IPA so that hop flavor and aroma are the primary experience. Oats and a touch of caramel malt make for a mouth coating light body balanced with medium bitterness. Mosaic, Citra, Simcoe, and Amarillo hops create flavors and aromas of tropical fruit, citrus, and just a hint of pine. Can art, featuring a gold doubloon and our trademark anchor, by Philly-based artist Eric Hinkley.
+'https://imgur.com/YWNdddk');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (7, 
+8, 
+'BEAN2BEAN ESPRESSO STOUT', 
+'Stout', 
+6.0, 
+'Intense aromas of espresso and dark chocolate precede this rich, elegant stout. Medium-bodied with a pleasant sweetness. Conditioned atop pounds and pounds of coffee beans from Bean2Bean.
+'https://imgur.com/YWNdddk');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (8, 
+8, 
+'RYE IPA',
+'India Pale Ale',
+6.8,
+An aggressively hopped American Style India Pale Ale brewed with Columbus, Simcoe and Amarillo hops. The use of 20% rye gives this ale it's trademark dry and spicy character. It's been voted among the Top 15 Rye Beers in the World on Beer Advocate.
+'https://imgur.com/YWNdddk');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (9,
+8,
+'BOTTLE CONDITIONED WILD KING',
+'Double IPA',
+8.9,
+2020 WINNER - SECOND PLACE, PENNSYLVANIA FARM SHOW AWARDS. For 19 months we aged the base for one of our house Double IPAs, King Juice, in stainless steel with a house-cultured blend of Brettanomyces until the beer was transformed into something entirely different. We then dry hopped heavily with Mosaic, Amarillo, and Ekuanot to compliment the aromas and flavors contributed by the Brett. The resulting beer is an indulgent wild ale, not overly tart but significantly funky with bold aromas of a strawberry-mango-pineapple smoothie and flavors of capri-sun summers and overripe fruit funkiness. 
+'https://imgur.com/laYzgAm');
+
