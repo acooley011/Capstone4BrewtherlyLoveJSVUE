@@ -122,8 +122,20 @@ VALUES (9,
 'From ales and lagers, to saisons and IPAs, there’s something on tap for everyone. C+P aims to blend the once-great local brewing tradition with newer craft techniques and international inspirations. They have designed a rotating menu of distinctive brews and Russian-influenced dishes done their way.',
 'https://imgur.com/L4caNYA');
 
+-- BREWERY ARS --
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
+VALUES (10,
+'Brewery ARS',
+'1927-29 W Passyunk Ave.',
+'Philadelphia',
+'19145',
+'South Philadelphia',
+'215-960-5173',
+'Wed-Fri 4pm to 8pm Sat-Sun: 2pm to 7pm',
+'Brewery ARS is a small garage brewery in South Philadelphia and the brainchild of Andy and Sean Arsenault, who began their brewing career as engineers with curiosity. After spending Friday evenings at the Foodery at 10th and Pine with a 6 pack of Yuengling and one craft beer from around the world each week, the brothers realized that they both were fond of the Belgian styles and grew an affinity for yeast-forward beers. After years of planning and tinkering recipes, the brewery officially opened its doors on December 17, 2016. Since then, the duo have brewed over 70 different batches of 56 different beers, including collaborations with Highway Manor Brewing and Kurant Ciders, exploring the endless flavor profiles craft beer has to offer. 
+'https://imgur.com/EhsXVNF');
 
---YARDS BEERS--
+-- YARDS BREWERY --
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (1, 
 1, 
@@ -157,7 +169,7 @@ VALUES (4,
 'Brawler', 
 'English Mild Ale', 
 4.2, 
-'Crafted in the style of an English mild, this malt-forward ale is great when you want to go a few rounds. Its smooth character, hints of caramel and toast and remarkable drinkability define this ruby-colored brew as a knockout session ale.',
+'Crafted in the style of an English mild, this malt-forward ale is great when you want to go a few rounds, its smooth character, hints of caramel and toast and remarkable drinkability define this ruby-colored brew as a knockout session ale.',
 'https://imgur.com/Hzz8FFC');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -751,3 +763,88 @@ VALUES (5,
 4.5,
 'Brewed with wheat and oats, coriander and sea salt in the boil, and dry hopped with Citra and Sultana. Notes of pineapple margarita, fruit loop lemonade, and eucalyptus bath bombs.  Put on those happy glasses and brighten up your day just a little bit more!',
 'https://imgur.com/Nk5PbDR');
+
+--ARS BEERS--
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (1, 
+10, 
+'Good Grape IPA', 
+'IPA', 
+7.5,
+'Hazy IPA brewed with gewurztraminer grapes and hopped with mosaic & triumph | 7.5% ABV Tasting Notes: Ripe lychee, passion fruit & peaches',
+'https://imgur.com/OjGdv5d');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (2, 
+10, 
+'Showy Spikes Saison', 
+'Saison', 
+5.5,
+'Saison spiced with lemon verbena and hopped with citra | 5.5% ABV Tasting notes: Bright & vibrant floral lemon character with a hint of lime.
+'https://imgur.com/i0GyN0b');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (3, 
+10, 
+'Two Robbers Hard Seltzer Orange and Mango', 
+'Seltzer', 
+5.2, 
+'Orange and Mango hard seltzer.',
+'https://imgur.com/1rXIv6T');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (4, 
+10, 
+'Two Robbers Hard Seltzer Pineapple and Ginger', 
+'Hard Seltzer', 
+5.2, 
+'Pineapple and ginger hard seltzer.',
+'https://imgur.com/Hzz8FFC');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (5, 
+10, 
+'Speculoos Stout', 
+'Stout', 
+5.8, 
+'Stout with speculoos cookies, spices (cinnamon, ginger, cloves, cardamom & nutmeg) and a touch of lactose. Tasting notes: The almighty speculoos cookie in liquid form
+'https://imgur.com/3LLdenw');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (6, 
+10, 
+'FUMUS Smoked Black Ale', 
+'Black Ale', 
+6.2, 
+'Maple wood smoked black ale with wildflower honey | 6.2% ABV Tasting notes: smoked cherries drenched in darkness. Available in growler.',
+'https://imgur.com/YWNdddk');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (7, 
+10, 
+'Antique'n Pale Ale', 
+'Pale Ale', 
+6.0, 
+'New England style Pale Ale with simcoe & el dorado hops | 6% ABV Tasting notes: Pungent citrus, intense stone fruit, fresh pears. Available in growler.',
+'https://imgur.com/YWNdddk');
+
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (8, 
+10, 
+'Zwillinger', 
+'German style pilsner', 
+5.5, 
+'Unfiltered German style pilsner with tettnang, spalt select & saaz hops | 5.5% ABV Tasting notes: Crisp and crushable.',
+'https://imgur.com/YWNdddk');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (9, 
+10, 
+'Short Bursts', 
+'Barley wine', 
+8.0, 
+'Barley wine fermented with a few of our preferred Belgian yeast strains | 8% ABV Tasting notes: Sticky caramel & toffee pudding with a gentle dusting of our favorite American hops.
+'https://imgur.com/YWNdddk');
