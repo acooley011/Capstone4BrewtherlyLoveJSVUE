@@ -70,6 +70,19 @@ VALUES (5,
 'If you ask us what we are all about at Separatist Beer Project, the answer is simple: Hops, Lagerbier and Spontaneous Fermentation. From our classic, easy-drinking quintessential Cream Ale to our Wild Ale Blendery series we aim create the best beer possible.',
 'https://imgur.com/CrCY4HD');
 
+--LOVE CITY BREWING--
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
+VALUES (6,
+'Love City Brewing',
+'1023 Hamilton St.',
+'Philadelphia',
+'19123',
+'215-398-1900',
+'Callowhill',
+'Mon-Fri: 4pm to 12am. Sat: 12pm to 12am. Sun: 12pm to 10pm.',
+'We’ve found a home here in Philadelphia, a city that’s reclaiming its space on the national stage, but isn’t afraid to be itself. As we got to know Philly, we fell in love with its rich brewing history. We were amazed by the number of breweries that existed here (nearly 700 before Prohibition was enacted). Each neighborhood had a brewery that served the local residents, and beer was a part of every table. We want to make that a reality for our neighbors today. We think you should know your brewer and be able to watch your beer being made.WE THINK BEER SHOULD STILL BE AT THE CENTER OF EVERY TABLE.',
+'https://imgur.com/UCA2laD');
+
 
 --YARDS BEERS--
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -433,3 +446,77 @@ VALUES (5,
 'German Style Kellerbier',
 'Our young and unfiltered German-Style Kellerbier. Hopped with beautiful Hallertauer hops and cold conditioned for several weeks on a special German yeast strain. Jung Love is everything you could want in a lagerbier, with its clean and crisp flavor high quaffability.',
 'https://imgur.com/0eRxCFW');
+
+--LOVE CITY BEERS--
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (1,
+6,
+'Love City Lager',
+'American Lager',
+4.0,
+'Lightly malty with a hint of orange aromatics give every bright sip a clean landing. The perfect gateway for macro drinkers looking to step-up and taste a craft version of a super-crisp style.',
+'https://imgur.com/EM49UiP');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (2,
+6,
+'Unity IPA',
+'American IPA',
+5.5,
+'Assertive, yet highly drinkable American IPA. Double dry-hopped with Mosaic, Citra and Simcoe for a robust citrusy hop character. Light malt backbone, hoppy finish, low bitterness.',
+'https://imgur.com/DDUQ03A');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (3,
+6,
+'Sylvie Stout',
+'Oatmeal Stout',
+5.0
+'Full-bodied English-style oatmeal stout with rich dark chocolate and espresso character with a very light citrus hop character and round, smooth finish.',
+'https://imgur.com/BcDo1PI');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (4,
+6,
+'Earaserhood Hazy IPA',
+'New England Style IPA',
+7.2,
+'Our signature hazy IPA! Triple dry-hopped with Mosaic, Citra and Centennial for a huge mango hop character with a smooth, round body. Moderate malt backbone and juicy finish.',
+'https://imgur.com/ZZuAeuZ');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (5,
+6,
+'Tart Beats Plum',
+'Sour',
+5.8,
+'The second in our tart series! Kettle-soured with lactic bacteria, with plum juice added to fermentation. Refreshingly tart with a light sweetness & balanced plum flavor.',
+'https://imgur.com/EJbTEys');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (6,
+6,
+'Totally Wired',
+'Coffee Brown Ale',
+4.7,
+'English-style brown ale. Aged on Lunar Lander espresso from our neighbors at Elixr coffee roasters',
+'https://imgur.com/cis2uNW');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (7,
+6,
+'Deep Cut',
+'Pilsner',
+5.0,
+'Dry, lightly bready, with sweet herb & spice hop character.',
+'https://imgur.com/AQXVesw');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (8,
+6,
+'Generator Wheat',
+'Wheate Ale',
+4.2,
+'Wheat beer featuring spices that pay homage to our North Chinatown neighborhood. Generous lemongrass and orange aroma counterbalanced by coriander.',
+'https://imgur.com/WulkQ5e');
+
