@@ -9,6 +9,6 @@ public interface BreweryDao {
      * Get all of the breweries from the database.
      * @return a List of user objects
      */
-    public List<User> getAllBreweries();
+    public List<Brewery> getAllBreweries();
 
 }
