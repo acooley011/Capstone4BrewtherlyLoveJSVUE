@@ -70,7 +70,7 @@ const router = new Router({
     name: "beer-lover",
     component: BeerLover,
     meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -78,7 +78,7 @@ const router = new Router({
     name: "brewer",
     component: Brewer,
     meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
   {
@@ -86,7 +86,7 @@ const router = new Router({
     name: "admin",
     component: Administrator,
     meta: {
-      requiresAuth: true
+      requiresAuth: false
     }
   },
 
