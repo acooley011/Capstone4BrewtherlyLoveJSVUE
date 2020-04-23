@@ -22,7 +22,7 @@ VALUES (1,
 INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
 VALUES (2,
 'Philadelphia Brewing Co.',
-'2440 Frankford Ave.'
+'2440 Frankford Ave.',
 'Philadelphia',
 '19125',
 'Fishtown',
@@ -45,17 +45,16 @@ VALUES (3,
 'https://imgur.com/C9rFcuP');
 
 --Tired Hands Brewery--
-INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, description, business_hours, brewery_img)
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
 VALUES (4,
 'Tired Hands Biergarten', 
-'2213 Frankford Avenue',
+'2213 Frankford Ave.',
 'Philadelphia',
 '19125',
 'Fishtown',
 '267-930-8645',
-'Seasonal',
 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am',
-'Philly-based fans of Tired Hands Brewing Company won?t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer?s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts ? from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary ? plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks',
+'Philly based fans of Tired Hands Brewing Company won?t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer?s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts ? from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary plus their sought-after Alien Church in cans, bottles of 333 Kombucha, and snacks.',
 'https://imgur.com/yjas3QW');
 
 --SEPARATIST BEER PROJECT--
@@ -252,6 +251,7 @@ VALUES (13,
 2,
 'Kenzinger',
 'Golden Ale',
+4.5,
 'This crisp, light-bodied, golden beer is the very definition of refreshment. The combination of premium German pilsner malts and American Noble hops aims to please your taste buds and satisfy your thirst.',
 'https://imgur.com/vQRWeoH');
 
