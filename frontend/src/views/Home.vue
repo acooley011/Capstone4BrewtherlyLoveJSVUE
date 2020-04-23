@@ -3,13 +3,14 @@
   <section class="section">
       <img src="../assets/images/beerbanner.png" width="100%"/>
       <section><br/>
-
-    <h1><strong>Welcome to the City of Brew-therly Love</strong></h1><br/>
-  
+  <div class="heading">
+    <h1 class="headline-text"><strong>Welcome to the City of Brew-therly Love</strong></h1><br/>
+  </div>
   </section>
 <main id="main-content" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
 
-    <p>    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean nisl leo, sagittis dignissim nulla nec, auctor mattis lacus. Quisque maximus felis quis urna rutrum, congue commodo mauris porttitor. Duis sed ullamcorper nibh. Nam vehicula at tortor id sollicitudin. Fusce vitae consequat ipsum, dictum mattis tortor. Sed scelerisque metus nec ipsum bibendum interdum. Nunc pretium, sem ac consectetur posuere, arcu mi aliquet erat, at porttitor ligula arcu et urna. Suspendisse feugiat pharetra magna, nec congue risus imperdiet consectetur. Aenean porta efficitur nulla, ac interdum nisi vulputate sed. Morbi fermentum porttitor sem non scelerisque. Aliquam ultrices suscipit sapien, vel condimentum risus scelerisque non. Vestibulum quis luctus mauris. Cras efficitur mauris et turpis laoreet mollis. Etiam lectus tellus, eleifend nec nunc placerat, tempor commodo diam.</p>
+    <p> We keep track of all the breweries in Philadelphia so you don't have to! Browse our website and you will find a list of all the breweries and cider distilleries in Center City and surrounding neighborhoods. Make an account as a beer lover and you will be able to review any beers you try, along with interact with fellow beer lovers. Check out the review page for a list of all the reviewed beers sorted by average rating. Find out which breweries and beers are most popular at a glance.</p><br/>
+    <p>Own a brewery? Make a profile page if we don't already have one and keep track of your delicious brew stock for the public to see. Respond to customer questions on the message board too! Philadelphia has so many great places to go and now you wont have to worry about finding the best breweries in town.</p>
 </main>
 </section>
 </template>
@@ -24,6 +25,17 @@ export default {
 
 
 <style scoped>
+.headline-text {
+color: black;
+	font-size: 40px;
+	text-shadow: 
+  -1px 1px 0 #FFF,
+  1px 1px 0 #FFF,
+	1px -1px 0 #FFF,
+	-1px -1px 0 #FFF;
+
+
+}
 .text-box {
   opacity: 0.8;
 }

@@ -1,22 +1,23 @@
 <template>
+
 <container class="section">
   <body class="has-navbar-fixed-top" width="100%">
  
 <header>
-  <nav class="level has-background-link navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+  <navbar class="level is-link navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
     <div class="level-item has-text-centered">
       <a role="button" class="navbar-burger burger" aria-label="menu"
-				aria-expanded="false" data-target="navbarBasicExample"> <span
+				aria-expanded="false" data-target="navbarBasicExample"><span
 				aria-hidden="true"></span> 
 				<span aria-hidden="true"></span> <span
 				aria-hidden="true"></span>
 			</a>
       </div>
-    <div id="navbarBasicExample" class="navbar-menu">
+    <div id="navbarBasicExample" class="navbar-menu is-link">
 			<div class="navbar-start is-size-5">
-        
+      
     <a>
-      <img src="./assets/images/navbarImage.png" width="40px" padding-right="10px">
+      <img src="./assets/images/navbarImage.png" width="40px" alt="Love Beer logo">
     </a>
     
       <a class="navbar-item"><router-link :to="{name: 'home'}">
@@ -24,14 +25,14 @@
       <a class="navbar-item"><router-link :to="{name: 'brewery-list'}">
         <span class="icon is-small"><i class="fa fa-beer" aria-hidden="true"></i></span><span> Brewery List</span></router-link></a>
       <a class="navbar-item"><router-link :to="{name: 'reviews'}">
-        <span class="icon is-small"><i class="fa fa-envelope-open" aria-hidden="true"></i></span><span> Reviews</span></router-link></a>
+        <span class="icon is-small"><i class="fas fa-edit" aria-hidden="true"></i></span><span> Reviews</span></router-link></a>
       
       <a class="navbar-item"><router-link :to="{name: 'login'}">
       <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span><span> Login/Register</span></router-link></a>
       
     </div>
     </div>
-  </nav>
+  </navbar>
 </header>
     <router-view />
 
@@ -56,11 +57,15 @@ body {
 justify-content: center;
 align-items: center;
 background-image: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Philadelphia_cityscape_BW_20150328.jpg/1200px-Philadelphia_cityscape_BW_20150328.jpg");
-background-repeat: no-repeat;
+
 }
 
 .content {
   padding: 20px;
+}
+
+.navbar-item {
+  color: white;
 }
 
 
