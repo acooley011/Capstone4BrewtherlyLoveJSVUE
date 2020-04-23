@@ -55,7 +55,7 @@ VALUES (4,
 '267-930-8645',
 'Seasonal',
 'Philly-based fans of Tired Hands Brewing Company won’t have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer’s beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts — from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary — plus their sought-after Alien Church (an IPA brewed with oats) in cans, bottles of 333 Kombucha, and snacks', 'www.tiredhands.com', 'Tues-Fri: 4pm - 12am, Sat-Sun: 12pm -1am',
-'https://imgur.com/OjGdv5d');
+'https://imgur.com/yjas3QW');
 
 --SEPARATIST BEER PROJECT--
 INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
@@ -106,8 +106,21 @@ VALUES (8,
 'West Philadelphia',
 '215-337-3103',
 'Tues-F 4pm -11pm, Sat & Sun 12pm-12am',
-'Come by Dock Street Brewpub for a great, laid-back spot to hang out with friends and family, enjoy hand-tossed, wood-fired pizza, fresh beer poured direct from the tanks, or a brewery tour. (Or all of the above.) Check back often for updates like new additions to the menu for game days, parties and holidays. Then, swing by Dock Street Cannery + Tasting Lounge, voted Philadelphia Magazine’s Best New Bar, located right next door to the main brewpub but with a separate entrance. There, you’ll find craft cocktails with house-made syrups and Pennsylvania spirits, and of course, Dock Street Beer. We're also known to throw a mean party over there, featuring any and everything from comedy, prose reading, cheese-making, glass-blowing, mezcal tasting and live tattooing.',
-'https://imgur.com/mIfGksv');
+'Come by Dock Street Brewpub for a great, laid-back spot to hang out with friends and family, enjoy hand-tossed, wood-fired pizza, fresh beer poured direct from the tanks, or a brewery tour. (Or all of the above.) Check back often for updates like new additions to the menu for game days, parties and holidays. Then, swing by Dock Street Cannery + Tasting Lounge, voted Philadelphia Magazine’s Best New Bar, located right next door to the main brewpub but with a separate entrance. There, you’ll find craft cocktails with house-made syrups and Pennsylvania spirits, and of course, Dock Street Beer. We`re also known to throw a mean party over there, featuring any and everything from comedy, prose reading, cheese-making, glass-blowing, mezcal tasting and live tattooing.',
+'https://imgur.com/HQCmw0n');
+
+--CRIME AND PUNISHMENT--
+INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)
+VALUES (9,
+'Crime and Punishment Brewing Co.',
+'2711 W Girard Ave',
+'Philadelphia',
+'19130',
+'Brewerytown',
+'215-235-2739',
+'Mon-Fri: 4pm to 12am. Sat: 11am to 1am. Sun: 11am to 12am.',
+'From ales and lagers, to saisons and IPAs, there’s something on tap for everyone. C+P aims to blend the once-great local brewing tradition with newer craft techniques and international inspirations. They have designed a rotating menu of distinctive brews and Russian-influenced dishes done their way.',
+'https://imgur.com/L4caNYA');
 
 
 --YARDS BEERS--
@@ -336,8 +349,8 @@ VALUES (1,
 'Alien Church',
 'IPA', 
 6.5,
-'People in Philly don’t have a filter, and neither does our Philthy Hazy IPA. This bold, aromatic ale is loaded with tropical and citrus hops character and has that classic hazy, golden color. And just like the city where it’s brewed, this unapologetic IPA is left unfiltered.',
-'https://imgur.com/OjGdv5d');
+'Our otherworldly Reptoid with flavor photosynthesizing tongue Oat IPA. 7.0% Brewed with the fluffiest of oats and hopped AND dry hopped very aggressively with a blend of our favorite American varietals. This is absolutely THE one. Very alive & pungent & bright. Notes of mandarin orange, floral lychee, peach push pop, and musky guava.',
+'https://imgur.com/gGqQrx4');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -348,7 +361,7 @@ VALUES (2,
  4.8,
  'Brewed with 100% German Pilsner malt and hopped lightly with Hallertau Mittelfrüh. Fermented with our house lager yeast and cold conditioned for five weeks before its release. Refined and eminently crushable.
 Notes of white grape, hay, clover honey, white peach, and fresh cut grass.',
-'https://imgur.com/i0GyN0b');
+'https://imgur.com/xUBvW60');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -359,17 +372,17 @@ VALUES (3,
  4.6, 
  'Built with a simple grist of German Pilsner malt, and hopped throughout the boil with German Perle, Mittelfrüh, and Spalter Select from our annual trip to Bavaria. Fermented with our house Lager yeast, and cold conditioned for four weeks before packaging. Perhaps our most refined batch to date? Not sure... who remembers Batch #1? =) Austere notes of black peppercorn, lemon pith, 
 fresh dough, loose leaf green tea, Suze spritz, and white grape.',
-'https://imgur.com/1rXIv6T');
+'https://imgur.com/9IeNKAD');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (4,
 4,
-'Simcoe Oat Double',
-'Lager', 
+'Little Log Cabin',
+'Simcoe Oat Double', 
 9.0, 
 'We brewed this one with an absolutely massive amount of wholesome oats and poured in the perfect amount of luscious lactose sugar to round out the comfortable body. Sunny Day was then Double Dry Hopped with mostly Australian Galaxy and a touch of hand selected US Simcoe and Mosaic.'
-'https://imgur.com/Hzz8FFC');
+'https://imgur.com/lK2CcVH');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -379,7 +392,7 @@ VALUES (5,
 'Pale Ale',
  5.5,
  'Brewed with oats. Hopped intensely with Simcoe, Centennial, and Amarillo. Hazy, juicy, and imminently crushable. Our precious Pale Ale. -Notes of tangelo, kiwi, dank, pine sap, nectarine,'
-'https://imgur.com/3LLdenw');
+'https://imgur.com/6WCjP7r');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -390,7 +403,7 @@ VALUES (6,
  4.8, 
 'Ourison is Our Saison, SaisonHands, left to condition in oak and then allowed to fully express itself via a lengthy keg conditioning period. The end result is a highly refined snappy and pungent Saison that, I feel, is one of
 the most simplistic and exciting iterations of Saison that we have ever produced.-Notes of lemon zest, pear, barnyard, hay, guava, juicy fruit, and earth.',
-'https://imgur.com/YWNdddk');
+'https://imgur.com/0HFYnQr');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -401,7 +414,7 @@ VALUES (7,
 'Black Lagerbier', 
 5.5, 
 'Brewed with Pilsner malt, as well as a tasteful flurry of German specialty and dark malts.Hopped assertively with German Hersbrucker from our buddies in Bavaria, fermented with our house Lager yeast, and cold conditioned for four weeks. Extremely stark, restrained, and elegant, yet eminently crushable.-Notes of baker’s chocolate, pumpernickel toast, mild peat, and burnt sugar.'
-'https://imgur.com/YWNddd');
+'https://imgur.com/ykZkCGS');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -414,7 +427,7 @@ VALUES (8,
  'An unabashedly desserty riff on our hilarious Culinary IPA series, originally conceived with our sincerely magical associates over at Omnipollo. Brewed with a veritable mountain of luscious oats and
  wheat, and a bit of lactose sugar. Conditioned atop a hefty helping of cacao, whole Madagascar vanilla beans and ripe banana puree, then mercilessly dry-hopped with the very choicest Mosaic and Citra. This one really gets at the
 heart of this series.-Notes of banana taffy, strawberry shortcake, vanilla candies, chocolate, and banana.'
-'https://imgur.com/YWNdddk');
+'https://imgur.com/90UmVJA');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -425,7 +438,7 @@ VALUES (9,
 6.5, 
 'OG BrewCafé classic triumphantly returns! Brewed with malted wheat and hopped intensely with Centennial and our then, now, and forever favorite: Simcoe.
  Vibrant & drippy & juicy! Notes of tangerine, mango nectar, bubblegum, spruce tips, and candied pineapple.'
-'https://imgur.com/YWNdddk');
+'https://imgur.com/RruKGyi');
 
 --SEPARATIST BEERS--
 
@@ -618,7 +631,7 @@ VALUES (1,
 'Double IPA', 
 8.5,
 'Double IPA - We're making it reign with this hazy, sticky, double dry hopped, silky smooth, and perfectly balanced DIPA brewed with oats and wheat and chock full of Mosaic, Citra, and Centennial. Strong flavors and aromas of dried apricots, nectarine, and stone fruit. There are lots of big, juicy DIPA's but there can only be one King Juice.',
-'https://imgur.com/OjGdv5d');
+'https://imgur.com/24BaSyD');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (2, 
@@ -626,17 +639,17 @@ VALUES (2,
 'IMPERIAL RED ALE', 
 'Ale', 
 10.0,
-'A style hallmarked by strong bitterness, high alcohol, a rich caramel body, and aggressive hop flavor and aroma - this beer has it all. Hopped frequently and heavily from First Wort to Dry Hop with Comet, Chinook, Centennial, and Citra. The hops are balanced by a strong caramel backbone and sweet boozy finish
-'https://imgur.com/i0GyN0b');
+'A style hallmarked by strong bitterness, high alcohol, a rich caramel body, and aggressive hop flavor and aroma - this beer has it all. Hopped frequently and heavily from First Wort to Dry Hop with Comet, Chinook, Centennial, and Citra. The hops are balanced by a strong caramel backbone and sweet boozy finish.',
+'https://imgur.com/0oD20An');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (3, 
 8, 
-'Prince Myshkin's Russian Imperial Stout', 
+'Prince Myshkin`s Russian Imperial Stout', 
 'Stout', 
 4.6, 
-'Pours a deep, opaque, midnight-black, with a dense milk chocolate colored head. Brewed with a large percentage of roasted and chocolate malts for depth and complexity. Flavors are reminiscent of dark fruits, chocolate, and sandalwood, making Prince Myshkin perfect for dessert or a dangerously smooth nightcap. "But who's Prince Myshkin," you may be wondering? He's the Idiot-Sauvant from Dostoyevsky's novel, The Idiot, who the Russian writer described as "entirely positive... with an absolutely beautiful nature".',
-'https://imgur.com/1rXIv6T');
+'Pours a deep, opaque, midnight-black, with a dense milk chocolate colored head. Brewed with a large percentage of roasted and chocolate malts for depth and complexity. Flavors are reminiscent of dark fruits, chocolate, and sandalwood, making Prince Myshkin perfect for dessert or a dangerously smooth nightcap. But who is Prince Myshkin, you may be wondering? He is the Idiot-Sauvant from Dostoyevskys novel, The Idiot, who the Russian writer described as entirely positive... with an absolutely beautiful nature.',
+'https://imgur.com/2FtSFwa');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -646,16 +659,16 @@ VALUES (4,
 'London Style Porter', 
 5.2, 
 '2020 WINNER - FIRST PLACE, PENNSYLVANIA FARM SHOW AWARDS. This London Style Porter was brewed with “Old-World” in mind. Black and chocolate malts create its deep mahogany appearance and creamy espresso-like flavor. A blend of English East Kent Goldings and Fuggles hops lends a delicate earthy presence.',
-'https://imgur.com/Hzz8FFC');
+'https://imgur.com/fAAcs0x');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (5, 
 8, 
+'Amber Beer', 
 'Amber Ale', 
-'Ale', 
 5.0, 
-'The flagship Dock Street recipe from the 1980's, made right here in West Philly. Brewed with American Cascade hops and 2-row pale and caramel malts. It's medium-bodied, exceptionally balanced and always admired for its clean smooth finish.'
-'https://imgur.com/3LLdenw');
+'The flagship Dock Street recipe from the 1980's, made right here in West Philly. Brewed with American Cascade hops and 2-row pale and caramel malts. It's medium-bodied, exceptionally balanced and always admired for its clean smooth finish.',
+'https://imgur.com/cjAAHzu');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (6, 
@@ -663,8 +676,8 @@ VALUES (6,
 'GOLDEN IPA', 
 'IPA', 
 6.0, 
-'American IPA - We designed this golden-hued, clear IPA so that hop flavor and aroma are the primary experience. Oats and a touch of caramel malt make for a mouth coating light body balanced with medium bitterness. Mosaic, Citra, Simcoe, and Amarillo hops create flavors and aromas of tropical fruit, citrus, and just a hint of pine. Can art, featuring a gold doubloon and our trademark anchor, by Philly-based artist Eric Hinkley.
-'https://imgur.com/YWNdddk');
+'American IPA - We designed this golden-hued, clear IPA so that hop flavor and aroma are the primary experience. Oats and a touch of caramel malt make for a mouth coating light body balanced with medium bitterness. Mosaic, Citra, Simcoe, and Amarillo hops create flavors and aromas of tropical fruit, citrus, and just a hint of pine. Can art, featuring a gold doubloon and our trademark anchor, by Philly-based artist Eric Hinkley.',
+'https://imgur.com/YR35TUC');
 
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -673,8 +686,8 @@ VALUES (7,
 'BEAN2BEAN ESPRESSO STOUT', 
 'Stout', 
 6.0, 
-'Intense aromas of espresso and dark chocolate precede this rich, elegant stout. Medium-bodied with a pleasant sweetness. Conditioned atop pounds and pounds of coffee beans from Bean2Bean.
-'https://imgur.com/YWNdddk');
+'Intense aromas of espresso and dark chocolate precede this rich, elegant stout. Medium-bodied with a pleasant sweetness. Conditioned atop pounds and pounds of coffee beans from Bean2Bean.',
+'https://imgur.com/c2Kmsmn');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (8, 
@@ -682,8 +695,8 @@ VALUES (8,
 'RYE IPA',
 'India Pale Ale',
 6.8,
-An aggressively hopped American Style India Pale Ale brewed with Columbus, Simcoe and Amarillo hops. The use of 20% rye gives this ale it's trademark dry and spicy character. It's been voted among the Top 15 Rye Beers in the World on Beer Advocate.
-'https://imgur.com/YWNdddk');
+'An aggressively hopped American Style India Pale Ale brewed with Columbus, Simcoe and Amarillo hops. The use of 20% rye gives this ale it`s trademark dry and spicy character. It`s been voted among the Top 15 Rye Beers in the World on Beer Advocate.',
+'https://imgur.com/869WdaL');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (9,
@@ -691,6 +704,50 @@ VALUES (9,
 'BOTTLE CONDITIONED WILD KING',
 'Double IPA',
 8.9,
-2020 WINNER - SECOND PLACE, PENNSYLVANIA FARM SHOW AWARDS. For 19 months we aged the base for one of our house Double IPAs, King Juice, in stainless steel with a house-cultured blend of Brettanomyces until the beer was transformed into something entirely different. We then dry hopped heavily with Mosaic, Amarillo, and Ekuanot to compliment the aromas and flavors contributed by the Brett. The resulting beer is an indulgent wild ale, not overly tart but significantly funky with bold aromas of a strawberry-mango-pineapple smoothie and flavors of capri-sun summers and overripe fruit funkiness. 
-'https://imgur.com/laYzgAm');
+'2020 WINNER - SECOND PLACE, PENNSYLVANIA FARM SHOW AWARDS. For 19 months we aged the base for one of our house Double IPAs, King Juice, in stainless steel with a house-cultured blend of Brettanomyces until the beer was transformed into something entirely different. We then dry hopped heavily with Mosaic, Amarillo, and Ekuanot to compliment the aromas and flavors contributed by the Brett. The resulting beer is an indulgent wild ale, not overly tart but significantly funky with bold aromas of a strawberry-mango-pineapple smoothie and flavors of capri-sun summers and overripe fruit funkiness.',
+'https://imgur.com/S0PwH0D');
 
+--CRIME AND PUNISHMENT Beers--
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (1,
+9,
+'Space Race IPA',
+'IPA',
+7.0,
+'In the world of IPA’s the sky’s the limit.  Hop on board our house IPA full of Citra, Mosaic, and Simcoe.  Scents of peach, papaya, and wheat grass commingle with flavors of tangelo, melon, and grapefruit rind, ultimately leading to a clean, dry finish. Join us on the IPA journey ahead!',
+'https://imgur.com/QN5T6Tw');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (2,
+9,
+'Ghost Station',
+'Raspberry Berliner Weisse',
+4.5,
+'Brewed with wheat, kettle soured, and refermented with 200lbs of raspberry puree for an incredibly bright, lovely, and refreshing beverage experience.',
+'https://imgur.com/Z3ZyvL7');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (3,
+9,
+'Pretend Winter Happened Stout',
+'Imperial Stout with Chocolate, Vanilla and Tangerine Peel',
+12.6,
+'Close your eyes, take a sip,  and transport yourself to a snow laden urban landscape.  10% of sales will be donated to the good folks at PennEnvironment.',
+'https://imgur.com/rnIPhKY');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (4,
+9,
+'Vandal Vacation',
+'IPA',
+6.7,
+'Take a break from all that thievery and enjoy some Galaxy, Mosaic, Citra, and Sultana all in a nice tropical package. Notes of ripe summer melon,  suntan peppers on the kabob, some friendly strangers fruit punch, and a little bit of that puff puff stuff stuff.',
+'https://imgur.com/jXiXFXw');
+
+INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
+VALUES (5,
+9,
+'Optimistic Optometrist',
+4.5,
+'Brewed with wheat and oats, coriander and sea salt in the boil, and dry hopped with Citra and Sultana. Notes of pineapple margarita, fruit loop lemonade, and eucalyptus bath bombs.  Put on those happy glasses and brighten up your day just a little bit more!',
+'https://imgur.com/Nk5PbDR');
