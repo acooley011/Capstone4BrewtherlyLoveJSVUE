@@ -15,7 +15,7 @@
       </div>
     <div class="navbar-menu is-link">
 			<div class="navbar-start is-size-5">
-    <a href="#">
+    <a href="/">
       <img src="./assets/images/navbarImageWhite.png" width="40px" alt="Love Beer logo">
     </a>
     
