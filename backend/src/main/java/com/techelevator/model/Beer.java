@@ -16,7 +16,6 @@ public class Beer {
 	private BigDecimal abv;
 	private String type;
 	private String imgUrl;
-	private boolean isActive = true;
 
 	
 	//TODO need to connect to Brewery and Reviews for Beerlist and review rating
@@ -75,13 +74,6 @@ public class Beer {
 		this.imgUrl = imgUrl;
 	}
 
-	public boolean isActive() {
-		return isActive;
-	}
-
-	public void setActive(boolean isActive) {
-		this.isActive = isActive;
-	}
 
 	/*method for start rating*/
 	//TODO need Review model rating data type TBD int/big decimal/float
