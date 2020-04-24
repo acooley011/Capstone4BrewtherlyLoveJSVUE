@@ -36,7 +36,19 @@
             </select>
          </div>   
 
-        <button type="submit" class="btn btn-primary">Add New Brewery</button>
+        <button type="submit" v-on:click="saveBrewery">Add New Brewery</button>
+
+        <div>
+          <a href="#" v-on:click="editBrewery(parseInt(brewery.id))">
+            <i></i> Edit 
+          </a>
+          <a href="#"  v-on:click="deleteBrewery(brewery.id)">
+            <i ></i> Delete 
+          </a>
+        </div>
+
+
+
       </form>
        <hr />
       <div class="confirmation">
@@ -52,8 +64,14 @@
 </template>
 
 <script>
+import auth from '../auth.js'
+
 export default {
   name: 'admin',
+  props: {
+    apiURL: String,
+    breweryId: Number
+  },
 
   data () {
     return {
@@ -64,14 +82,62 @@ export default {
       }
     };
   },
+
   methods: {
+   createBrewery() {
+      fetch(this.apiURL,{
+        method: 'POST',
+        headers: {
+          "Content-Type": "application/json",
+          "Authorization": `Bearer ${auth.getToken()}`
+        },
+        body: JSON.stringify(this.brewery)
+      })
+      .then((response) => {
+        if(response.ok) {
+          this.$emit('showBreweries');
+        }
+      })
+      .catch((err) => console.error(err));
+    },
+
     saveBrewery(){
-       // note that JSON.stringify is a built in function which takes a javascript object
-      // and turns it into a json string!
-      const json = JSON.stringify(this.brewery);
-      //TODO issue a fetch request to submit the data to the server
-      console.log(`We submitted the data to the server: ${json}`);
-    }
+      this.breweryId === 0 ? this.createBrewery() : this. updateBrewery();
+    },
+
+    updateBrewery(id) {
+      this.$emit('updateBrewery',id)
+    },
+
+    deleteBrewery() {
+      fetch(`${this.apiURL}/${this.breweryId}`,{
+        method: 'DELETE',
+        headers: { 
+          "Authorization": `Bearer ${auth.getToken()}`
+        }
+      }
+
+      )
+      .then((response) => {
+        if( response.ok ) {
+          this.brewery.splice(index,1);
+        }
+      })
+      .catch((err) => console.error(err));
+    },
+  
+  computed: {
+      created() {
+        if( this.breweryId != 0 ) {
+          fetch(this.apiURL + '/' + this.breweryId)
+            .then((response) => {
+          return response.json();
+        })
+        .then((brewery) => {
+          this.brewery = brewery;
+        })
+        .catch((err) => console.error(err));
+      }
   }
 }
 </script>
@@ -79,4 +145,3 @@ export default {
 <style scoped>
 
 </style>
-
