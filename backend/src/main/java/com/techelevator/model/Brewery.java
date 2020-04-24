@@ -1,20 +1,30 @@
 package com.techelevator.model;
 
-
+import org.hibernate.validator.constraints.NotBlank;
 
 /**
  * Brewery
  */
 public class Brewery {
-    
+	
+    //Added validation NotBlank so that all fields must be filled to add brewery info 
+	private int id;
+	
+	@NotBlank(message="Name cannot be blank")
 	private String name;
+	@NotBlank(message="required")
 	private String address;
+	@NotBlank(message="required")
 	private String city;
+	@NotBlank(message="required")
 	private int zip;
 	private String neighborhood;
+	@NotBlank(message="required")
 	private String contact;
+	@NotBlank(message="required")
 	private String description;
 	private String breweryLogoUrl;
+	@NotBlank(message="required")
 	private String businessHours;
 	
 	public String getName() {
@@ -70,6 +80,12 @@ public class Brewery {
 	}
 	public void setBusinessHours(String businessHours) {
 		this.businessHours = businessHours;
+	}
+	public long getId() {
+		return id;
+	}
+	public void setId(int id) {
+		this.id = id;
 	}
 	
 }

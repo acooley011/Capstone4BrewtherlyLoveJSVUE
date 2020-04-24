@@ -8,11 +8,13 @@ public class Beer {
 	
 	/*Properties*/
 	
-	private Long id;
+	private int id;
 	
-	@NotBlank
+	@NotBlank(message="Name cannot be blank")
 	private String name;
+	@NotBlank(message="required")
 	private String description;
+	@NotBlank(message="required")
 	private BigDecimal abv;
 	private String type;
 	private String imgUrl;
@@ -26,11 +28,11 @@ public class Beer {
 
 	/*GETTERS AND SETTERS*/
 
-	public Long getId() {
+	public int getId() {
 		return id;
 	}
 
-	public void setId(Long id) {
+	public void setId(int id) {
 		this.id = id;
 	}
 
