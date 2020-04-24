@@ -1,11 +1,12 @@
 <template>
 
   <section class="section">
-      <img src="../assets/images/beerbanner.png" width="100%"/>
-      <section><br/>
-  <div class="heading">
+     <div class="heading">
     <h1 class="headline-text"><strong>Welcome to the City of Brew-therly Love</strong></h1><br/>
   </div>
+      <img src="../assets/images/beerbanner.png" width="100%"/>
+      <section><br/>
+ 
   </section>
 <main id="main-content" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
 
@@ -39,7 +40,7 @@ color: black;
 
 }
 .text-box {
-  opacity: 0.8;
+  opacity: 0.92;
 }
 section {
   width: 100%;
