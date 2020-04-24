@@ -10,11 +10,12 @@ public interface UserDao {
      * stored in the system. We will never have any idea what it is!
      *
      * @param userName the user name to give the new user
+     * @param email
      * @param password the user's password
      * @param role the user's role
      * @return the new user
      */
-    public User saveUser(String userName, String password, String role);
+    public User saveUser(String userName, String email, String password, String role);
 
     public void changePassword(User user, String newPassword);
 

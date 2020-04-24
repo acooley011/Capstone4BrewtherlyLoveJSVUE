@@ -1,6 +1,7 @@
 package com.techelevator.model;
 
 import javax.validation.constraints.AssertTrue;
+import org.hibernate.validator.constraints.Email;
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -10,6 +11,10 @@ import org.hibernate.validator.constraints.NotBlank;
 public class User {
     @NotBlank(message = "Username is required")
     private String username;
+
+    @NotBlank(message = "Email is required")
+    @Email(message = "Must be valid email")
+    private String email;
 
     @NotBlank(message = "Role is required")
     private String role;
@@ -42,6 +47,10 @@ public class User {
      */
     public String getUsername() {
         return username;
+    }
+
+    public String getEmail() {
+        return email;
     }
 
     /**
@@ -77,6 +86,10 @@ public class User {
      */
     public void setUsername(String username) {
         this.username = username;
+    }
+
+    public void setEmail(String email) {
+        this.email = email;
     }
 
     public void setPassword(String password) {

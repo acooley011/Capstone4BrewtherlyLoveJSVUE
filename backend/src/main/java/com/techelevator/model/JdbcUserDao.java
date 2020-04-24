@@ -38,22 +38,24 @@ public class JdbcUserDao implements UserDao {
      * stored in the system. We will never have any idea what it is!
      *
      * @param userName the user name to give the new user
+     * @param email
      * @param password the user's password
      * @param role the user's role
      * @return the new user
      */
     @Override
-    public User saveUser(String userName, String password, String role) {
+    public User saveUser(String userName, String email, String password, String role) {
         byte[] salt = passwordHasher.generateRandomSalt();
         String hashedPassword = passwordHasher.computeHash(password, salt);
         String saltString = new String(Base64.encode(salt));
         long newId = jdbcTemplate.queryForObject(
-                "INSERT INTO users(username, password, salt, role) VALUES (?, ?, ?, ?) RETURNING id", Long.class,
-                userName, hashedPassword, saltString, role);
+                "INSERT INTO users(username, email, password, salt, role) VALUES (?, ?, ?, ?, ?) RETURNING id", Long.class,
+                userName, email, hashedPassword, saltString, role);
 
         User newUser = new User();
         newUser.setId(newId);
         newUser.setUsername(userName);
+        newUser.setEmail(email);
         newUser.setRole(role);
 
         return newUser;
@@ -103,7 +105,7 @@ public class JdbcUserDao implements UserDao {
     @Override
     public List<User> getAllUsers() {
         List<User> users = new ArrayList<User>();
-        String sqlSelectAllUsers = "SELECT id, username, role FROM users";
+        String sqlSelectAllUsers = "SELECT id, username, email, role FROM users";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllUsers);
 
         while (results.next()) {
@@ -118,6 +120,7 @@ public class JdbcUserDao implements UserDao {
         User user = new User();
         user.setId(results.getLong("id"));
         user.setUsername(results.getString("username"));
+        user.setEmail(results.getString("email"));
         user.setRole(results.getString("role"));
         return user;
     }
