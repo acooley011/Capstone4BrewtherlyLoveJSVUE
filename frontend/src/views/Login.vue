@@ -9,8 +9,10 @@
       <div class="alert alert-success" role="alert" v-if="this.$route.query.registration">
         Thank you for registering, please sign in.
       </div>
+       <main  class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
       
-      <section>
+      <section class="section">
+   
       <div class="field is-center" id="login">
       <label for="username" class="field"><strong>Username:</strong></label>
       <div>
@@ -41,6 +43,7 @@
       <router-link :to="{ name: 'register' }" class="link-text"><strong>Need an account?</strong></router-link><br/><br/>
        <router-link :to="{ name: 'password'}" class="link-text"><strong>Forgot your password?</strong></router-link><br/><br/><br/><br/><br/><br/><br/>
        <br/><br/><br/><br/><br/>
+       </main>
     </form>
   </div>
   </container>
@@ -98,13 +101,22 @@ export default {
   text-align: center;
 }
 .link-text {
+
 color: blue;
-	font-size: 12px;
-	text-shadow: 
-  -1px 1px 0 #FFF,
-  1px 1px 0 #FFF,
-	1px -1px 0 #FFF,
-	-1px -1px 0 #FFF;
+	font-size: 14px;
+}
+
+.link-text:hover {
+  text-decoration:underline;
+}
+
+.text-box {
+  opacity: 0.92;
+  width: 40vw;
+}
+
+.main-content {
+margin-left: 30vw;
 }
 
 </style>

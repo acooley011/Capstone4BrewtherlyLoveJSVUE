@@ -62,20 +62,17 @@
       </div>
       </div>
      
-      <br/>
+      
    
- <div class="field is-center">
-    <input type="radio" id="brewer" class="form-control" value="Brewer" v-model="user.role">
-        <label for="brewer">Brewer</label>
-        <br>
-      <input type="radio" id="beer-lover" class="form-control" value="Beer Lover" v-model="user.role">
-        <label for="beer-lover">Beer Lover</label>
-        <br/>
-        <br/>
-        </div>
+ <div class="select">
+   <select>
+      <option selected>Beer Lover</option>
+        <option>Brewer</option>
+    </select>
+        </div><br/><br/>
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         Create Account
-      </button>
+      </button><br/>
      <router-link :to="{ name: 'login' }" class="link-text">
         Have an account?
       </router-link>
@@ -134,11 +131,10 @@ export default {
 .link-text {
 color: blue;
 	font-size: 14px;
-	text-shadow: 
-  -.5px .5px 0 #FFF,
-  .5px .5px 0 #FFF,
-	.5px -.5px 0 #FFF,
-	-.5px -.5px 0 #FFF;
+}
+
+.link-text:hover {
+  text-decoration:underline;
 }
 
 .text-box {
