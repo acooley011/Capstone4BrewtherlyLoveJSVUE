@@ -24,13 +24,12 @@
         <p class="feedback">{{review.review}}</p>
       </div>
     </div>
-    </div>
+  </div>
 </template>
 
 <script>
 export default {
     
-
 data() {
     return {
       showCreate: false,

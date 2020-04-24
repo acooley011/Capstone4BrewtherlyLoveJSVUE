@@ -41,15 +41,16 @@ CREATE TABLE beers (
 );
 
 CREATE TABLE reviews (
-	review_id serial,
-	beer_id integer NOT NULL,
-  name varchar(255) NOT NULL,
-  username varchar(255) NOT NULL UNIQUE,
-	rating varchar(30) NOT NULL,
-	average_rating varchar(30) NOT NULL
-  review varchar(299) NOT NULL,
-  CONSTRAINT pk_review primary key (review_id),
-  CONSTRAINT fk_beer_id foreign key (beer_id);
+    review_id serial,
+    beer_id integer,
+    beer_name varchar(255) NOT NULL,
+    subject varchar(100) NOT NULL,
+    review varchar(299) NOT NULL,
+    rating int NOT NULL,
+    username varchar(255) NOT NULL UNIQUE,
+    CONSTRAINT pk_review_review_id PRIMARY KEY (review_id),
+    CONSTRAINT fk_beer_beer_id FOREIGN KEY (beer_id) REFERENCES beers(beer_id),
+    CONSTRAINT fk_user_user_username FOREIGN KEY (user_username) REFERENCES users(user_username)
 );
 
 COMMIT TRANSACTION;
