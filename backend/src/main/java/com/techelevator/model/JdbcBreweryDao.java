@@ -38,6 +38,7 @@ public class JdbcBreweryDao implements BreweryDao{
 
     private Brewery mapResultToUser(SqlRowSet results) {
     	Brewery brewery = new Brewery();
+    	brewery.setId(results.getLong("id"));
     	brewery.setName(results.getString("name"));
     	brewery.setAddress(results.getString("address"));
     	brewery.setCity(results.getString("city"));
@@ -51,7 +52,7 @@ public class JdbcBreweryDao implements BreweryDao{
     }
 
 	@Override
-	public Brewery getBreweryById(int breweryId) {
+	public Brewery getBreweryById(Long breweryId) {
 		Brewery brewery = new Brewery();
 		
 		return brewery;

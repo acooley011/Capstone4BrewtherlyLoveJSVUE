@@ -38,14 +38,14 @@ public class BeerController {
 	 BeerDAO beerDAO;
 	 
 //TODO eventually may need to connect with brewery and review	 
-//	 @Autowired
-//	 BreweryDao breweryDAO;
+	 @Autowired
+	 BreweryDao breweryDAO;
 //		
 //	 @Autowired
 //	 ReviewDAO reviewDAO;
 	 
 	 @RequestMapping(path="/beer/{id}", method=RequestMethod.GET)
-		public Beer getBeer(@PathVariable long id) {
+		public Beer getBeer(@PathVariable Long id) {
 		 return beerDAO.getBeerById(id);
 	 }
 	}

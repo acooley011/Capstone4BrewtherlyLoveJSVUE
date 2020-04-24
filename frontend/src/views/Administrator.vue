@@ -102,7 +102,7 @@ export default {
     },
 
     saveBrewery(){
-      this.breweryId === 0 ? this.createBrewery() : this. updateBrewery();
+      this.breweryId === 0 ? this.createBrewery() : this.updateBrewery();
     },
 
     updateBrewery(id) {
@@ -120,7 +120,7 @@ export default {
       )
       .then((response) => {
         if( response.ok ) {
-          this.brewery.splice(index,1);
+          this.brewery.splice();
         }
       })
       .catch((err) => console.error(err));

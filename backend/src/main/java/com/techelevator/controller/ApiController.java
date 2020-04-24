@@ -2,6 +2,7 @@ package com.techelevator.controller;
 
 import com.techelevator.authentication.AuthProvider;
 import com.techelevator.authentication.UnauthorizedException;
+import com.techelevator.model.BeerDAO;
 import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryDao;
 import java.util.List;
@@ -25,6 +26,8 @@ public class ApiController {
 	
 	@Autowired
 	private BreweryDao breweryDao;
+	//@Autowired
+	//private BeerDAO beerDao;
 
     @Autowired
     private AuthProvider authProvider;

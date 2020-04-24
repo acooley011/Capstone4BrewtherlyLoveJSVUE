@@ -3,13 +3,15 @@ package com.techelevator.model;
 import java.math.BigDecimal;
 import java.util.List;
 
-//TODO Brewery model will need to use beerId to display beer list
+import org.springframework.stereotype.Service;
 
+//TODO Brewery model will need to use beerId to display beer list
+@Service
 public interface BeerDAO {
 	
 	public List<Beer> getAllBeer();
 	
-	public Beer getBeerById(int id);
+	public Beer getBeerById(Long id);
 
 	public Beer getBeerByName(String name);
 	

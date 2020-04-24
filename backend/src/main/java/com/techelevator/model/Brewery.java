@@ -8,7 +8,7 @@ import org.hibernate.validator.constraints.NotBlank;
 public class Brewery {
 	
     //Added validation NotBlank so that all fields must be filled to add brewery info 
-	private int id;
+	private long id;
 	
 	@NotBlank(message="Name cannot be blank")
 	private String name;
@@ -84,7 +84,7 @@ public class Brewery {
 	public long getId() {
 		return id;
 	}
-	public void setId(int id) {
+	public void setId(long id) {
 		this.id = id;
 	}
 	
