@@ -1,6 +1,6 @@
 package com.techelevator.model;
 
-import java.math.BigDecimal;
+
 import java.util.List;
 
 //TODO Brewery model will need to use beerId to display beer list
@@ -27,6 +27,5 @@ public interface BeerDAO {
 	//public boolean searchForBeerByName(String name);
 	
 	//public void updateBeerAvailability(Long beerId, boolean isActive);
-	
 	
 }

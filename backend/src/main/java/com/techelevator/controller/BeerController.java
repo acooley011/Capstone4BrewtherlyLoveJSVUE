@@ -45,7 +45,7 @@ public class BeerController {
 //	 ReviewDAO reviewDAO;
 	 
 	 @RequestMapping(path="/beer/{id}", method=RequestMethod.GET)
-		public Beer getBeer(@PathVariable int id) {
+		public Beer getBeer(@PathVariable long id) {
 		 return beerDAO.getBeerById(id);
 	 }
 	}
@@ -56,4 +56,4 @@ public class BeerController {
 	 
 	 
 
-}
+
