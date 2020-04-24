@@ -38,8 +38,8 @@ public class BeerController {
 	 BeerDAO beerDAO;
 	 
 //TODO eventually may need to connect with brewery and review	 
-	 @Autowired
-	 BreweryDao breweryDAO;
+//	 @Autowired
+//	 BreweryDao breweryDAO;
 //		
 //	 @Autowired
 //	 ReviewDAO reviewDAO;
