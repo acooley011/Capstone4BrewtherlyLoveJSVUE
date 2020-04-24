@@ -34,7 +34,7 @@
 </header>
     <router-view />
 
-<footer class="footer">
+<footer class="footer" height="5%">
   <div class="content has-text-centered">
     <p>
       <strong>COBL</strong> by <a href="#">TE Capstone Team One PHL 2020</a> 
