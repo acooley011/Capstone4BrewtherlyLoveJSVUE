@@ -45,16 +45,11 @@ public class JDBCBeerDAO implements BeerDAO {
 		return null;
 	}
 
-	@Override
-	public List<Beer> getAllBeerByBrewery(Long breweryId) {
-		// TODO Auto-generated method stub
-		return null;
-	}
 
 	@Override
 	public void saveBeer(Beer newBeer) {
-		jdbcTemplate.update("INSERT INTO beers(name, abv, type, description, img_url) VALUES (?,?,?,?,?)",
-				newBeer.getName(), newBeer.getAbv(), newBeer.getType(), newBeer.getDescription(), newBeer.getImgUrl());
+		jdbcTemplate.update("INSERT INTO beers(brewery_id, name, type, abv, description, img_url) VALUES (?,?,?,?,?,?)",
+				newBeer.getBreweryId(), newBeer.getName(),  newBeer.getType(), newBeer.getAbv(), newBeer.getDescription(), newBeer.getImgUrl());
 	}
 	
 	
@@ -63,8 +58,8 @@ public class JDBCBeerDAO implements BeerDAO {
 	public Beer getBeerById(Long id) {
 		Beer beer = null;
 
-		String sqlGetgetBeerById = "SELECT * FROM beers WHERE beers.beer_id =? GROUP BY beers.beer_id, rating.beer_id ORDER BY name";
-		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetgetBeerById, id, true);
+		String sqlGetBeerById = "SELECT * FROM beers WHERE beers.beer_id =? GROUP BY beers.beer_id ORDER BY name";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetBeerById, id, true);
 		while(result.next()) {
 			beer = mapRowToBeer(result);
 		}
@@ -72,12 +67,12 @@ public class JDBCBeerDAO implements BeerDAO {
 	}
 	
 
-//
-//	@Override
-//	public void removeBeer(Long beerId) {
-//		jdbcTemplate.update("DELETE FROM beers WHERE beer_id = ?", beerId);
-//		
-//	}
+
+	@Override
+	public void deleteBeer(long beerId) {
+		jdbcTemplate.update("DELETE FROM beers WHERE beer_id = ?", beerId);
+		
+	}
 
 
 
@@ -94,15 +89,14 @@ public class JDBCBeerDAO implements BeerDAO {
 		newBeer.setDescription(row.getString("description"));
 		newBeer.setImgUrl(row.getString("img_url"));
 	;
-	//TODO cannot set rating until Reviews model is completed
-//		newBeer.setActive(row.getBoolean("is_active"));
-//		if (row.getBigDecimal("avg_rating") == null) {
-//			newBeer.setRating(row.getBigDecimal("avg_rating"));
-//		} else {
-//			newBeer.setRating(row.getBigDecimal("avg_rating").setScale(2, RoundingMode.HALF_UP));
-//		}
 
 		return newBeer;
+	}
+
+	@Override
+	public List<Beer> getAllBeersInBeerList(long breweryId) {
+		// TODO Auto-generated method stub
+		return null;
 	}
 
 }

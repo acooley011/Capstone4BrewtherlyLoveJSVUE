@@ -22,7 +22,7 @@ public class Beer {
 	
 	//TODO need to connect to Brewery and Reviews for Beerlist and review rating
 	//private int rating;
-	//private Long breweryId
+	private long breweryId;
 	//The Brewery model will need to use beerId
 	
 
@@ -30,6 +30,14 @@ public class Beer {
 
 	public long getId() {
 		return id;
+	}
+
+	public Long getBreweryId() {
+		return breweryId;
+	}
+
+	public void setBreweryId(long breweryId) {
+		this.breweryId = breweryId;
 	}
 
 	public void setId(long id) {
