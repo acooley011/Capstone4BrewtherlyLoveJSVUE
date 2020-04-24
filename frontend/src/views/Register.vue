@@ -1,6 +1,5 @@
 <template>
-
-  <main class="is-size-20 has-text-weight-semibold box has-text-centered text-box">
+ <section class="section">
   <div id="register">
     <form class="form-register" @submit.prevent="register">
       <h1 class="h3 mb-3 font-weight-normal">Create Account</h1>
@@ -8,8 +7,9 @@
         There were problems registering this user.
       </div>
 
-      <section>
-      <div class="field is-center " id="register">
+     
+<main  class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
+     <div class="field is-center " id="register">
       <label for="username" class="field"><strong>  Username:  </strong></label>
       <div>
       <input
@@ -35,8 +35,6 @@
           />
           </div>
           </div>
-        </section>
-        <section>
      <div class="field is-center " id="register">
       <label for="password" class="field"><strong>  Password:  </strong></label>
       <div>
@@ -63,34 +61,29 @@
       />
       </div>
       </div>
-      </section>
+     
       <br/>
-      <section>
-      <div class="field is-center">
+   
+ <div class="field is-center">
     <input type="radio" id="brewer" class="form-control" value="Brewer" v-model="user.role">
         <label for="brewer">Brewer</label>
         <br>
       <input type="radio" id="beer-lover" class="form-control" value="Beer Lover" v-model="user.role">
         <label for="beer-lover">Beer Lover</label>
-        <br>
-        <br>
-     
-        </div>
-   
         <br/>
-
-      <br/>
-      <router-link :to="{ name: 'login' }" class="link-text">
-        Have an account?
-      </router-link>
-      </section>
+        <br/>
+        </div>
       <button class="btn btn-lg btn-primary btn-block" type="submit">
         Create Account
       </button>
+     <router-link :to="{ name: 'login' }" class="link-text">
+        Have an account?
+      </router-link>
+        </main>
+  
     </form>
-    
   </div>
-  </main>
+ </section>
 </template>
 
 <script>
@@ -149,10 +142,17 @@ color: blue;
 }
 
 .text-box {
-  align-items: center;
   opacity: 0.92;
   width: 50vw;
 }
 
+section {
+  
+  align-content: center;
+  justify-content: center;
+}
 
+.main-content {
+margin-left: 20vw;
+}
 </style>
