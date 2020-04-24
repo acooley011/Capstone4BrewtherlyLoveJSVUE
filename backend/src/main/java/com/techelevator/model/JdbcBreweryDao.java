@@ -3,6 +3,8 @@ package com.techelevator.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import javax.sql.DataSource;
+
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
@@ -11,6 +13,10 @@ import org.springframework.stereotype.Component;
 public class JdbcBreweryDao implements BreweryDao{
 
     private JdbcTemplate jdbcTemplate;
+
+	public JdbcBreweryDao(DataSource dataSource) {
+		this.jdbcTemplate = new JdbcTemplate(dataSource);
+	}
    
     /**
      * Get all of the breweries from the database.
@@ -19,7 +25,7 @@ public class JdbcBreweryDao implements BreweryDao{
     @Override
     public List<Brewery> getAllBreweries() {
         List<Brewery> breweries = new ArrayList<Brewery>();
-        String sqlSelectAllBreweries = "SELECT  FROM breweries";
+        String sqlSelectAllBreweries = "SELECT * FROM breweries";
         SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectAllBreweries);
 
         while (results.next()) {

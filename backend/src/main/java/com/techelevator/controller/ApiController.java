@@ -4,9 +4,10 @@ import com.techelevator.authentication.AuthProvider;
 import com.techelevator.authentication.UnauthorizedException;
 import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryDao;
-import com.techelevator.npgeek.model.Park;
-
 import java.util.List;
+
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpSession;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
@@ -40,18 +41,20 @@ public class ApiController {
         if (!authProvider.userHasRole(new String[] { "admin" })) {
             throw new UnauthorizedException();
         }
+        System.out.println("running admin");
         return "Success";
+        
     }
     
     
 	@RequestMapping(value="/breweries", method=RequestMethod.GET)
-	public String displayFavoritesPage(ModelMap model)
+	public String getAllBreweries(
+			HttpServletRequest request,
+			HttpSession session,
+			ModelMap model)
 	{
-		List<Brewery> breweries = breweryDao.getAllBreweries();
-		
-		model.put("breweries", breweries);
-		
-		return "breweries";
+		System.out.println("entering getAllBreweries()");
+		return "RESULT ==> ";
 	}
     
     
