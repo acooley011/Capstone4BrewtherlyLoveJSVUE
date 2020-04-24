@@ -15,7 +15,7 @@
       </div>
     <div class="navbar-menu is-link">
 			<div class="navbar-start is-size-5">
-    <a href="#">
+    <a href="/">
       <img src="./assets/images/navbarImageWhite.png" width="40px" alt="Love Beer logo">
     </a>
     
@@ -32,10 +32,10 @@
     </div>
   </navbar>
 </header>
-    <router-view />
+<router-view />
 
-<footer class="footer" height="5%">
-  <div class="content has-text-centered">
+<footer>
+  <div class="footer">
     <p>
       <strong>COBL</strong> by <a href="#">TE Capstone Team One PHL 2020</a> 
     </p>
@@ -66,6 +66,7 @@ background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Phila
 }
 
 footer {
+  text-align: center;
   height: 20px;
 }
 
