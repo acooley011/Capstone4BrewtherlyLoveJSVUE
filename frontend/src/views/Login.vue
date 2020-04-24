@@ -1,5 +1,6 @@
 <template>
-  <div id="login" class="text-center">
+<container>
+  <div id="login">
     <form class="form-signin" @submit.prevent="login">
       <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
       <div class="alert alert-danger" role="alert" v-if="invalidCredentials">
@@ -8,17 +9,23 @@
       <div class="alert alert-success" role="alert" v-if="this.$route.query.registration">
         Thank you for registering, please sign in.
       </div>
-      <label for="username" class="sr-only">Username</label>
-      <input
-        type="text"
+      
+      <section>
+      <div class="field is-center" id="login">
+      <label for="username" class="field"><strong>Username:</strong></label>
+      <div>
+      <input type="text"
         id="username"
         class="form-control"
         placeholder="Username"
         v-model="user.username"
         required
-        autofocus
-      />
-      <label for="password" class="sr-only">Password</label>
+        autofocus/>
+      </div>
+      </div>
+      <div class="field is-center" id="login">
+      <label for="password" class="field"><strong>Password:</strong></label>
+      <div>
       <input
         type="password"
         id="password"
@@ -27,10 +34,16 @@
         v-model="user.password"
         required
       />
-      <router-link :to="{ name: 'register' }">Need an account?</router-link>
-      <button type="submit">Sign in</button>
+      </div>
+      </div>
+      </section>
+      <button type="submit">Sign in</button><br/>
+      <router-link :to="{ name: 'register' }" class="link-text"><strong>Need an account?</strong></router-link><br/><br/>
+       <router-link :to="{ name: 'password'}" class="link-text"><strong>Forgot your password?</strong></router-link><br/><br/><br/><br/><br/><br/><br/>
+       <br/><br/><br/><br/><br/>
     </form>
   </div>
+  </container>
 </template>
 
 <script>
@@ -81,5 +94,17 @@ export default {
 </script>
 
 <style>
+#login {
+  text-align: center;
+}
+.link-text {
+color: blue;
+	font-size: 12px;
+	text-shadow: 
+  -1px 1px 0 #FFF,
+  1px 1px 0 #FFF,
+	1px -1px 0 #FFF,
+	-1px -1px 0 #FFF;
+}
 
 </style>

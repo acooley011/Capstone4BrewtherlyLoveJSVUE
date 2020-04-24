@@ -1,17 +1,20 @@
 <template>
 
   <section class="section">
-      <img src="../assets/images/beerbanner.png" width="100%"/>
-      <section><br/>
-  <div class="heading">
+     <div class="heading">
     <h1 class="headline-text"><strong>Welcome to the City of Brew-therly Love</strong></h1><br/>
   </div>
+      <img src="../assets/images/beerbanner.png" width="100%"/>
+      <section><br/>
+ 
   </section>
 <main id="main-content" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
 
     <p> We keep track of all the breweries in Philadelphia so you don't have to! Browse our website and you will find a list of all the breweries and cider distilleries in Center City and surrounding neighborhoods. Make an account as a beer lover and you will be able to review any beers you try, along with interact with fellow beer lovers. Check out the review page for a list of all the reviewed beers sorted by average rating. Find out which breweries and beers are most popular at a glance.</p><br/>
-    <p>Own a brewery? Make a profile page if we don't already have one and keep track of your delicious brew stock for the public to see. Respond to customer questions on the message board too! Philadelphia has so many great places to go and now you wont have to worry about finding the best breweries in town.</p>
+    <p>Own a brewery? Make a profile page if we don't already have one and keep track of your delicious brew stock for the public to see. Respond to customer questions on the message board too! Philadelphia has so many great places to go and now we can drink up together in the City of Brew-therly Love.</p>
+<br/><br/>
 </main>
+<br/><br/>
 </section>
 </template>
 
@@ -37,7 +40,7 @@ color: black;
 
 }
 .text-box {
-  opacity: 0.8;
+  opacity: 0.92;
 }
 section {
   width: 100%;

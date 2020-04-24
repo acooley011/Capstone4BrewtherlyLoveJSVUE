@@ -3,7 +3,7 @@ package com.techelevator.model;
 
 
 /**
- * User
+ * Brewery
  */
 public class Brewery {
     
