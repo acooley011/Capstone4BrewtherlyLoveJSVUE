@@ -11,7 +11,7 @@ import java.util.List;
 	     * @return a List of user objects
 	     */
 	    public List<Brewery> getAllBreweries();
-	    public Brewery getBreweryById(int brewryId);
+	    public Brewery getBreweryById(int breweryId);
 		
 	
 }
