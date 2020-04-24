@@ -24,8 +24,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/api")
 public class ApiController {
 	
-	@Autowired
-	private BreweryDao breweryDao;
+	// @Autowired
+	// private BreweryDao breweryDao;
 	//@Autowired
 	//private BeerDAO beerDao;
 
@@ -49,23 +49,22 @@ public class ApiController {
         
     }
     
-    
-    @RequestMapping(value="/breweries", method=RequestMethod.GET)
-	public String getAllBreweries(
-			HttpServletRequest request,
-			HttpSession session,
-			ModelMap model)
-	{
-		System.out.println("entering getAllBreweries()");
-		List<Brewery> breweries = breweryDao.getAllBreweries();
-		model.put("breweries", breweries);
-		String result = "Size of breweries [" + breweries.size() + "]";
-		String jsonBreweries = "{\"breweries\":[  \r\n" + 
-				"    {\"name\":\"Yards Brewery\", \"email\":\"victoryl@gmail.com\"},  \r\n" + 
-				"    {\"name\":\"AJS\", \"email\":\"ag@gmail.com\"},  \r\n" + 
-				"    {\"name\":\"Tired Hands\", \"email\":\"tiredhands@gmail.com\"}  \r\n" + 
-				"]}  ";
-		System.out.println("exiting getAllBreweries() " + result + " " + jsonBreweries);
-		return "RESULT ==> " + result + "\n" + jsonBreweries;
-	}
+    // @RequestMapping(value="/breweries", method=RequestMethod.GET)
+	// public String getAllBreweries(
+	// 		HttpServletRequest request,
+	// 		HttpSession session,
+	// 		ModelMap model)
+	// {
+	// 	System.out.println("entering getAllBreweries()");
+	// 	List<Brewery> breweries = breweryDao.getAllBreweries();
+	// 	model.put("breweries", breweries);
+	// 	String result = "Size of breweries [" + breweries.size() + "]";
+	// 	String jsonBreweries = "{\"breweries\":[  \r\n" + 
+	// 			"    {\"name\":\"Yards Brewery\", \"email\":\"victoryl@gmail.com\"},  \r\n" + 
+	// 			"    {\"name\":\"AJS\", \"email\":\"ag@gmail.com\"},  \r\n" + 
+	// 			"    {\"name\":\"Tired Hands\", \"email\":\"tiredhands@gmail.com\"}  \r\n" + 
+	// 			"]}  ";
+	// 	System.out.println("exiting getAllBreweries() " + result + " " + jsonBreweries);
+	// 	return "RESULT ==> " + result + "\n" + jsonBreweries;
+	// }
 }
