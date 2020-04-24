@@ -143,12 +143,12 @@ color: blue;
 }
 
 section {
-  
   align-content: center;
   justify-content: center;
 }
 
 .main-content {
-margin-left: 20vw;
+margin-left: 22vw;
+
 }
 </style>

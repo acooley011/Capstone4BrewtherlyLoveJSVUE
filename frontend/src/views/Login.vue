@@ -1,5 +1,5 @@
 <template>
-<container>
+<section class="section">
   <div id="login">
     <form class="form-signin" @submit.prevent="login">
       <h1 class="h3 mb-3 font-weight-normal">Please Sign In</h1>
@@ -11,7 +11,7 @@
       </div>
        <main  class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
       
-      <section class="section">
+      
    
       <div class="field is-center" id="login">
       <label for="username" class="field"><strong>Username:</strong></label>
@@ -38,7 +38,6 @@
       />
       </div>
       </div>
-      </section>
       <button type="submit">Sign in</button><br/>
       <router-link :to="{ name: 'register' }" class="link-text"><strong>Need an account?</strong></router-link><br/><br/>
        <router-link :to="{ name: 'password'}" class="link-text"><strong>Forgot your password?</strong></router-link><br/><br/><br/><br/><br/><br/><br/>
@@ -46,7 +45,7 @@
        </main>
     </form>
   </div>
-  </container>
+</section>
 </template>
 
 <script>
@@ -101,7 +100,6 @@ export default {
   text-align: center;
 }
 .link-text {
-
 color: blue;
 	font-size: 14px;
 }
@@ -112,11 +110,16 @@ color: blue;
 
 .text-box {
   opacity: 0.92;
-  width: 40vw;
+  width: 50vw;
+}
+
+section {
+  align-content: center;
+  justify-content: center;
 }
 
 .main-content {
-margin-left: 30vw;
+margin-left: 22vw;
 }
 
 </style>
