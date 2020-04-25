@@ -23,6 +23,7 @@ public interface BeerDAO {
 	public void deleteBeer(long beerId);
 	
 
+
 	
 	
 }
