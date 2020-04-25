@@ -25,6 +25,8 @@ public class BreweryController {
 	
 	 @Autowired
 	 private BreweryDao breweryDao;
+	 
+	 //TODO should this actually be path="/brewery-list" ? does the path here need to match the router/front-end?
 	
 	 @RequestMapping(value="/breweries", method=RequestMethod.GET)
 		 public String getAllBreweries(

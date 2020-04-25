@@ -23,7 +23,7 @@ public class JDBCBeerDAO implements BeerDAO {
 	}	
 
 	@Override
-	public List<Beer> getAllBeer() {
+	public List<Beer> getAllBeers() {
 		
 		List<Beer> allBeers = new ArrayList<>();
 		String sqlSelectAllBeers = "SELECT * FROM beers ORDER BY name";

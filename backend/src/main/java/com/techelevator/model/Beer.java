@@ -21,6 +21,7 @@ public class Beer {
 
 	
 	//TODO need to connect to Brewery and Reviews for Beerlist and review rating
+	//Should we include average rating with beer?
 	//private int rating;
 	private long breweryId;
 	//The Brewery model will need to use beerId

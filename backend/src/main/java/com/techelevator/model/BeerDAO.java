@@ -9,7 +9,7 @@ import org.springframework.stereotype.Service;
 @Service
 public interface BeerDAO {
 	
-	public List<Beer> getAllBeer();
+	public List<Beer> getAllBeers();
 	
 	public Beer getBeerById(Long id);
 

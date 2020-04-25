@@ -44,7 +44,7 @@ public class BeerController {
 //	 @Autowired
 //	 ReviewDAO reviewDAO;
 	 
-	 @RequestMapping(path="/beer/{id}", method=RequestMethod.GET)
+	 @RequestMapping(path="/beers/{id}", method=RequestMethod.GET)
 		public Beer getBeer(@PathVariable Long id) {
 		 return beerDAO.getBeerById(id);
 	 }
