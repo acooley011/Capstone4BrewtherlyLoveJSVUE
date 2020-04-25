@@ -11,6 +11,7 @@ import Brewer from './views/Brewer.vue'
 import BeerLover from './views/BeerLover.vue'
 import BeerList from './views/Beers.vue'
 
+
 Vue.use(Router)
 
 /**
@@ -98,6 +99,8 @@ const router = new Router({
       requiresAuth: false
     }
   },
+
+  
 
 
   ]
