@@ -9,8 +9,6 @@ import Reviews from './views/Reviews.vue'
 import Administrator from './views/Administrator.vue'
 import Brewer from './views/Brewer.vue'
 import BeerLover from './views/BeerLover.vue'
-import Beers from './views/Beers.vue'
-import BeerDetails from './views/BeerDetails.vue'
 
 
 Vue.use(Router)
@@ -93,23 +91,7 @@ const router = new Router({
     }
   },
 
-  {
-    path: "/beers",
-    name: "beers",
-    component: Beers,
-    meta: {
-      requiresAuth: false
-    }
-  },
-
-  {
-    path: "/beers/:id",
-    name: "beer",
-    component: BeerDetails,
-    meta: {
-      requiresAuth: false
-    }
-  },
+  
 
 
   ]
