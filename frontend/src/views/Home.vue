@@ -4,7 +4,7 @@
      <div class="heading">
     <h1 class="headline-text"><strong>Welcome to the City of Brew-therly Love</strong></h1><br/>
   </div>
-      <img src="../assets/images/beerbanner.png" width="100%" />
+      <img src="../assets/images/brewbannermockup.png" width="100%" />
     <br/><br/><br/>
 <main id="main-content" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
 
