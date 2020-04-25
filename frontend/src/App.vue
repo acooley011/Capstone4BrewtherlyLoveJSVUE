@@ -34,12 +34,12 @@
 </header>
 <router-view />
 
-<footer>
-  <div class="footer">
+<footer class="footer-text">
+  
     <p>
       <strong>COBL</strong> by <a href="#">TE Capstone Team One PHL 2020</a> 
     </p>
-  </div>
+  
 </footer>
 </body>
 </container>
@@ -52,8 +52,7 @@ h1 {
 }
 
 body {
-justify-content: center;
-align-items: center;
+
 background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Philadelphia_cityscape_BW_20150328.jpg/1200px-Philadelphia_cityscape_BW_20150328.jpg") center / cover;
 }
 
@@ -65,12 +64,17 @@ background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Phila
   color: white;
 }
 
-footer {
-  text-align: center;
-  height: 20px;
+
+.footer-text {
+background-color: white;
+text-align: center;
+height: 5px;
+ 
 }
 
-
+p {
+  background-color: white;
+}
 
 
 
