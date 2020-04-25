@@ -1,6 +1,6 @@
 package com.techelevator.model;
 
-import java.math.BigDecimal;
+
 import java.util.List;
 
 import org.springframework.stereotype.Service;
@@ -15,20 +15,14 @@ public interface BeerDAO {
 
 	public Beer getBeerByName(String name);
 	
-	//Displaying the Beer List for Brewer to update the  beer list
-	public List<Beer> getAllBeerByBrewery(Long breweryId); 
+	//Displaying the Beer List for Brewery to update its beer list
+	public List<Beer> getAllBeersInBeerList(long breweryId); 
 	
 	public void saveBeer(Beer newBeer);
+		
+	public void deleteBeer(long beerId);
 	
-	//public void updateBeer(String name, BigDecimal abv, String type, String description, String imgUrl, Long beerId);
-	
-	//public void deleteBeer(Long beerId);
-	
-	//public List<Beer> getBeerByBrewery(long breweryId);
-	
-	//public boolean searchForBeerByName(String name);
-	
-	//public void updateBeerAvailability(Long beerId, boolean isActive);
+
 	
 	
 }
