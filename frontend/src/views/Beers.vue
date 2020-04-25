@@ -1,5 +1,5 @@
 <template>
-  <div class="products-list">
+  <div :style="{'background-image':'black'}">
     <h1>Beers from: {{ this.$route.params.brewery }}</h1>
     <beer-list v-bind:beers="beers"/>
   </div>
@@ -7,7 +7,7 @@
 
 <script>
 //this is the beers by brewer
-import data from '../assets/data/beers.json'
+//import data from '../assets/data/beers.json'
 import BeerList from '@/components/BeerList.vue'
 
 export default {
@@ -17,7 +17,7 @@ export default {
   },
   data() {
     return {
-      allBeers: data,
+      allBeers: [],
       items: []
     }
   },
@@ -33,3 +33,9 @@ export default {
   }
 }
 </script>
+
+<style>
+  body {
+  background-color: black;
+}
+</style>

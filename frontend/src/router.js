@@ -9,6 +9,7 @@ import Reviews from './views/Reviews.vue'
 import Administrator from './views/Administrator.vue'
 import Brewer from './views/Brewer.vue'
 import BeerLover from './views/BeerLover.vue'
+import BeerList from './views/Beers.vue'
 
 Vue.use(Router)
 
@@ -69,6 +70,14 @@ const router = new Router({
     path: "/beer-lover",
     name: "beer-lover",
     component: BeerLover,
+    meta: {
+      requiresAuth: false
+    }
+  },
+  {
+    path: "/beer-list",
+    name: "beer-list",
+    component: BeerList,
     meta: {
       requiresAuth: false
     }

@@ -2,7 +2,7 @@
   <div id="brewery-list">
     <h1>Brewery List</h1>
     <ul>
-      <li>Yards</li>
+      <router-link to="/beer-list" active-class="active" tag="li">Yards</router-link>
       <li>Evil Genius</li>
       <li>LoveCity</li>
       <li>DockStreet</li>
