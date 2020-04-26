@@ -2,7 +2,7 @@
 <div>
     <div class="header">
       <h2>Reviews <span>({{reviews.length}})</span></h2>
-      <a href="#" class="add-review" v-on:click="$emit('addReview')">
+      <a href="#" class="add-review" v-on:click="addReview()">
         <i class="far fa-address-card"></i> Add Review
       </a>
     </div>
@@ -28,14 +28,116 @@
 </template>
 
 <script>
+import moment from 'moment';
+
 export default {
-    
+  name: "CreateReview",
+  props: {
+    apiURL: String
+  },   
 data() {
     return {
-      showCreate: false,
       reviews: []
     };
+  },
+    methods: {
+    addReview() {
+      this.$emit('addReview')
+    },
+    editReview(id) {
+      this.$emit('editReview',id)
+    },
+    deleteReview(id) {
+      fetch(`${this.apiURL}/reviews/${id}`,{
+        method : 'DELETE'
+        }
+      )
+      .then(response => {
+        if(response.ok){
+          const index = this.reviews.map(review => review.id).indexOf(id);
+          this.reviews.splice(index,1);
+        }
+      })
+      .catch(err => console.error(err));
+
+    },
+    formatDate(d) {
+      return moment(d, 'YYYY-MM-DD h:mm:ss a').format('MMMM Do YYYY, h:mm:ss A');
+    }
+  },
+   created() {
+    fetch(`${this.apiURL}/reviews`)
+      .then(response => {
+        return response.json();
+      })
+      .then(apiReviews => {
+        this.reviews = apiReviews;
+
+      
+        this.reviews.sort((reviewA, reviewB) => {
+          if( reviewA.createdAt > reviewB.createdAt ){
+            return -1;
+          }
+          else if ( reviewB.createdAt > reviewA.createdAt){
+            return 1;
+          }
+          else {
+            return 0;
+          }
+        })
+      })
+      .catch(err => console.log(`Error fetching reviews ${err}`));
   }
-}
+
+};
 </script>
 
+<style>
+.header {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+h2 {
+  border:none;
+}
+h2 span {
+  font-size:14px;
+}
+a.add-review {
+  display: block;
+  margin-top:7px;
+  margin-left:auto;
+  text-decoration: none;
+  border:none;
+  color:#4EADEA;
+}
+.review {
+  display: flex;
+  margin: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.review-left {
+  margin-right: 20px;
+}
+.feedback {
+  margin-top: 10px;
+  line-height: 1.7;
+  padding-bottom: 15px;
+}
+.review-actions {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+.review-actions a, .review-actions a:visited {
+  display: block;
+  color:black;
+  margin-top:10px;
+  text-decoration: none;
+  color:#4EADEA;
+}
+.review-actions a:hover {
+  color:rgb(0, 116, 189);
+}
+
+</style>
