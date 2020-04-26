@@ -14,14 +14,15 @@
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input" autofocus/>
+    <input class="input" type="text" placeholder="Text input" required autofocus/>
   </div>
 </div>
 <div class="field is-center" id="review">
   <label class="label"><strong>Beer</strong></label>
     <div class="select">
-      <select>
+      <select required>
 <!-- must add a way to check if beer name exists in beer table -->
+
         <option style="font-weight: bold;">--ARS--</option>
         <option>Short Bursts</option>
         <option>Zwilinger 64</option>
@@ -110,10 +111,18 @@
       </select>
     </div>
   </div>
+
+
+
+
+
+
+
+
 <div class="field is-center" id="review">
   <label class="label">Review:</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Your text here"></textarea>
+    <textarea class="textarea" placeholder="Your text here" required></textarea>
   </div>
 </div>
 <br/>
@@ -146,6 +155,13 @@ export default {
   },
   data() {
     return {
+      review: {
+      reviewTitle: '',
+      beer: '',
+      reviewBody: ''
+      },
+      reviewErrors: false,
+      
       showCreate: false,
       reviews: []
     };
