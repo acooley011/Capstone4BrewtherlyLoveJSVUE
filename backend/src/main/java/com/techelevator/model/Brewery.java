@@ -27,6 +27,9 @@ public class Brewery {
 	@NotBlank(message="required")
 	private String businessHours;
 	
+	//the userId for the brewer 
+	private long userId;
+	
 	public String getName() {
 		return name;
 	}
@@ -86,6 +89,12 @@ public class Brewery {
 	}
 	public void setId(long id) {
 		this.id = id;
+	}
+	public long getUserId() {
+		return userId;
+	}
+	public void setUserId(long userId) {
+		this.userId = userId;
 	}
 	
 }

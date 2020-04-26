@@ -48,7 +48,8 @@ public class JdbcBreweryDao implements BreweryDao{
     	brewery.setContact(results.getString("contact"));
     	brewery.setDescription(results.getString("description"));
     	brewery.setBreweryLogoUrl(results.getString("brewery_img"));
-    	brewery.setBusinessHours(results.getString("business_hours"));    	
+    	brewery.setBusinessHours(results.getString("business_hours")); 
+    	brewery.setUserId(results.getLong("user_id"));
         return brewery;
     }
 
@@ -92,6 +93,25 @@ public class JdbcBreweryDao implements BreweryDao{
 				+ "description = ?, brewery_logo_url = ?, business_hours = ? WHERE brewery_id = ?",
 				name, address, city, neighborhood, zip, contact, description, breweryLogoUrl, businessHours);
 		
+	}
+
+	//use to add beers/update brewery info by brewer
+	@Override
+	public Brewery getBreweryByUserId(long userId) {
+		Brewery breweries = new Brewery();
+		String sqlSelectBrewerieByUserId = "SELECT * FROM breweries WHERE user_id = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlSelectBrewerieByUserId, userId);
+		
+		while(results.next()) {
+			breweries= mapResultToBrewery(results);
+		}
+		return breweries;
+	}
+	@Override
+	public boolean updateBreweryUserId(long id, int userId) {
+		String sqlUpdateBreweryUserId = "UPDATE breweries SET user_id = ? WHERE brewery_id = ?";
+		jdbcTemplate.update(sqlUpdateBreweryUserId, userId, id);
+		return true;
 	}
 
    
