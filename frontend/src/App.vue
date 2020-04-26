@@ -4,7 +4,7 @@
   <body class="has-navbar-fixed-top" width="100%">
  
 <header>
-  <navbar class="level navbar is-fixed-top is-spaced" role="navigation" aria-label="main navigation">
+  <navbar class="level navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
     <div class="level-item has-text-centered">
       <a role="button" class="navbar-burger burger" aria-label="menu"
 				aria-expanded="false" data-target="navbarBasicExample"><span
@@ -55,7 +55,7 @@ h1 {
 
 body {
 
-background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Philadelphia_cityscape_BW_20150328.jpg/1200px-Philadelphia_cityscape_BW_20150328.jpg") center / cover;
+background: url("https://media.nbcphiladelphia.com/2019/09/south-philly-row-homes.jpg?fit=722%2C406") center / cover;
 }
 
 .content {
@@ -65,9 +65,6 @@ background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Phila
 .navbar-item {
   color: white;
 }
-
-
-
 
 .footer-text {
 text-align: center;
@@ -79,7 +76,6 @@ p {
   background-color: white;
   opacity: 0.8;
 }
-
 
 
 </style>
