@@ -47,6 +47,7 @@ CREATE TABLE reviews (
     subject varchar(100) NOT NULL,
     review varchar(299) NOT NULL,
     rating int NOT NULL,
+    date DATE NOT NULL,
     username varchar(255) NOT NULL UNIQUE,
     CONSTRAINT pk_review_review_id PRIMARY KEY (review_id),
     CONSTRAINT fk_beer_beer_id FOREIGN KEY (beer_id) REFERENCES beers(beer_id),

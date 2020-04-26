@@ -3,6 +3,9 @@
   <div id="register">
   <form class="form-register" @submit.prevent="reviews">
     <h1 class="h3 mb-3 font-weight-normal" id="review">Sumbit a Beer Review</h1>
+    <a href="#" class="back" v-on:click="backToReviews()">
+        <i class="fas fa-list-ul"></i> Return to Reviews
+      </a>
     <create-review v-if="showCreate"></create-review>
      <list-reviews v-else v-on:addReview="showCreate = true"></list-reviews>
     <div class="alert alert-danger" role="alert" v-if="reviewErrors">
@@ -14,14 +17,14 @@
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input" required autofocus/>
+    <input v-model="review.reviewTitle" class="input" type="text" placeholder="Text input" required autofocus/>
   </div>
 </div>
 <div class="field is-center" id="review">
-  <label class="label"><strong>Beer</strong></label>
+  <label class="label"><strong>Beer:</strong></label>
     <div class="select">
-      <select required>
-<!-- must add a way to check if beer name exists in beer table -->
+      <select required v-model="review.beer">
+
 
         <option style="font-weight: bold;">--ARS--</option>
         <option>Short Bursts</option>
@@ -112,23 +115,18 @@
     </div>
   </div>
 
-
-
-
-
-
-
+<!--stars/bottles selector should go here -->
 
 <div class="field is-center" id="review">
   <label class="label">Review:</label>
   <div class="control">
-    <textarea class="textarea" placeholder="Your text here" required></textarea>
+    <textarea name="review" id="reivew" cols="60" rows="10" v-model="review.review" class="textarea" placeholder="Your text here" required></textarea>
   </div>
 </div>
 <br/>
 <div class="field is-grouped is-grouped-centered" id="review">
   <div class="control">
-    <button class="button is-success">Submit</button>
+    <button class="button is-success" v-bind:disabled="!isValidForm" v-on:click="saveReview">Submit</button>
   </div>
   <div>
     <button class="button is-link">Cancel</button>
@@ -156,14 +154,13 @@ export default {
   data() {
     return {
       review: {
-      reviewTitle: '',
-      beer: '',
-      reviewBody: ''
+        reviewTitle: '',
+        beer: '',
+        reviewText: '',
       },
       reviewErrors: false,
-      
-      showCreate: false,
-      reviews: []
+      //showCreate: false,
+     // reviews: []
     };
   },
   components: {
@@ -171,42 +168,73 @@ export default {
     ListReviews
   },
   methods: {
-    editReview(id) {
-      this.$emit('editReview',id)
+     backToReviews() {
+      this.$emit("showReviews");
     },
-    deleteReview(id) {
-      fetch(`${this.apiURL}/${id}`,{
-        method: 'DELETE',
+    saveReview() {
+      this.reviewID === 0 ? this.createReview() : this.updateReview();
+    },
+     createReview() {
+       const fetchConfig = {
+        method: 'POST',
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type" : "application/json"
         },
         body: JSON.stringify(this.review)
-      })
-      .then((response) => {
+      };
+
+    fetch(`${this.apiURL}/reviews`, fetchConfig)
+      .then(response => {
         if(response.ok) {
-          // the review has been removed from the server but we need to remove it from the local array
-          // if you were to refresh the page it would be gone but that isn't very SPA like
-          const index = this.reviews.map(review => review.id).indexOf(id);
-          this.reviews.splice(index,1);
+          this.$emit('showReviews');
         }
       })
-      .catch((err) => console.error(err));
+      .catch((err) => console.error('Review creation or update error', err)); //not sure if this will work properly
+  },
+    updateReview() {
+     const fetchConfig = {
+       method: "PUT",
+       headers: {
+         "Content-Type" : "application/json"
+     },
+     body: JSON.stringify(this.review)
+    };
+    fetch(`${this.apiURL}/reviews/${this.reviewID}`, fetchConfig)
+      .then(response => {
+          if(response.ok) {
+            this.$emit('showReviews');
+          }
+        })
+        .catch(err => console.error('Recieved an error creating or updating a review', err));
+    }
+  },
+   // i saved this chunk of code in a note
+    computed: {
+    isValidForm() {
+      return (
+        this.review.reviewTitle != '' &&
+        this.review.beer != '' || '--ARS--' || '--Crime and Punishment--' || '--Dock Street--' || '--Evil Genius--' || '--Love City--' || 
+        '--Original 13 Ciderworks--' || '--Philadelphia Brewing Co--' || '--Separatist--' || '--Tired Hands--' || '--Yards--' &&
+        this.review.reviewText != ''
+      );
     },
-    formatDate(d) {
-      let current_datetime = new Date(d)
-      return (current_datetime.getMonth() + 1) + "/" + current_datetime.getDate() + "/" + current_datetime.getFullYear() + " " + current_datetime.getHours() + ":" + current_datetime.getMinutes();
+    pageTitle() {
+      return this.reviewID === 0 ? "Add Review" : "Edit Review - " + this.review.title;
     }
   },
   created() {
-    // load the reviews
-    fetch(this.apiURL)
-      .then((response) => {
+    if(this.reviewID === 0){
+      return;
+    }
+   // url: 'https://localhost:8081/reviews'; ???
+    fetch(`${this.apiURL}/reviews/${this.reviewID}`)
+      .then(response => {
         return response.json();
       })
-      .then((reviews) => {
-        this.reviews = reviews;
+      .then( review => {
+        this.review = review;
       })
-      .catch((err) => console.error(err));
+      .catch(err => console.error(err));
   }
 };
 </script>
@@ -222,6 +250,18 @@ color: blue;
 	font-size: 14px;
 }
 
+a.back {
+  display: block;
+  margin-top: 7px;
+  margin-left: auto;
+  text-decoration: none;
+  border: none;
+  color: #4eadea;
+}
+
+
+
+
 .link-text:hover {
   text-decoration:underline;
 }
@@ -231,6 +271,8 @@ color: blue;
   opacity: 0.92;
   width: 35vw;
 }
+
+
 
 section {
   align-content: center;
