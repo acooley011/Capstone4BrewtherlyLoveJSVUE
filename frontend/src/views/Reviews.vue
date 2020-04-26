@@ -14,29 +14,99 @@
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
   <div class="control">
-    <input class="input" type="text" placeholder="Text input">
+    <input class="input" type="text" placeholder="Text input" autofocus/>
   </div>
 </div>
 <div class="field is-center" id="review">
   <label class="label"><strong>Beer</strong></label>
     <div class="select">
       <select>
-        <option>Select dropdown</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
-        <option>With options</option>
+<!-- must add a way to check if beer name exists in beer table -->
+        <option style="font-weight: bold;">--ARS--</option>
+        <option>Short Bursts</option>
+        <option>Zwilinger 64</option>
+        <option>Antique'n Pale Ale</option>
+        <option>Chasing The Whale Double IPA</option>
+        <option>Wayne's Pale Ale</option>
+        <option>FUMUS Smoked Black Ale</option>
+        <option>Grinding Teeth IPA</option>
+        <option style="font-weight: bold;">--Crime and Punishment--</option>
+        <option>Space Race IPA</option>
+        <option>Ghost Station Berliner Weisse</option>
+        <option>Pretend Winter Happened Imperial Stout</option>
+        <option>Optimistic Optometrist</option>
+        <option>Vandal Vacation IPA</option>
+        <option style="font-weight: bold;">--Dock Street--</option>
+        <option>Dock Street King Juice</option>
+        <option>Imperial Red Ale</option>
+        <option>Prince Myshkin's Russian Imperial Stout</option>
+        <option>Man Full Of Trouble</option>
+        <option>Amber Ale</option>
+        <option>Golden IPA</option>
+        <option>Bean-2-Bean Espresso Stout</option>
+        <option>Rye IPA</option>
+        <option>Bottle-Conditioned Wild King</option>
+        <option style="font-weight: bold;">--Evil Genius--</option>
+        <option>There’s No Crying in Baseball Mango IPA</option>
+        <option>Purple Monkey Dishwasher Chocolate Peanutbutter Porter</option>
+        <option>Stacy’s Mom Citra IPA </option>
+        <option>#Adulting Guava IPA</option>
+        <option>I’ll Have What She’s Having Chocolate Hazelnut Imperial Stout</option>
+        <option>Santa! I Know Him!</option>
+        <option>#ICantEven Watermelon Blonde Ale</option>
+        <option>New Phone Who Dis? Caramel Macchiato Porter</option>
+        <option style="font-weight: bold;">--Love City--</option>
+        <option>Love City Lager American Lager</option>
+        <option>Unity IPA American IPA</option>
+        <option>Sylvie Stout Oatmeal Stout</option>
+        <option>Eraserhood Hazy IPA</option>
+        <option>Tart Beats Plum Sour</option>
+        <option>Totally Wired Brown Ale</option>
+        <option>Deep Cut Pilsner</option>
+        <option>Generator Wheat </option>
+        <option style="font-weight: bold;">--Original 13 Ciderworks--</option>
+        <option>Sir Charles Original Semi-Dry</option>
+        <option>Sir Charles Deep Blueberry Sea Semi-Dry</option>
+        <option>Sir Charles Strawberry Valkyrie</option>
+        <option>Atacama Bone Dry English Dry</option>
+        <option>Atacama Hopped Hopped Dry</option>
+        <option>Sir Charles Ol’ Scrumpy</option>
+        <option>Sir Charles Irish Scrumpy</option>
+        <option style="font-weight: bold;">--Philadelphia Brewing Co--</option>
+        <option>Harvest From the Hood Wet Hopped Ale</option>
+        <option>Newbold IPA</option>
+        <option>Joe Coffee Porter</option>
+        <option>Rowhouse Red Philly Style Ale</option>
+        <option>Kenzinger</option>
+        <option>Walt Wit</option>
+        <option>Working Cat Pale Ale</option>
+        <option>Yous Gotta Gose</option>
+        <option style="font-weight: bold;">--Separatist--</option>
+        <option>Classic Cream Ale</option>
+        <option>PineApple Smoosh Smoothie IPA</option>
+        <option>Good Good Doulbe IPA</option>
+        <option>Sketches of Cascade Wild Pale Ale</option>
+        <option>Jung Love German-style Kellerbier</option>
+        <option style="font-weight: bold;">--Tired Hands--</option>
+        <option>Alien Church</option>
+        <option>Helles Other People: Helles Lager</option>
+        <option>Sunny Day Comfy and Creamy</option>
+        <option>Austere Modular</option>
+        <option>HopHands</option>
+        <option>Ourison</option>
+        <option>Trendler Schwarzbier</option>
+        <option>Nothing</option>
+        <option>PUNGE</option>
+        <option>Banana Split Double Milkshake IPA</option>
+        <option style="font-weight: bold;">--Yards--</option>
+        <option>Philthy Unfiltered Hazy IPA</option>
+        <option>Loyal Lager</option>
+        <option>Philadelphia Pale Ale</option>
+        <option>Brawler English Mild Ale</option>
+        <option>American IPA</option>
+        <option>Love Stout</option>
+        <option>Pynk Sparkling Tart Berry Ale</option>
+        <option>Extra Special Ale</option>
       </select>
     </div>
   </div>
