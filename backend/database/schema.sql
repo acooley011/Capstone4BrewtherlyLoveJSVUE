@@ -16,6 +16,7 @@ CREATE TABLE users (
 
 CREATE TABLE breweries (
     brewery_id serial,
+    user_id integer,
     name varchar(255) NOT NULL,
     address varchar(255) NOT NULL,
     city varchar(50) NOT NULL,
@@ -25,7 +26,8 @@ CREATE TABLE breweries (
     business_hours varchar(255),
     description text NOT NULL,
     brewery_img varchar(255),
-    CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id)
+    CONSTRAINT pk_brewery_brewery_id PRIMARY KEY (brewery_id),
+    CONSTRAINT fk_brewery_user_id FOREIGN KEY (user_id) REFERENCES users(id)
 );
 
 CREATE TABLE beers (
