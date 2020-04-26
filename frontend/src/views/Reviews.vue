@@ -1,9 +1,67 @@
 <template>
-  <div class="beer-reviews">
+<section class="section">
+  <div id="register">
+  <form class="form-register" @submit.prevent="reviews">
+    <h1 class="h3 mb-3 font-weight-normal" id="review">Sumbit a Beer Review</h1>
     <create-review v-if="showCreate"></create-review>
-    <list-reviews v-else v-on:addReview="showCreate = true"></list-reviews>
-    
+     <list-reviews v-else v-on:addReview="showCreate = true"></list-reviews>
+    <div class="alert alert-danger" role="alert" v-if="reviewErrors">
+      There were problems submitting your review.
+      </div>
+   
+
+<main class="is-size-20 has-text-weight-semibold bos has-text-centered text-box main-content">
+    <div class="field is-center" id="review">
+  <label class="label"><strong>Review Title:</strong></label>
+  <div class="control">
+    <input class="input" type="text" placeholder="Text input">
   </div>
+</div>
+<div class="field is-center" id="review">
+  <label class="label"><strong>Beer</strong></label>
+    <div class="select">
+      <select>
+        <option>Select dropdown</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+        <option>With options</option>
+      </select>
+    </div>
+  </div>
+<div class="field is-center" id="review">
+  <label class="label">Review:</label>
+  <div class="control">
+    <textarea class="textarea" placeholder="Your text here"></textarea>
+  </div>
+</div>
+<br/>
+<div class="field is-grouped is-grouped-centered" id="review">
+  <div class="control">
+    <button class="button is-success">Submit</button>
+  </div>
+  <div>
+    <button class="button is-link">Cancel</button>
+  </div>
+  
+  </div>
+
+ </main>
+</form>
+   </div>
+ </section>
+ 
 </template>
 
 <script>
@@ -68,5 +126,36 @@ export default {
 </script>
 
 <style scoped>
+
+#review {
+  text-align: center;
+}
+
+.link-text {
+color: blue;
+	font-size: 14px;
+}
+
+.link-text:hover {
+  text-decoration:underline;
+}
+
+.text-box {
+  background-color: #f2f2f2;
+  opacity: 0.92;
+  width: 35vw;
+}
+
+section {
+  align-content: center;
+  justify-content: center;
+}
+
+.main-content {
+margin-left: 29.5vw;
+padding: 4vw;
+
+
+}
 
 </style>
