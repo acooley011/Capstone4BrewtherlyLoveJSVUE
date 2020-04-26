@@ -17,7 +17,7 @@
 
 <script>
 //this is where the beers come from, its called products because I got it from old homework number 12
-import data from '../assets/data/products.json'
+import data from '../assets/data/beerlist.json'
 
 export default {
   name: 'beer',
