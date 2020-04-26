@@ -55,7 +55,10 @@ h1 {
 
 body {
 
-background: url("https://media.nbcphiladelphia.com/2019/09/south-philly-row-homes.jpg?fit=722%2C406") center / cover;
+background: linear-gradient(rgba(255, 255, 255, 0.685), rgba(255,255,255,0.8)), url("https://media.nbcphiladelphia.com/2019/09/south-philly-row-homes.jpg?fit=722%2C406") ;
+
+width: 100vw;
+height: 100%;
 }
 
 .content {
