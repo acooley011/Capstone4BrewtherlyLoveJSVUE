@@ -1,5 +1,5 @@
 <template>
-<div class="columns">
+<div class="column">
   <div class="column">
     <img src="../assets/images/brewbannermockup.png" width="100%" /><br/><br/>
     <div class="columns is-mobile">
