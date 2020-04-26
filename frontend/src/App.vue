@@ -67,8 +67,9 @@ background: url("https://upload.wikimedia.org/wikipedia/commons/thumb/5/5a/Phila
 }
 
 
+
+
 .footer-text {
-background-color: white;
 text-align: center;
 height: 5px;
  
@@ -76,6 +77,7 @@ height: 5px;
 
 p {
   background-color: white;
+  opacity: 0.8;
 }
 
 
