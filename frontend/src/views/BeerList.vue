@@ -1,61 +1,41 @@
-
 <template>
-  <div class="beer-list">
-    <div class="beer" v-for="beer in beers" :key="beer.id">
-      <div class="name">{{beer.name}}</div>
-      <div class="type">by {{beer.type}}</div>
-    </div>
+  <div :style="{'background-image':'black'}">
+    <h1>Beer Lists : {{ this.$route.params.brewery }}</h1>
+    <beer-list v-bind:beers="beers"/>
   </div>
 </template>
 
 <script>
+//this is the beers by brewer
+//import data from '../assets/data/beers.json'
+import BeerList from '@/components/BeerList.vue'
+
 export default {
-  name: 'beer-list',
+  name: 'products',
+  components: {
+    BeerList
+  },
   data() {
     return {
-     beers: [
-        { id: 1, name: 'Philthy', type: 'IPA'},
-        { id: 2, name: 'Loyal Lager', type: 'Lager'},
-        { id: 3, name: 'Philadelphia Pale Ale', type: 'Pale Ale'},
-        { id: 4, name: 'Brawler', type: 'English Mild ALe'},
-        { id: 5, name: 'IPA', type: 'American IPA' },
-        { id: 6, name: 'Love Stout', type: 'Dry Stout'},
-        { id: 7, name: 'Pynk', type: 'Tart Fruit Beer'},
-        { id: 8, name: 'ESA', type: 'Extra Special Ale'},
-        { id: 9, name: 'Harvest from the Hood', type: 'Wet Hopped Ale'},
-        { id: 10, name: 'Newbold IPA', type: 'IPA'},
-        { id: 11, name: 'Joe Coffee Porter', type: 'Coffee Porter'},
-        { id: 12, name: 'Rowhouse Red', type: 'Philadelphia Style Ale'},
-        { id: 13, name: 'Kenzinger', type: 'Golden Ale'},
-        { id: 14, name: 'Walt Wit', type: 'Belgian-Style White Ale'},
-        { id: 15, name: 'Working Cat', type: 'Pale Ale' },
-        { id: 16, name: 'Yous Gotta Gose', type: 'Gose'},
-        { id: 17, name: 'There`s No Crying in Baseball', type: 'Mango IPA'},
-        { id: 18, name: 'Purple Monkey Dishwasher', type: 'Chocolate Peanut Butter Porter'},
-        { id: 19, name: 'Stacy`s Mom', type: 'Citra Pale Ale'},
-        { id: 20, name: '#Adulting', type: 'Guava IPA'},
-        { id: 21, name: 'I`ll Have What She`s Having', type: 'Chocolate Hazelnut Imperial Stout'},
-        { id: 22, name: 'Santa! I Know Him!', type: 'Festive Saison'},
-        { id: 23, name: '#ICANTEVEN', type: 'Watermelon Blonde Ale'},
-        { id: 24, name: 'New Phone, Who Dis?', type: 'Caramel Macchiato Porter'},
-        { id: 25, name: 'Alien Church', type: 'IPA' },
-        { id: 26, name: 'Helles Other People', type: 'Lager'},
-        { id: 27, name: 'Austere Modular', type: 'Lager'},
-        { id: 28, name: 'Little Log Cabin', type: 'Simcoe Oat Double'},
-        { id: 29, name: 'HopHands', type: 'Pale Ale'},
-        { id: 30, name: 'Ourison', type: 'Saison'},
-        { id: 31, name: 'Trendler Schwarzbier', type: 'Black Lagerbier'},
-        { id: 32, name: 'Banana Split Double Milkshake IPA', type: 'Milkshake IPA:'},
-        { id: 33, name: 'We Are All Infinite Energy Vibrating At The Same Frequency', type: 'Wheat IPA'}
-      ]
+      allBeers: [],
+      items: []
     }
   },
   methods: {
-
+    getBeers(brewery) {
+      this.items = this.allBeers.filter((beer) => beer.brewery == brewery);
+    }
+  },
+  created() {
+   console.log("hello from product list in view");
+   const brewery = this.$route.params.department;
+   this.getProducts(brewery);
   }
 }
 </script>
 
 <style>
-
+  body {
+  background-color: black;
+}
 </style>

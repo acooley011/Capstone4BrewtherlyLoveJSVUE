@@ -9,7 +9,7 @@ import Reviews from './views/Reviews.vue'
 import Administrator from './views/Administrator.vue'
 import Brewer from './views/Brewer.vue'
 import BeerLover from './views/BeerLover.vue'
-import BeerList from './views/Beers.vue'
+import BeerList from './views/BeerList.vue'
 
 
 Vue.use(Router)
