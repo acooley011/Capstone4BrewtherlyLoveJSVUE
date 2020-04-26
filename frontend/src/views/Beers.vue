@@ -1,6 +1,6 @@
 <template>
   <div :style="{'background-image':'black'}">
-    <h1>Beers from: {{ this.$route.params.brewery }}</h1>
+    <h1>aBeers from: {{ this.$route.params.brewery }}</h1>
     <beer-list v-bind:beers="beers"/>
   </div>
 </template>
