@@ -2,7 +2,10 @@
   <div class="beers-list">
     <div class="beer" v-for="beer in beers" :key="beer.id">
       <div class="name">{{beer.name}}</div>
-      <div class="type">by {{beer.brewery_name}}</div>
+      <div class="type">TYPE : {{beer.type}}</div>
+      <div class="type">{{beer.abv}} %ABV</div>
+      <div class="brewery_name">by {{beer.brewery_name}}</div> 
+      
     </div>
   </div>
 </template>
@@ -38,12 +41,18 @@ export default {
   width: 75px;
 }
 .name {
-  font-size: 21px;
+  font-size: 25px;
   font-weight: 700;
+  color: rgb(38, 0, 255);
+  margin: 5px 0px;
+}
+.brewery_name {
+  font-size: 20px;
+  font-weight: 600;
   margin: 5px 0px;
 }
 .type {
-  font-size:12px;
+  font-size:18px;
   font-style: italic;
 }
 </style>
