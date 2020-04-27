@@ -70,7 +70,7 @@
         <option>Brewer</option>
     </select>
         </div><br/><br/>
-      <button class="btn btn-lg btn-primary btn-block" type="submit">
+      <button class="button is-link" type="submit">
         Create Account
       </button><br/>
      <router-link :to="{ name: 'login' }" class="link-text">

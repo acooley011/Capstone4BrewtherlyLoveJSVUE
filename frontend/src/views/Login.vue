@@ -9,16 +9,16 @@
       <div class="alert alert-success" role="alert" v-if="this.$route.query.registration">
         Thank you for registering, please sign in.
       </div>
-       <main id="main-content" class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
-      
-      
-   
+
+
+
+       <main class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
       <div class="field is-center" id="login">
-      <label for="username" class="field"><strong>Username:</strong></label>
-      <div>
+      <label for="username" class="label"><strong>Username:</strong></label>
+      <div class="control">
       <input type="text"
         id="username"
-        class="form-control"
+        class="input"
         placeholder="Username"
         v-model="user.username"
         required
@@ -27,18 +27,19 @@
       </div>
       <div class="field is-center" id="login">
       <label for="password" class="field"><strong>Password:</strong></label>
-      <div>
+      <div class="control">
       <input
         type="password"
         id="password"
-        class="form-control"
+        class="input"
         placeholder="Password"
         v-model="user.password"
         required
       />
       </div>
       </div>
-      <button type="submit">Sign in</button><br/>
+      
+      <button type="submit" class="button is-link">Sign in</button><br/>
       <router-link :to="{ name: 'register' }" class="link-text"><strong>Need an account?</strong></router-link><br/><br/>
        <router-link :to="{ name: 'password'}" class="link-text"><strong>Forgot your password?</strong></router-link><br/><br/><br/><br/><br/><br/><br/>
        <br/><br/><br/><br/><br/>
@@ -111,7 +112,7 @@ color: blue;
 .text-box {
   background-color: #f2f2f2;
   opacity: 0.92;
-  width: 50vw;
+  width: 30vw;
 }
 
 section {
@@ -120,7 +121,8 @@ section {
 }
 
 .main-content {
-margin-left: 22vw;
+margin-left: 32vw;
+padding: 4vw;
 }
 
 </style>

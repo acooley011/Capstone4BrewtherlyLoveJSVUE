@@ -13,7 +13,7 @@
       </div>
    
 
-<main class="is-size-20 has-text-weight-semibold bos has-text-centered text-box main-content">
+<main class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
   <div class="control">
@@ -23,7 +23,7 @@
 <div class="field is-center" id="review">
   <label class="label"><strong>Beer:</strong></label>
     <div class="select">
-      <select required v-model="review.beer">
+      <select required v-model="review.beer_name">
 
 
         <option style="font-weight: bold;">--ARS--</option>
@@ -147,7 +147,7 @@ import ListReviews from "../components/ListReviews";
 
 
 export default {
-  name: "Reviews",
+  name: "reviews",
   props: {
     apiURL: String
   },
@@ -259,9 +259,6 @@ a.back {
   color: #4eadea;
 }
 
-
-
-
 .link-text:hover {
   text-decoration:underline;
 }
@@ -272,8 +269,6 @@ a.back {
   width: 35vw;
 }
 
-
-
 section {
   align-content: center;
   justify-content: center;
@@ -282,8 +277,6 @@ section {
 .main-content {
 margin-left: 29.5vw;
 padding: 4vw;
-
-
 }
 
 </style>
