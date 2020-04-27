@@ -6,18 +6,8 @@
 	},
 	"item": [
 		{
-			"name": "Get breweries",
+			"name": "Get brewery details",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1ODgwMDg5ODEsInN1YiI6InVzZXIiLCJyb2wiOiJ1c2VyIiwiZXhwIjoxNTg4MDMwNTgxfQ.PfdP7947qNZoiTSLDw-V3RKz824EPzyf6OULOVzMGp649oGan4l_tdpWTpNDgqkoz0XuCefXYWuOIhQXs_nTuA",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [
 					{
@@ -42,6 +32,100 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get beer details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/beerDetails/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"beerDetails",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reviews",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1ODgwMjE5MDAsInN1YiI6InVzZXIiLCJyb2wiOiJ1c2VyIiwiZXhwIjoxNTg4MDQzNTAwfQ.Y6BRqdiQ8svFg_dcGOPN-SmEkeEES-DDRTzJdwb8MmLyacre1lB67L1eQtegmZ0YGA4tCtQSZWBjryY7WWItQw",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2d21cbf2-6388-470d-b6d7-d82eb44790e3",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6d23d12e-460c-4a7b-9b46-6f2731589293",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
 		}
 	],
 	"protocolProfileBehavior": {}

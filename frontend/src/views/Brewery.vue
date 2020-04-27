@@ -35,7 +35,7 @@
           <p class="subtitle">Beer ABV: {{beer.abv}}</p>
           <p class="subsubtitle">{{beer.description}}</p><br/>
           <figure>
-            <img :src="beer.imgUrl + '.png'">
+            <img :src="beer.imgUrl">
           </figure>
         </article>
   </div>
