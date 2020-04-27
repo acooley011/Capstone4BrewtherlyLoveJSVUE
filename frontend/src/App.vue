@@ -6,14 +6,14 @@
 <header>
   <navbar class="level navbar is-fixed-top is-transparent" role="navigation" aria-label="main navigation">
     <div class="level-item has-text-centered">
-      <a role="button" class="navbar-burger burger" aria-label="menu"
+      <a role="button" class="navbar-burger burger" v-on:click="hamburgerOpen = !hamburgerOpen" v-bind:class="{'is-active':hamburgerOpen}" aria-label="menu"
 				aria-expanded="false" data-target="navbarBasicExample"><span
 				aria-hidden="true"></span> 
 				<span aria-hidden="true"></span> <span
 				aria-hidden="true"></span>
 			</a>
       </div>
-    <div class="navbar-menu is-link">
+    <div class="navbar-menu is-link" v-bind:class="{'is-active':hamburgerOpen}">
 			<div class="navbar-start is-size-5">
     <a href="/">
       <img src="./assets/images/navbarImageWhite.png" width="40px" alt="Love Beer logo">
@@ -46,6 +46,16 @@
 </body>
 </container>
 </template>
+<script>
+export default {
+  data() {
+    return {
+        hamburgerOpen : false
+    };
+  }
+
+}
+</script>
 
 <style>
 

@@ -1,5 +1,7 @@
 package com.techelevator.controller;
 
+import java.util.List;
+
 import javax.servlet.http.HttpSession;
 import javax.validation.Valid;
 
@@ -22,6 +24,7 @@ import com.techelevator.model.Review;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/api")
 public class ReviewController {
 
     @Autowired
@@ -29,6 +32,16 @@ public class ReviewController {
 
     @Autowired
     BeerDAO beerDAO;
+    
+    
+    @RequestMapping(path="/reviews", method = RequestMethod.GET)
+    public List<Review> showReviews(@PathVaiable long id) {
+    	//TODO add method for getting all reviews
+    	
+    	return null;
+    }
+    
+    
 
     @RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.GET)
     public String showBreweryDetails(@PathVariable("id") long beerId, ModelMap modelHolder, HttpSession session) {

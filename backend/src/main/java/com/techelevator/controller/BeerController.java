@@ -33,6 +33,7 @@ import com.techelevator.model.Beer;
 
 @RestController
 @CrossOrigin
+@RequestMapping("/api")
 public class BeerController {
 	
 	 @Autowired
@@ -60,18 +61,16 @@ public class BeerController {
 	 
 	 //Getting beer details page by beer id
 	 @RequestMapping(path="/beerDetails/{id}", method=RequestMethod.GET)
-		public String showBreweryDetails(@PathVariable long id, ModelMap modelHolder){
-			if (beerDAO.getBeerById(id) == null) {
-				return "redirect:/beer-list";
-			}
-			Beer beer = beerDAO.getBeerById(id);
-			Brewery brewery = breweryDAO.getBreweryById(beer.getBreweryId());
-			List<Review> reviews = reviewDAO.searchReviewsByBeerId(id);
-			modelHolder.addAttribute("beer", beer);
-			modelHolder.addAttribute("brewery", brewery);
-			modelHolder.addAttribute("reviews", reviews);
+		public Beer showBeerDetails(@PathVariable long id){
 			
-			return "beerDetails";
+		/*
+		 * if (beerDAO.getBeerById(id) == null) { return "redirect:/beer-list"; }
+		 */
+		 
+			Beer beer = beerDAO.getBeerById(id);
+			
+		
+			return beer;
 		}
 	 
 	 //Getting form to add Beer if a brewer

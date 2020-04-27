@@ -59,10 +59,10 @@ public class BreweryController {
 	 //
 	 
 	 @RequestMapping(path = "/admin", method = RequestMethod.POST)
-	 public String createBrewery(@Valid @RequestBody Brewery newBrewery, Binding result) {
+	 public Brewery createBrewery(@Valid @RequestBody Brewery newBrewery, Binding result) {
 		 breweryDao.saveBrewery(newBrewery.getName(), newBrewery.getAddress(), newBrewery.getCity(),newBrewery.getNeighborhood(),  
 					 newBrewery.getZip(), newBrewery.getContact(), newBrewery.getDescription(), newBrewery.getBreweryLogoUrl(), newBrewery.getBusinessHours());
-			return "redirect:/brewery-ligit st";
+			return null;
 	 }
 	 
 	 @RequestMapping(path="/breweryDetails/{id}", method=RequestMethod.GET)
@@ -71,7 +71,7 @@ public class BreweryController {
 
 			List<Beer> breweryBeerList = beerDAO.getAllBeersInBeerList(id);
 			
-			//Response object
+			//Response object- made separate java object for BreweryDetailResponse
 			
 			BreweryDetailResponse response = new BreweryDetailResponse();
 			response.setBeerList(breweryBeerList);
