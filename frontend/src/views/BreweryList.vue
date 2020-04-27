@@ -113,7 +113,7 @@
     <p><strong>Yards Brewing Company</strong></p><br/>
     <div class="columns is-mobile">
       <div>
-       <img src="../assets/images/Breweries/breweryYards.png" width="500vw" style="margin-right: 15vw;"/>
+       <router-link to="/brewery"><img src="../assets/images/Breweries/breweryYards.png" width="500vw" style="margin-right: 15vw;"/></router-link>
       </div>
       <div id="brewery-info" class="text-box" width="25vw;">
         <p style="width: 25vw">Yards has been brewing Philly's beer since 1994. We’ve grown from a garage-sized operation in Manayunk all the way up to our current location at 500 Spring Garden Street in Northern Liberties. And we couldn't have done it without your support through the years. Our beers always have and always will be brewed, bottled, kegged, and canned for the hard working people of Philadelphia and beyond.</p>
