@@ -32,8 +32,8 @@
             />
          </div>      
           <br/>
-        <button type="submit" v-on:click="saveBrewery">Add New Brewery</button>
-
+        <button class="button is-link" type="submit" v-on:click="saveBrewery">Add New Brewery</button>
+<!-- change to real buttons? -->
         <div>
           <a href="#" v-on:click="editBrewery(parseInt(brewery.id))">
             <i></i> Edit

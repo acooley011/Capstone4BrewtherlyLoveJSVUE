@@ -35,7 +35,7 @@
           />
           </div>
           </div>
-     <div class="field is-center " id="register">
+     <div class="field is-center" id="register">
       <label for="password" class="field"><strong>  Password:  </strong></label>
       <div>
       <input
