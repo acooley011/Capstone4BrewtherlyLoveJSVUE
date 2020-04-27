@@ -21,7 +21,7 @@
          </div>  
          <br/>
          <div class="form-group">
-           <label for="brewer">Brewer Userame: </label><br/>
+           <label for="brewer">Brewer Username: </label><br/>
             <input
               type="text"
               class="input"

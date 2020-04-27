@@ -11,7 +11,7 @@
 import BeerList from '@/components/BeerList.vue'
 
 export default {
-  name: 'products',
+  name: 'beer-list',
   components: {
     BeerList
   },
@@ -27,9 +27,8 @@ export default {
     }
   },
   created() {
-   console.log("hello from product list in view");
-   const brewery = this.$route.params.department;
-   this.getProducts(brewery);
+   const brewery = this.$route.params.brewery;
+   this.getBeers(brewery);
   }
 }
 </script>

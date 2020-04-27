@@ -59,7 +59,6 @@ public class ReviewController {
             return "redirect://beerDetails/{id}/review";
         }
 
-        reviewDAO.saveReview(review);
 
         return "redirect:/beerDetails/" + beerId;
     }
