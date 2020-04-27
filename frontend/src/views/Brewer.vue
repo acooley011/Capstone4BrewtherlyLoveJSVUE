@@ -6,7 +6,7 @@
   <div class="form">
     <form v-on:submit.prevent="saveBeer">
       <div class="form-group">
-           <label for="name">Beer Name: </label><br/>
+           <label for="name"><strong>Beer Name: </strong></label><br/>
             <input
               type="text"
               class="input"
@@ -17,7 +17,7 @@
          </div> 
 
         <div class="form-group">
-           <label for="type">Type: </label></br>
+           <label for="type"><strong>Type: </strong></label></br>
              <select class="form-control" id="type" v-model="beer.type">
               <option>Pilsner</option>
               <option>Stout</option>
@@ -36,7 +36,7 @@
          </div>    
 
          <div class="form-group">
-           <label for="name">ABV: </label><br/>
+           <label for="name"><strong>ABV: </strong></label><br/>
             <input
               type="text"
               class="input"
@@ -47,7 +47,7 @@
          </div>
 
          <div class="form-group">
-           <label for="name">Description: </label><br/>
+           <label for="name"><strong>Description: </strong></label><br/>
             <input
               type="text"
               class="input"
