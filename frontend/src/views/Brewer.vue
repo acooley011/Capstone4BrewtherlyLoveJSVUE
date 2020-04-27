@@ -1,11 +1,12 @@
 <template>
-  <div class="brewer"><h1>Brewer</h1>
-    <button type="submit">View Brewery Information</button>
 <section class="section">
-  <!--<h2>Beer List</h2>-->
+  <div class="h3 mb-3 font-weight-normal" id="brewer"><h1>Brewer</h1>
+  <form v-on:submit.prevent="saveBeer">
+    <main class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
+    <button class="button is-link" type="submit">View Brewery Information</button>
   <div class="form">
-    <form v-on:submit.prevent="saveBeer">
-      <div class="form-group">
+    
+      <div class="field is-center">
            <label for="name"><strong>Beer Name: </strong></label><br/>
             <input
               type="text"
@@ -15,11 +16,10 @@
               v-model="beer.name"
             />
          </div> 
-
-        <div class="form-group">
-           <label for="type"><strong>Type: </strong></label></br>
-             <select class="form-control" id="type" v-model="beer.type">
-              <option>Pilsner</option>
+  <label for="type"><strong>Type: </strong></label><br/>
+        <div class="select">
+             <select id="type" v-model="beer.type">
+              <option selected>Pilsner</option>
               <option>Stout</option>
               <option>Porter</option>
               <option>Cider</option>
@@ -35,7 +35,7 @@
             </select>
          </div>    
 
-         <div class="form-group">
+         <div class="field is-center">
            <label for="name"><strong>ABV: </strong></label><br/>
             <input
               type="text"
@@ -46,7 +46,7 @@
             />
          </div>
 
-         <div class="form-group">
+         <div class="field is-center">
            <label for="name"><strong>Description: </strong></label><br/>
             <input
               type="text"
@@ -57,14 +57,16 @@
             />
          </div> 
     <br/>
-    <button type="submit">Add A Beer to Beer List</button><br/>
-    <button type="submit">Update Brewery Information</button><br/>
-    <button type="submit">Remove A Beer from Beer List</button><br/>
+    <div class="field is-center" id="brewer">
+    <button class="button is-link" type="submit">Add A Beer to Beer List</button><br/><br/>
+    <button class="button is-link" type="submit">Update Brewery Information</button><br/><br/>
+    <button class="button is-link" type="submit">Remove A Beer from Beer List</button><br/><br/>
+    </div>
+    </div>
+    </main>
     </form>
   </div>
   </section>
-  </br>
-  </div>
 </template>
 
 <script>
@@ -101,18 +103,25 @@ export default {
 
 <style scoped>
 
-.brewer {
+#brewer {
   text-align: center;
+}
+
+.text-box {
+  background-color: #f2f2f2;
+  opacity: 0.92;
+  width: 35vw;
 }
 
 section {
   align-content: center;
-  text-align: center;
   justify-content: center;
-  background-color: #f2f2f2;
-  opacity: 0.92;
-  width: 35%;
-  margin-left: 32vw;
+}
+
+.main-content {
+margin-left: 30vw;
+min-width: 225px;
+padding: 4vw;
 }
 
 </style>
