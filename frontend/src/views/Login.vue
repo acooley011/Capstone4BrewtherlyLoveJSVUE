@@ -9,7 +9,7 @@
       <div class="alert alert-success" role="alert" v-if="this.$route.query.registration">
         Thank you for registering, please sign in.
       </div>
-       <main  class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
+       <main id="main-content" class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
       
       
    

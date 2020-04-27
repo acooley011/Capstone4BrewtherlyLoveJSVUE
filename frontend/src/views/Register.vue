@@ -8,7 +8,7 @@
       </div>
 
      
-<main  class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
+<main id="main-content"  class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
      <div class="field is-center " id="register">
       <label for="username" class="field"><strong>  Username:  </strong></label>
       <div>
