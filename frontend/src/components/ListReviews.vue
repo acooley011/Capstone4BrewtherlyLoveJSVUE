@@ -67,10 +67,10 @@ export default {
   box-shadow: 2px 2px rgb(0, 0, 0, 60%);
   border: 1px solid rgba(0, 0, 0, 0.6);
 }
-.Review-info {
+.review-info {
   grid-area: review-info;
 }
-.Review-reviews {
+.review-reviews {
   grid-area: review-reviews;
   margin-top: 30px;
 }

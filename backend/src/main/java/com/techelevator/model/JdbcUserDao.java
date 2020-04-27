@@ -140,8 +140,8 @@ public class JdbcUserDao implements UserDao {
 	@Override
 	public List<User> getUserByRole(String role) {
 		List<User> brewers = new ArrayList<>();
-		String sqlgetUserByRoleId = "SELECT * FROM users WHERE role = ?";
-		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlgetUserByRoleId, role);
+		String sqlGetUserByRoleId = "SELECT * FROM users WHERE role = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetUserByRoleId, role);
 		
 		while(results.next()){
 			User brewer = new User();
