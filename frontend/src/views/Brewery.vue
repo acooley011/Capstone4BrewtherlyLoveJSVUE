@@ -120,5 +120,43 @@
 </main>
 </template>
 
+<script>
+
+import auth from "../auth.js";
+
+export default {
+
+  data(){
+    return {
+      breweryDetails: null,
+      breweryId: 1, //TODO during the create method, get the brewery id out of the url, see HW
+    };
+  },
+
+  methods: {
+    fetchBrewery() {
+      const options = {
+        method: "GET",
+        headers:{
+          "Authentication" : `Bearer ${auth.getToken()}`
+        },
+        //If doing post/put then body: json.stringify would go here
+      };
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryDetails/${this.breweryId}`,options) 
+    .then(response => response.json())
+    .then(details => this.breweryDetails = details)
+    .catch(err => console.error(err));
+    }
+
+  },
+
+  created(){
+      //TODO Set brewery id here
+      this.fetchBrewery(); 
+  }
+  
+}
+</script>
+
 <style>
 </style>

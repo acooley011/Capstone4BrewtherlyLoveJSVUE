@@ -99,7 +99,7 @@ public class BeerController {
 		public String addNewBeer(@Valid @ModelAttribute("newBeer") Beer newBeer,
 				BindingResult result, @RequestParam int breweryId, HttpSession session) {
 		 	
-		 newBeer.setBreweryId((long) breweryId);
+		 	newBeer.setBreweryId((long) breweryId);
 			beerDAO.saveBeer(newBeer);
 			return "redirect:/breweryBeers";
 	 }
