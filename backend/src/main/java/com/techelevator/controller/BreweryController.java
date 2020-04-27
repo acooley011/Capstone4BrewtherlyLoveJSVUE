@@ -21,10 +21,12 @@ import com.techelevator.model.Beer;
 import com.techelevator.model.BeerDAO;
 import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryDao;
+import com.techelevator.model.BreweryDetailResponse;
 
 
 @RestController
 @CrossOrigin
+@RequestMapping("/api")
 public class BreweryController {
 	
 	 @Autowired
@@ -60,19 +62,23 @@ public class BreweryController {
 	 public String createBrewery(@Valid @RequestBody Brewery newBrewery, Binding result) {
 		 breweryDao.saveBrewery(newBrewery.getName(), newBrewery.getAddress(), newBrewery.getCity(),newBrewery.getNeighborhood(),  
 					 newBrewery.getZip(), newBrewery.getContact(), newBrewery.getDescription(), newBrewery.getBreweryLogoUrl(), newBrewery.getBusinessHours());
-			return "redirect:/brewery-list";
+			return "redirect:/brewery-ligit st";
 	 }
 	 
 	 @RequestMapping(path="/breweryDetails/{id}", method=RequestMethod.GET)
-		public String showBreweryDetails(@PathVariable long id, ModelMap modelHolder) {
-			Brewery breweryDetails = breweryDao.getBreweryById(id);
+		public BreweryDetailResponse showBreweryDetails(@PathVariable long id) {
+			Brewery brewery = breweryDao.getBreweryById(id);
 
-			modelHolder.addAttribute("details", breweryDetails);
-			
 			List<Beer> breweryBeerList = beerDAO.getAllBeersInBeerList(id);
-			modelHolder.addAttribute("beers", breweryBeerList);
 			
-			return "breweryDetails";
+			//Response object
+			
+			BreweryDetailResponse response = new BreweryDetailResponse();
+			response.setBeerList(breweryBeerList);
+			response.setBrewery(brewery);
+		
+			
+			return response;
 		}
 
 }

@@ -95,7 +95,7 @@ public class JDBCBeerDAO implements BeerDAO {
 	private Beer mapRowToBeer(SqlRowSet row) {
 		Beer newBeer = new Beer();
 		
-		newBeer.setId(row.getLong("id"));
+		newBeer.setId(row.getLong("beer_id"));
 		newBeer.setName(row.getString("name").toUpperCase());
 		newBeer.setAbv(row.getBigDecimal("abv"));
 		newBeer.setType(row.getString("type"));
