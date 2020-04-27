@@ -1,9 +1,9 @@
-'COMMIT TRANSACTION;
 
 BEGIN TRANSACTION;
 
 -- Password for this user is 'greatwall'
-INSERT INTO users ("username", "email", "password", "salt", "role") VALUES
+INSERT INTO users ("username", "email", "password", "salt", "role") 
+VALUES
 ('user',
 'fakeemail@yahoo.com',
 'FjZDm+sndmsdEDwNtfr6NA==',
@@ -845,7 +845,7 @@ VALUES (74,
 
 INSERT INTO reviews(review_id, beer_id, beer_name, subject, review, rating, date, username)
 VALUES(1, 1, 'Philthy Unfiltered Hazy IPA',
-'This was a digustingly good beer',
+'This was a disgustingly good beer',
 'Reminds me of the dirty streets of Filthadelphia..but in a good way! I drank over 100 of these in one day.',
 5, '2020-04-27', 'user');
 
