@@ -10,7 +10,7 @@ import Administrator from './views/Administrator.vue'
 import Brewer from './views/Brewer.vue'
 import BeerLover from './views/BeerLover.vue'
 import BeerList from './views/BeerList.vue'
-
+import Brewery from './views/Brewery.vue'
 
 Vue.use(Router)
 
@@ -99,7 +99,14 @@ const router = new Router({
       requiresAuth: false
     }
   },
-
+  {
+    path: "/brewery",
+    name: "brewery",
+    component: Brewery,
+    meta: {
+      requiresAuth: false
+    }
+  },
   
 
 
