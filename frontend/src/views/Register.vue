@@ -139,7 +139,7 @@ color: blue;
 
 .text-box {
   opacity: 0.92;
-  width: 50vw;
+  width: 30vw;
 }
 
 section {
@@ -148,7 +148,10 @@ section {
 }
 
 .main-content {
-margin-left: 22vw;
+margin-left: 32.3vw;
+min-width: 225px;
+justify-content: center;
+padding: 4vw;
 
 }
 </style>

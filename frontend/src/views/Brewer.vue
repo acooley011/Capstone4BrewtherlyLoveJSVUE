@@ -121,7 +121,8 @@ section {
 .main-content {
 margin-left: 30vw;
 min-width: 225px;
-padding: 4vw;
+justify-content: center;
+padding: 5vw;
 }
 
 </style>

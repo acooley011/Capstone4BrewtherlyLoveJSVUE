@@ -131,14 +131,11 @@
   <div>
     <button class="button is-link">Cancel</button>
   </div>
-  
   </div>
-
  </main>
 </form>
    </div>
  </section>
- 
 </template>
 
 <script>
@@ -272,11 +269,15 @@ a.back {
 section {
   align-content: center;
   justify-content: center;
+  padding: 4vw;
+  
 }
 
 .main-content {
-margin-left: 29.5vw;
+margin-left: 28.5vw;
+justify-content: center;
 padding: 4vw;
+min-width: 225px;
 }
 
 </style>
