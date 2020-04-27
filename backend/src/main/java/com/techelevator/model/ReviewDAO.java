@@ -8,4 +8,5 @@ public interface ReviewDAO {
     public List<Review> searchReviewsByBeerId(long beerId);
     //public int getReviewCount(long beerId);
 
+    public List<Review> getAllReviews();
 }
