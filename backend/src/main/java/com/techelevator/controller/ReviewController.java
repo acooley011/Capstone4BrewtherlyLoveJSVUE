@@ -35,7 +35,7 @@ public class ReviewController {
     
     
     @RequestMapping(path="/reviews", method = RequestMethod.GET)
-    public List<Review> showReviews(@PathVaiable long id) {
+    public List<Review> showReviews(@PathVariable long id) {
     	//TODO add method for getting all reviews
     	
     	return null;
