@@ -55,8 +55,7 @@ h1 {
 
 body {
 
-background: linear-gradient(rgba(255, 255, 255, 0.685), rgba(255,255,255,0.8)), url("https://media.nbcphiladelphia.com/2019/09/south-philly-row-homes.jpg?fit=722%2C406") ;
-
+background: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7)), url("http://blogs.commons.georgetown.edu/kcr39/files/2015/12/Philadelphia-Photography.jpg") center / cover  ;
 width: 100vw;
 height: 100%;
 }
