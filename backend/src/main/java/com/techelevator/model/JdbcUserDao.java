@@ -137,4 +137,22 @@ public class JdbcUserDao implements UserDao {
         }
     }
 
+	@Override
+	public List<User> getUserByRole(String role) {
+		List<User> brewers = new ArrayList<>();
+		String sqlgetUserByRoleId = "SELECT * FROM users WHERE role = ?";
+		SqlRowSet results = jdbcTemplate.queryForRowSet(sqlgetUserByRoleId, role);
+		
+		while(results.next()){
+			User brewer = new User();
+			brewer.setId(results.getLong("id"));
+	        brewer.setUsername(results.getString("username"));
+	        brewer.setEmail(results.getString("email"));
+	        brewer.setRole(results.getString("role"));
+	        brewers.add(brewer);
+		}
+		
+		return brewers;
+	}
+
 }

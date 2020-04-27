@@ -1,9 +1,9 @@
 
 <template>
   <div class="admin"><h1>Administrator</h1>
-   <hr />
+
   <div class='container'>
-    <h2>Add New Brewery</h2>  
+    <h2><strong>Add New Brewery</strong></h2>  
     <div class='form'>
       <form v-on:submit.prevent="saveBrewery">
          <div class="form-group">
@@ -14,7 +14,8 @@
               id="name"
               placeholder="Enter brewery name"
               v-model="brewery.name"
-            />
+              required
+              autofocus/>
          </div>  
          <div class="form-group">
            <label for="brewer">Brewer Userame: </label>
@@ -24,23 +25,15 @@
               id="brewer"
               placeholder="Enter brewer username"
               v-model="brewery.brewer"
+              required
             />
-         </div>   
-         <div class="form-group">
-           <label for="neighborhood">Neighborhood: </label>
-             <select class="form-control" id="neighborhood" v-model="brewery.neighborhood">
-              <option>North</option>
-              <option>South</option>
-              <option>West</option>
-              <option>East</option>
-            </select>
-         </div>   
+         </div>      
 
         <button type="submit" v-on:click="saveBrewery">Add New Brewery</button>
 
         <div>
           <a href="#" v-on:click="editBrewery(parseInt(brewery.id))">
-            <i></i> Edit 
+            <i></i> Edit
           </a>
           <a href="#"  v-on:click="deleteBrewery(brewery.id)">
             <i ></i> Delete 
@@ -52,10 +45,9 @@
       </form>
        <hr />
       <div class="confirmation">
-        <h3>New Brewery Information</h3>
+        <h3><strong> Brewery Information</strong></h3>
         <p>Title: {{ brewery.name }}</p>
-        <p>Reviewer: {{ brewery.brewer }}</p>
-        <p>Rating: {{ brewery.neighborhood }}</p>
+        <p>Brewer: {{ brewery.brewer }}</p>
       </div>
 
     </div>    
@@ -77,15 +69,14 @@ export default {
     return {
       brewery: {
         name:   '',
-        brewer: '',
-        neighborhood: ''
+        brewer: ''
       }
     };
   },
 
   methods: {
    createBrewery() {
-      fetch(this.apiURL,{
+      fetch(`${process.env.VUE_APP_REMOTE_API}/admin`,{
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -94,11 +85,11 @@ export default {
         body: JSON.stringify(this.brewery)
       })
       .then((response) => {
-        if(response.ok) {
-          this.$emit('showBreweries');
+        if (response.ok) {
+        this.$router.push({ path: '/admin', query: { registration: 'success' } });
         }
       })
-      .catch((err) => console.error(err));
+      .then((err) => console.error(err));
     },
 
     saveBrewery(){
