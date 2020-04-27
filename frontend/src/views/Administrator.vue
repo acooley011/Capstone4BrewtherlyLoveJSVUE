@@ -1,34 +1,37 @@
 
 <template>
-  <div class="admin"><h1>Administrator</h1>
 
+  <div class="admin"><h1>Administrator</h1>
+  <section class="section">
+    <main class="is-size-20 has-text-weight-semibold bos has-text-centered text-box main-content">
   <div class='container'>
-    <h2><strong>Add New Brewery</strong></h2>  
+    <h2><strong>Add New Brewery</strong></h2><br/>
     <div class='form'>
       <form v-on:submit.prevent="saveBrewery">
          <div class="form-group">
-           <label for="name">Brewery Name: </label>
+           <label for="name">Brewery Name: </label><br/>
             <input
               type="text"
-              class="form-control"
+              class="input"
               id="name"
               placeholder="Enter brewery name"
               v-model="brewery.name"
               required
               autofocus/>
          </div>  
+         <br/>
          <div class="form-group">
-           <label for="brewer">Brewer Userame: </label>
+           <label for="brewer">Brewer Userame: </label><br/>
             <input
               type="text"
-              class="form-control"
+              class="input"
               id="brewer"
               placeholder="Enter brewer username"
               v-model="brewery.brewer"
               required
             />
          </div>      
-
+          <br/>
         <button type="submit" v-on:click="saveBrewery">Add New Brewery</button>
 
         <div>
@@ -39,11 +42,12 @@
             <i ></i> Delete 
           </a>
         </div>
-
+ 
 
 
       </form>
        <hr />
+       
       <div class="confirmation">
         <h3><strong> Brewery Information</strong></h3>
         <p>Title: {{ brewery.name }}</p>
@@ -51,8 +55,18 @@
       </div>
 
     </div>    
+    
  </div>
+ 
+ </main>
+ </section>
+
+ <br/>
+ 
  </div>
+
+
+
 </template>
 
 <script>
@@ -137,5 +151,30 @@ export default {
 </script>
 
 <style scoped>
+
+main {
+  align-content: center;
+  justify-content: center;
+  
+}
+
+.admin {
+  text-align: center;
+}
+
+section {
+  align-content: center;
+  text-align: center;
+  justify-content: center;
+  background-color: #f2f2f2;
+  opacity: 0.92;
+  width: 35%;
+  margin-left: 32vw;
+}
+
+.container {
+  align-content: center;
+  justify-content: center;
+}
 
 </style>
