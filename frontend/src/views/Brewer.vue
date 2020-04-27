@@ -1,4 +1,5 @@
 <template>
+<body style="align-items: center; justify-content: center;">
 <section class="section">
   <div class="h3 mb-3 font-weight-normal" id="brewer"><h1>Brewer</h1>
   <form v-on:submit.prevent="saveBeer">
@@ -57,7 +58,7 @@
             />
          </div> 
     <br/>
-    <div class="field is-center" id="brewer">
+    <div class="field is-grouped-centered" id="brewer">
     <button class="button is-link" type="submit">Add A Beer to Beer List</button><br/><br/>
     <button class="button is-link" type="submit">Update Brewery Information</button><br/><br/>
     <button class="button is-link" type="submit">Remove A Beer from Beer List</button><br/><br/>
@@ -67,6 +68,7 @@
     </form>
   </div>
   </section>
+  </body>
 </template>
 
 <script>
@@ -110,18 +112,20 @@ export default {
 .text-box {
   background-color: #f2f2f2;
   opacity: 0.92;
-  width: 35vw;
+  width: 55vw;
 }
 
 section {
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 
 .main-content {
 margin-left: 30vw;
+margin-right: 30vw;
 min-width: 225px;
 justify-content: center;
+align-items:center;
 padding: 5vw;
 }
 

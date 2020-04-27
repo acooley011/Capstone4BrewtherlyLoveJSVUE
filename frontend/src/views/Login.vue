@@ -113,7 +113,8 @@ color: blue;
   background-color: #f2f2f2;
   opacity: 0.92;
   width: 30vw;
-  height: 35vw;
+
+  
 }
 
 section {
