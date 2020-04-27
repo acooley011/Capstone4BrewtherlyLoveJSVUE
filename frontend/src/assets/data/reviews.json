@@ -1,0 +1,20 @@
+[
+    {
+        "review title": "A pretty solid IPA,",
+        "beer": "Philthy",
+        "review": "Look- Slightly hazy golden orange color, large off-whit head with solid retention and lacing. Moderate carbonation streams visible. Smell- Citrus (Mostly orange), mango and papaya, herbal/floral hops.Taste- Similar to the aroma, juicy orange and tropical fruit with a lightly bitter hop back end.Feel- Medium bodied, fairly crisp and dry. Active carbonation on the tongue.",
+        "rating": 3
+    },
+    {
+        "review title": "Very impressed with this beer",
+        "beer": "Joe Coffee Porter",
+        "review": "A - Pours the classic thick dark black with an oily shine. The head is Beige and retains very well.S - Oh yes ! Heaps of sweet vanilla with a slight roasted background.T - Well if you like Vanilla, coconut milky stouts then this is for you. The finish is toffee and caramel. Very little roast or molasses. M- This is very full body and low carbonation. It is very viscous indeed. O - Well this is a Monster stout. And for those of you who like the Vanilla in your stouts then this will do you very nicely",
+        "rating": 4
+    },
+    {
+        "review title": "Quite excellent",
+        "beer": "Harvest from the Hood",
+        "review": "Poured at 55 degrees into a tulip glass. Golden honey color with a off-white head. Nose is lightly bready with citrusy hop notes. High ABV made for a clean, crisp finish. But beware, as this one could get ahead of you.",
+		"rating": 5
+    }
+]

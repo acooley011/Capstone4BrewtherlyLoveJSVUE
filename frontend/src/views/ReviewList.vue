@@ -2,7 +2,7 @@
 <section class="section">
   <div id="register">
   <form class="form-register" @submit.prevent="reviews">
-    <h1 class="h3 mb-3 font-weight-normal" id="review">Submit a Beer Review</h1>
+    <h1 class="h3 mb-3 font-weight-normal" id="review">Sumbit a Beer Review</h1>
     <a href="#" class="back" v-on:click="backToReviews()">
         <i class="fas fa-list-ul"></i> Return to Reviews
       </a>
@@ -17,7 +17,7 @@
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
   <div class="control">
-    <input v-model="review.subject" class="input" type="text" placeholder="Text input" required autofocus/>
+    <input v-model="review.reviewTitle" class="input" type="text" placeholder="Text input" required autofocus/>
   </div>
 </div>
 <div class="field is-center" id="review">
@@ -147,16 +147,16 @@ import ListReviews from "../components/ListReviews";
 
 
 export default {
-  name: "Reviews",
+  name: "ProductReviews",
   props: {
     apiURL: String
   },
   data() {
     return {
       review: {
-        subject: '',
+        reviewTitle: '',
         beer: '',
-        review: '',
+        reviewText: '',
       },
       reviewErrors: false,
       //showCreate: false,
@@ -212,7 +212,7 @@ export default {
     computed: {
     isValidForm() {
       return (
-        this.review.subject != '' &&
+        this.review.reviewTitle != '' &&
         this.review.beer != '' || '--ARS--' || '--Crime and Punishment--' || '--Dock Street--' || '--Evil Genius--' || '--Love City--' || 
         '--Original 13 Ciderworks--' || '--Philadelphia Brewing Co--' || '--Separatist--' || '--Tired Hands--' || '--Yards--' &&
         this.review.reviewText != ''
