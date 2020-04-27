@@ -1,4 +1,4 @@
-COMMIT TRANSACTION;
+'COMMIT TRANSACTION;
 
 BEGIN TRANSACTION;
 
@@ -20,7 +20,7 @@ VALUES (1,
 'Northern Liberties',
 'info@yardsbrewing.com',
 'Sun: 11am to 10pm. Mon-Fri: 11:30am to 11pm. Sat: 11am to 11pm.',
-'Yards has been brewing Philly`s beer since 1994. We’ve grown from a garage-sized operation in Manayunk all the way up to our current location at 500 Spring Garden Street in Northern Liberties. And we couldn`t have done it without your support through the years. Our beers always have and always will be brewed, bottled, kegged, and canned for the hard working people of Philadelphia and beyond.', 
+'Yards has been brewing Philly`s beer since 1994. Weï¿½ve grown from a garage-sized operation in Manayunk all the way up to our current location at 500 Spring Garden Street in Northern Liberties. And we couldn`t have done it without your support through the years. Our beers always have and always will be brewed, bottled, kegged, and canned for the hard working people of Philadelphia and beyond.', 
 'https://imgur.com/mIfGksv');
 
 -- PBC --
@@ -147,7 +147,7 @@ VALUES (1,
 'Philthy', 
 'IPA', 
 6.5,
-'People in Philly don’t have a filter, and neither does our Philthy Hazy IPA. This bold, aromatic ale is loaded with tropical and citrus hops character and has that classic hazy, golden color. And just like the city where it’s brewed, this unapologetic IPA is left unfiltered.',
+'People in Philly donï¿½t have a filter, and neither does our Philthy Hazy IPA. This bold, aromatic ale is loaded with tropical and citrus hops character and has that classic hazy, golden color. And just like the city where itï¿½s brewed, this unapologetic IPA is left unfiltered.',
 'https://imgur.com/OjGdv5d');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -156,7 +156,7 @@ VALUES (2,
 'Loyal Lager', 
 'Lager', 
 5.0,
-'25 years after opening our first garage brewery in Manayunk, we’ve built our dream brewery in the heart of the city – all thanks to our fans who have been loyal since the beginning. As a sign of our gratitude, we’ve used our new world-class brewing system to create Loyal Lager: a crisp, easy-drinking American Craft Lager brewed with two-row malt and aromatic Loral hops. It’s what a clean, high-quality lager is meant to be.',
+'25 years after opening our first garage brewery in Manayunk, weï¿½ve built our dream brewery in the heart of the city ï¿½ all thanks to our fans who have been loyal since the beginning. As a sign of our gratitude, weï¿½ve used our new world-class brewing system to create Loyal Lager: a crisp, easy-drinking American Craft Lager brewed with two-row malt and aromatic Loral hops. Itï¿½s what a clean, high-quality lager is meant to be.',
 'https://imgur.com/i0GyN0b');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -165,7 +165,7 @@ VALUES (3,
 'Philadelphia Pale Ale', 
 'Pale Ale', 
 4.6, 
-'Not to be boastful, but we believe that all other ales pale in comparison to this Philadelphia favorite. Dry-hopped with an abundance of distinctive Simcoe hops, this straw-colored pale ale is more drinkable than bitter, more aromatic than aggressive. Now in cans, it’s great for poolside. And look for the new 19.2oz cans at the ballpark.',
+'Not to be boastful, but we believe that all other ales pale in comparison to this Philadelphia favorite. Dry-hopped with an abundance of distinctive Simcoe hops, this straw-colored pale ale is more drinkable than bitter, more aromatic than aggressive. Now in cans, itï¿½s great for poolside. And look for the new 19.2oz cans at the ballpark.',
 'https://imgur.com/1rXIv6T');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -201,7 +201,7 @@ VALUES (7,
 'Pynk', 
 'Tart Fruit Beer', 
 5.5, 
-'The people have spoken. We are pleased to announce that PYNK is now available all year-round! Each sip of PYNK starts with a crisp, fruity zing and finishes refreshingly dry. The delightful pink hue comes from heaps of fresh raspberries and cherries in every batch. It’s no wonder PYNK is called the rosé of beer. So let’s raise our bottles and pints to the good things in life — like family, friends, and beer — that bring us all together.',
+'The people have spoken. We are pleased to announce that PYNK is now available all year-round! Each sip of PYNK starts with a crisp, fruity zing and finishes refreshingly dry. The delightful pink hue comes from heaps of fresh raspberries and cherries in every batch. Itï¿½s no wonder PYNK is called the rosï¿½ of beer. So letï¿½s raise our bottles and pints to the good things in life ï¿½ like family, friends, and beer ï¿½ that bring us all together.',
 'https://imgur.com/YWNdddk');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
@@ -210,7 +210,7 @@ VALUES (8,
 'ESA', 
 'Extra Special Ale', 
 6.0, 
-'Our first-ever and most-beloved brew, ESA helped establish a following for cask-conditioned beer in the United States back in the ‘90s. East Kent Golding hops give this British-inspired ale a subtle spiciness, which complements the strong malt backbone. ESA is floral, earthy and smooth with hints of chocolate and caramel, rounding out this deep chestnut-colored ale.',
+'Our first-ever and most-beloved brew, ESA helped establish a following for cask-conditioned beer in the United States back in the ï¿½90s. East Kent Golding hops give this British-inspired ale a subtle spiciness, which complements the strong malt backbone. ESA is floral, earthy and smooth with hints of chocolate and caramel, rounding out this deep chestnut-colored ale.',
 'https://imgur.com/YWNdddk');
 
 -- PBC BEERS --
@@ -838,4 +838,15 @@ VALUES (74,
 'Barley wine fermented with a few of our preferred Belgian yeast strains | 8% ABV Tasting notes: Sticky caramel & toffee pudding with a gentle dusting of our favorite American hops.',
 'https://imgur.com/1f7ILrp');
 
-COMMIT TRANSACTION;
+
+
+
+--REVIEWS-----------------------------------------------------------
+
+INSERT INTO reviews(review_id, beer_id, beer_name, subject, review, rating, date, username)
+VALUES(1, 1, 'Philthy',
+'This was a digustingly good beer',
+'Reminds me of the dirty streets of Filthadelphia..but in a good way! I drank over 100 of these in one day.',
+5, '2020-04-27', 'user');
+
+COMMIT TRANSACTION;'
