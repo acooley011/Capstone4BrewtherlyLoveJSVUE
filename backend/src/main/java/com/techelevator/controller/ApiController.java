@@ -1,6 +1,7 @@
 package com.techelevator.controller;
 
 import com.techelevator.authentication.AuthProvider;
+
 import com.techelevator.authentication.UnauthorizedException;
 import com.techelevator.model.BeerDAO;
 import com.techelevator.model.Brewery;
@@ -25,7 +26,7 @@ import org.springframework.web.bind.annotation.RestController;
 public class ApiController {
 	
 	// @Autowired
-	// private BreweryDAO breweryDao;
+	// private BreweryDao breweryDao;
 	//@Autowired
 	//private BeerDAO beerDao;
 

@@ -70,11 +70,13 @@ public class BreweryController {
 	 	
 	 	@RequestMapping(path="/admin", method = RequestMethod.POST)
 	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) {
-			return breweryDAO.saveBrewery(newBrewery); 		
+			 breweryDAO.saveBrewery(newBrewery);
+			 return newBrewery;
 	 	}
 	 	
+	 	
 	 
-//	 @RequestMapping(path = "/admin", method = RequestMethod.GET)
+//	 @RequestMapping(path = "/admin", method = RequestMethod.POST)
 //	 public Brewery createBrewery(@PathVariable long id) {
 //		 
 //		 Brewery newBrewery = new Brewery();
@@ -85,7 +87,17 @@ public class BreweryController {
 //			
 //		 return newBrewery;
 //	 }
+	 	
+	 	@RequestMapping(path="/brewer/{id}", method = RequestMethod.GET)
+	 	public Brewery getBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {
+	 		return breweryDAO.getBreweryById(id);
+	 	}
 	 
+	 	
+	 	@RequestMapping(path="/brewer/{id}", method = RequestMethod.PUT)
+	 	public Brewery updateBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {
+	 		return breweryDAO.saveBrewery(brewery);
+	 	}
 	 
 
 }
