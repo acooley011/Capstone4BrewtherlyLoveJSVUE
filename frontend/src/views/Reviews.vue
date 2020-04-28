@@ -1,18 +1,41 @@
 <template>
 <section class="section">
+  <div class="beer-reviews">
+    <div class="header">
+      <h2>Reviews <span>({{reviews.length}})</span></h2>
+      <a href="#" class="add-review" v-on:click="addReview()">
+        <i class="far fa-address-card"></i> Add Review
+      </a>
+    </div>
+    <div class="review" v-for="review in reviews" v-bind:key="review.review_id">
+      <div class="review-left">
+     <!-- try to add beer image? -->
+        <div class="review-actions">
+          <a href="#" class="delete-review" v-on:click="deleteReview(review.review_id)">
+            <i class="far fa-trash-alt"></i> Delete
+          </a>
+        </div>
+      </div>
+      <div class="review-info">
+        <h2>{{review.subject}}</h2>
+        <span>{{review.username}} | {{formatDate(review.createdAt)}}</span>
+        <h3>{{review.beer_name}}</h3>
+        <h4>{{review.rating}}</h4>
+        <p class="feedback">{{review.review}}</p>
+      </div>
+    </div>
+  </div>
+
+
   <div id="register">
   <form class="form-register" @submit.prevent="reviews">
     <h1 class="h3 mb-3 font-weight-normal" id="review">Submit a Beer Review</h1>
-    <a href="#" class="back" v-on:click="backToReviews()">
-        <i class="fas fa-list-ul"></i> Return to Reviews
-      </a>
+    
     <create-review v-if="showCreate"></create-review>
      <list-reviews v-else v-on:addReview="showCreate = true"></list-reviews>
     <div class="alert alert-danger" role="alert" v-if="reviewErrors">
       There were problems submitting your review.
       </div>
-   
-
 <main class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
@@ -134,109 +157,86 @@
   </div>
  </main>
 </form>
-   </div>
+</div>
  </section>
 </template>
 
 <script>
-import CreateReview from "../components/CreateReview";
-import ListReviews from "../components/ListReviews";
-
+//import CreateReview from "../components/CreateReview";
+//import ListReviews from "../components/ListReviews";
+import moment from 'moment';
 
 export default {
-  name: "reviews",
+  name: "Reviews",
   props: {
     apiURL: String
   },
   data() {
     return {
-      review: {
-        subject: '',
-        beer: '',
-        review: '',
-      },
-      reviewErrors: false,
-      //showCreate: false,
-     // reviews: []
+      reviews: [],
     };
-  },
-  components: {
-    CreateReview,
-    ListReviews
   },
   methods: {
-     backToReviews() {
-      this.$emit("showReviews");
+    addReview() {
+     this.$emit('addReview')
     },
-    saveReview() {
-      this.reviewID === 0 ? this.createReview() : this.updateReview();
-    },
-     createReview() {
-       const fetchConfig = {
-        method: 'POST',
-        headers: {
-          "Content-Type" : "application/json"
-        },
-        body: JSON.stringify(this.review)
-      };
-
-    fetch(`${this.apiURL}/reviews`, fetchConfig)
-      .then(response => {
-        if(response.ok) {
-          this.$emit('showReviews');
+    deleteReview(review_id) {
+      fetch(`${this.apiURL}/reviews/${review_id}`, {
+        method: 'DELETE'
+      })
+        .then(response => {
+        if(response.ok){
+          const index = this.reviews.map(review => review.review_id).indexOf(review_id);
+          this.reviews.splice(index,1);
         }
       })
-      .catch((err) => console.error('Review creation or update error', err)); //not sure if this will work properly
-  },
-    updateReview() {
-     const fetchConfig = {
-       method: "PUT",
-       headers: {
-         "Content-Type" : "application/json"
-     },
-     body: JSON.stringify(this.review)
-    };
-    fetch(`${this.apiURL}/reviews/${this.reviewID}`, fetchConfig)
-      .then(response => {
-          if(response.ok) {
-            this.$emit('showReviews');
-          }
-        })
-        .catch(err => console.error('Recieved an error creating or updating a review', err));
-    }
-  },
-   // i saved this chunk of code in a note
-    computed: {
-    isValidForm() {
-      return (
-        this.review.subject != '' &&
-        this.review.beer != '' || '--ARS--' || '--Crime and Punishment--' || '--Dock Street--' || '--Evil Genius--' || '--Love City--' || 
-        '--Original 13 Ciderworks--' || '--Philadelphia Brewing Co--' || '--Separatist--' || '--Tired Hands--' || '--Yards--' &&
-        this.review.reviewText != ''
-      );
+      .catch(err => console.error(err));
     },
-    pageTitle() {
-      return this.reviewID === 0 ? "Add Review" : "Edit Review - " + this.review.title;
+   formatDate(d) {
+      return moment(d, 'YYYY-MM-DD h:mm:ss a').format('MMMM Do YYYY, h:mm:ss A');
     }
   },
   created() {
-    if(this.reviewID === 0){
-      return;
-    }
-   // url: 'https://localhost:8081/reviews'; ???
-    fetch(`${this.apiURL}/reviews/${this.reviewID}`)
-      .then(response => {
-        return response.json();
-      })
-      .then( review => {
-        this.review = review;
-      })
-      .catch(err => console.error(err));
-  }
-};
+    fetch(`${this.apiURL}/reviews`)
+    .then(response => {
+      return response.json();
+    })
+    .then(apiReviews => {
+      this.reviews = apiReviews;
+    })
+    .catch(err => console.log(`Error fetching reviews ${err}`));
+  },
+   // i saved this chunk of code in a note
+}
 </script>
 
 <style scoped>
+.header {
+  display: flex;
+  border-bottom: 1px solid #ccc;
+}
+h2 {
+  border:none;
+}
+h2 span {
+  font-size:14px;
+}
+a.add-review {
+  display: block;
+  margin-top:7px;
+  margin-left:auto;
+  text-decoration: none;
+  border:none;
+  color:#4EADEA;
+}
+.review {
+  display: flex;
+  margin: 20px;
+  border-bottom: 1px solid #ccc;
+}
+.review-left {
+  margin-right: 20px;
+}
 
 #review {
   text-align: center;
@@ -278,6 +278,26 @@ margin-left: 28.5vw;
 justify-content: center;
 padding: 4vw;
 min-width: 225px;
+}
+.feedback {
+  margin-top: 10px;
+  line-height: 1.7;
+  padding-bottom: 15px;
+}
+.review-actions {
+  margin-top: 20px;
+  margin-left: 10px;
+  text-align: center;
+}
+.review-actions a, .review-actions a:visited {
+  display: block;
+  color:black;
+  margin-top:10px;
+  text-decoration: none;
+  color:#4EADEA;
+}
+.review-actions a:hover {
+  color:rgb(0, 116, 189);
 }
 
 </style>

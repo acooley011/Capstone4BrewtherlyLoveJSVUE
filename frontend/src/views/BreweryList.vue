@@ -155,7 +155,7 @@ export default {
   },
 
   methods: {
-    fetchBrewery() {
+    fetchBrewery(){
       const options = {
         method: "GET",
         headers:{
@@ -164,7 +164,7 @@ export default {
         },
         //If doing post/put then body: json.stringify would go here
       };
-    fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryDetails/${this.breweryId}`,options) 
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryList/${this.breweryId}`,options) 
     .then(response => response.json())
     .then(details => this.breweryDetails = details)
     .catch(err => console.error(err));

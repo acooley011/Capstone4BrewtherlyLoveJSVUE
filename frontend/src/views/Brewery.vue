@@ -48,6 +48,8 @@
 <script>
 
 import auth from "../auth.js";
+import breweryService from '@/service/BreweryService';
+
 
 export default {
 
@@ -72,13 +74,20 @@ export default {
     .then(response => response.json())
     .then(details => this.breweryDetails = details)
     .catch(err => console.error(err));
-    }
+    },
+
+    getBrewery(id) {
+            breweryService.get(id)
+                .then(user => this.user = user); 
+        }
 
   },
 
   created(){
       //TODO Set brewery id here
-      this.fetchBrewery(); 
+        const id = this.$route.params.id
+
+      this.fetchBrewery(id); 
   }
 
   

@@ -107,7 +107,11 @@ const router = new Router({
       requiresAuth: false
     }
   },
-  
+  {
+    path: "/brewery/:id",
+    name: "brewery",
+    component: Brewery
+  }
 
 
   ]
