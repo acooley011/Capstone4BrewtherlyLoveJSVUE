@@ -1,5 +1,5 @@
 <template>
-<main class="main">
+<main class="main" v-if="breweryDetails !== null">
   
   <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
   v-for="brewery in breweryDetails" v-bind:key="brewery.id">
@@ -7,7 +7,7 @@
     <h3><strong>{{brewery.name}}</strong></h3><br/>
     <div class="columns">
       <div>
-            <img :src="brewery.brewery_img">
+            <img :src="brewery.breweryLogoUrl">
       </div>
       <div id="brewery-info" class="text-box" >
         <p>{{ brewery.description }}</p>
