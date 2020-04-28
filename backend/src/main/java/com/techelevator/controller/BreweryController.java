@@ -10,6 +10,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.techelevator.authentication.AuthProvider;
+import com.techelevator.authentication.UnauthorizedException;
 import com.techelevator.model.Beer;
 import com.techelevator.model.BeerDAO;
 import com.techelevator.model.Brewery;
@@ -22,6 +24,9 @@ import com.techelevator.model.BreweryListResponse;
 @CrossOrigin
 @RequestMapping("/api")
 public class BreweryController {
+	
+	 @Autowired
+	 private AuthProvider authProvider;
 	
 	 @Autowired
 	 private BreweryDAO breweryDAO;
@@ -62,13 +67,18 @@ public class BreweryController {
 			
 		}
 	 
-	 	@RequestMapping(path="/admin", method = RequestMethod.GET)
-	 	public List<Brewery> showBreweries(){
+	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.GET)
+	 	public List<Brewery> showBreweries() throws UnauthorizedException{
+	 		
+	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
+	 			throw new UnauthorizedException();
+	 		}
+	 		
 	 		List<Brewery> allBreweries = breweryDAO.getAllBreweries();
 			return allBreweries;
 	 		}
 	 	
-	 	@RequestMapping(path="/admin", method = RequestMethod.POST)
+	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.POST)
 	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) {
 			 breweryDAO.saveBrewery(newBrewery);
 			 return newBrewery;
