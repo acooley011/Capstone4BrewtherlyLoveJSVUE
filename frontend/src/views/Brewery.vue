@@ -58,6 +58,7 @@ export default {
     return {
       breweryDetails: null,
       breweryId: 1, //TODO during the create method, get the brewery id out of the url, see catalog HW
+      //I TRIED. /brewery will not display if i change 1 to this.id
     };
   },
 

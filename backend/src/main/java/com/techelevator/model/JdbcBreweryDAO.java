@@ -113,6 +113,7 @@ public class JdbcBreweryDAO implements BreweryDAO{
 		}
 		return breweries;
 	}
+	
 	@Override
 	public boolean updateBreweryUserId(long id, int userId) {
 		String sqlUpdateBreweryUserId = "UPDATE breweries SET user_id = ? WHERE brewery_id = ?";
