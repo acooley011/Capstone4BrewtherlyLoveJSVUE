@@ -19,6 +19,7 @@ import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
 import com.techelevator.model.ReviewDAO;
 import com.techelevator.model.BeerDAO;
+import com.techelevator.authentication.AuthProvider;
 import com.techelevator.model.Beer;
 import com.techelevator.model.Review;
 
@@ -26,6 +27,10 @@ import com.techelevator.model.Review;
 @CrossOrigin
 @RequestMapping("/api")
 public class ReviewController {
+	 
+	@Autowired
+	 private AuthProvider authProvider;
+	
 
     @Autowired
     ReviewDAO reviewDAO;
@@ -44,23 +49,6 @@ public class ReviewController {
    
     
 
-//    @RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.GET)
-//    public String showBreweryDetails(@PathVariable("id") long beerId, ModelMap modelHolder, HttpSession session) {
-//       
-//        if ( ! modelHolder.containsAttribute("newReview")) {
-//            modelHolder.put("newReview", new Review());
-//        }
-//
-//        Beer beer = beerDAO.getBeerById(beerId);
-//        modelHolder.addAttribute("beer", beer);
-//
-//        return "addReview";
-//    }
 
-//	@GetMapping
-//	public List<Review> list() {
-//		return ReviewDAO.list();
-//	}
-//	
 
 }

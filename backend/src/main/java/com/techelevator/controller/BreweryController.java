@@ -69,7 +69,8 @@ public class BreweryController {
 	 
 	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.GET)
 	 	public List<Brewery> showBreweries() throws UnauthorizedException{
-	 		
+
+	 		//Commenting this out until we get admin user creating done
 //	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
 //	 			throw new UnauthorizedException();
 //	 		}
@@ -91,7 +92,7 @@ public class BreweryController {
 	 	
 	 	
 	
-	 	//TODO
+	 	//TODO need to test updating brewery info
 	 	@RequestMapping(path="/brewer/{id}", method = RequestMethod.GET)
 	 	public Brewery getBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {
 	 		return breweryDAO.getBreweryById(id);
