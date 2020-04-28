@@ -57,5 +57,10 @@ public class ReviewController {
 //        return "addReview";
 //    }
 
-    
+//	@GetMapping
+//	public List<Review> list() {
+//		return ReviewDAO.list();
+//	}
+//	
+
 }
