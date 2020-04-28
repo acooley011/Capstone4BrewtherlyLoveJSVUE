@@ -158,6 +158,28 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Create new beer form on brewer page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/brewer/addBeer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"brewer",
+						"addBeer"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {

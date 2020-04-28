@@ -81,24 +81,16 @@ public class BreweryController {
 	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.POST)
 	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) throws UnauthorizedException {
 	 		
+	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
+	 			throw new UnauthorizedException();
+	 		}
 	 	 
 			 breweryDAO.saveBrewery(newBrewery);
 			 return newBrewery;
 	 	}
 	 	
 	 	
-	 
-//	 @RequestMapping(path = "/admin", method = RequestMethod.POST)
-//	 public Brewery createBrewery(@PathVariable long id) {
-//		 
-//		 Brewery newBrewery = new Brewery();
-//		
-//		 breweryDao.saveBrewery(newBrewery.getName(), newBrewery.getAddress(), newBrewery.getCity(),
-//				 newBrewery.getNeighborhood(), newBrewery.getZip(), newBrewery.getContact(), 
-//				 newBrewery.getDescription(), newBrewery.getBreweryLogoUrl(), newBrewery.getBusinessHours());
-//			
-//		 return newBrewery;
-//	 }
+	
 	 	//TODO
 	 	@RequestMapping(path="/brewer/{id}", method = RequestMethod.GET)
 	 	public Brewery getBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {

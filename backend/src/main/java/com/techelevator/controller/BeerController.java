@@ -74,7 +74,7 @@ public class BeerController {
 		 //Load the brewery by id, then make sure user id on brewery is the current user id or that
 		 //the current user is an brewer (role) and that they are the brewer for the brewery matching the beer
 		 
-		 if(currentUser == null ||!authProvider.userHasRole(new String[] {"brewer"}) ) {
+		 if(currentUser == null || currentUser.getId() != currentBrewery.getUserId()||!authProvider.userHasRole(new String[] {"brewer"})) {
 			 throw new UnauthorizedException();
 		 }
 		 
