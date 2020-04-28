@@ -70,9 +70,9 @@ public class BreweryController {
 	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.GET)
 	 	public List<Brewery> showBreweries() throws UnauthorizedException{
 	 		
-	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
-	 			throw new UnauthorizedException();
-	 		}
+//	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
+//	 			throw new UnauthorizedException();
+//	 		}
 	 		
 	 		List<Brewery> allBreweries = breweryDAO.getAllBreweries();
 			return allBreweries;
@@ -81,9 +81,9 @@ public class BreweryController {
 	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.POST)
 	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) throws UnauthorizedException {
 	 		
-	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
-	 			throw new UnauthorizedException();
-	 		}
+//	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
+//	 			throw new UnauthorizedException();
+//	 		}
 	 	 
 			 breweryDAO.saveBrewery(newBrewery);
 			 return newBrewery;
