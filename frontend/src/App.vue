@@ -38,7 +38,7 @@
 
 <footer class="footer-text">
   
-    <p>
+    <p style="padding-top: 5px;">
       <strong>COBL</strong> by <a href="#">TE Capstone Team One PHL 2020</a> 
     </p>
   
