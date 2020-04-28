@@ -70,7 +70,8 @@ public class BreweryController {
 	 	
 	 	@RequestMapping(path="/admin", method = RequestMethod.POST)
 	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) {
-			return breweryDAO.saveBrewery(newBrewery); 		
+			 breweryDAO.saveBrewery(newBrewery);
+			 return newBrewery;
 	 	}
 	 	
 	 
