@@ -5,6 +5,7 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,7 @@ import org.springframework.web.bind.annotation.RestController;
 import com.techelevator.model.Beer;
 import com.techelevator.model.BeerDAO;
 import com.techelevator.model.BeerDetailResponse;
+import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryDAO;
 import com.techelevator.model.Review;
 import com.techelevator.model.ReviewDAO;
@@ -67,25 +69,14 @@ public class BeerController {
 			
 			return response;
 		}
-	 
+	 //TODO
 	 //Getting form to add Beer if a brewer
-//	 @RequestMapping(path="/addBeer", method=RequestMethod.GET)
-//		public String showAddBeer(ModelMap modelHolder, HttpSession session){
-//			User currentUser= (User) session.getAttribute("currentUser");
-//			
-//			if(currentUser == null || currentUser.getRole() != "beer-lover" || currentUser.getRole() != "administrator") {
-//				return "redirect:/beer-list";
-//			}
-//			if( ! modelHolder.containsAttribute("newBeer")){
-//				modelHolder.put("newBeer", new Beer());
-//			}
-//			
-//			Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
-//			modelHolder.put("brewery", currentBrewery);
-//			
-//			return "addBeer";
-//	
-//	 }
+	 @RequestMapping(path="brewer/{id}", method=RequestMethod.POST)
+		public Beer showAddBeer(@RequestBody Beer newBeer, @PathVariable long id){
+			
+			return beerDAO.saveBeer(newBeer);
+	
+	 }
 	 
 	 //Add a beer
 	 

@@ -87,7 +87,7 @@ public class BreweryController {
 //			
 //		 return newBrewery;
 //	 }
-	 	
+	 	//TODO
 	 	@RequestMapping(path="/brewer/{id}", method = RequestMethod.GET)
 	 	public Brewery getBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {
 	 		return breweryDAO.getBreweryById(id);
