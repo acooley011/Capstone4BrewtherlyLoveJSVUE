@@ -1,29 +1,27 @@
 <template>
-  <div class="review" >
-   
-    <create-review 
-      v-if="showAddReviewForm"
+  <div class="beer" >
+    <save-review 
+      v-if="showSaveReviewForm"
       v-on:showReviews="showReviews"
       v-bind:apiURL="API_URL"
-      v-bind:reviewID="reviewID"
+      v-bind:review_id="reviewID"
     />
     <reviews
-      v-if="!showAddReviewForm"
+      v-if="!showSaveReviewForm"
       v-bind:apiURL="API_URL"
       v-on:addReview="addReview"
-      v-on:editReview="editReview($event)"
-      class="reviews"
+      class="beer-reviews"
     />
   </div>
 </template>
 
 <script>
-import CreateReview from "@/components/CreateReview"
-import Reviews from "@/views/Reviews";
+import SaveReview from "@/components/SaveReview"
+import Reviews from "@/components/Reviews";
 
 export default {
   components: {
-    CreateReview,
+    SaveReview,
     Reviews
   },
   data() {
@@ -36,14 +34,14 @@ export default {
   },
   methods: {
     addReview() {
-      this.showAddReviewForm = true;
+      this.showSaveReviewForm = true;
     },
     editReview(id) {
       this.reviewID = id;
-      this.showAddReviewForm = true;
+      this.showSaveReviewForm = true;
     },
     showReviews() {
-      this.showAddReviewForm = false;
+      this.showSaveReviewForm = false;
       this.reviewID = 0;
     }
   }
@@ -51,27 +49,27 @@ export default {
 </script>
 
 <style>
-.Review {
+.beer {
   display: grid;
   grid-template-areas:
-    "review-image review-info"
-    "review-reviews review-reviews"
-    "review-add review-add";
+    "beer-image beer-info"
+    "beer-reviews beer-reviews"
+    "beer-add beer-add";
   grid-template-columns: 300px auto;
 }
-.Review-image {
-  grid-area: review-image;
+.beer-image {
+  grid-area: beer-image;
 }
-.Review-image img {
+.beer-image img {
   max-width: 280px;
   box-shadow: 2px 2px rgb(0, 0, 0, 60%);
   border: 1px solid rgba(0, 0, 0, 0.6);
 }
-.review-info {
-  grid-area: review-info;
+.beer-info {
+  grid-area: beer-info;
 }
-.review-reviews {
-  grid-area: review-reviews;
+.beer-reviews {
+  grid-area: beer-reviews;
   margin-top: 30px;
 }
 .description {
