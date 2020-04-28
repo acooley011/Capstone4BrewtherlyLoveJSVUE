@@ -85,10 +85,11 @@ export default {
   computed: {
     isValidForm() {
       return (
-        this.review.subject != "" &&
-        this.review.beer_name != "" || '--ARS--' || '--Crime and Punishment--' || '--Dock Street--' || '--Evil Genius--' || '--Love City--' || 
+        this.review.subject != '' &&
+        this.review.rating != '' &&
+        this.review.beer_name != '' || '--ARS--' || '--Crime and Punishment--' || '--Dock Street--' || '--Evil Genius--' || '--Love City--' || 
         '--Original 13 Ciderworks--' || '--Philadelphia Brewing Co--' || '--Separatist--' || '--Tired Hands--' || '--Yards--' &&
-        this.review.review != ""
+        this.review.review != ''
       );
     },
     pageTitle() {

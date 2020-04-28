@@ -1,17 +1,16 @@
 <template>
 <main class="main" >
   <!-- add to main if we ever get this fetch to work v-if="breweryDetails !== null" -->
-  
-  <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
-  v-for="brewery in breweryDetails" v-bind:key="brewery.id">
+<!-- this chunk of code was saved -->
+      <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
     
-    <h3><strong>{{brewery.name}}</strong></h3><br/>
+    <h3><strong>Brewery ARS</strong></h3><br/>
     <div class="columns">
       <div>
-            <img :src="brewery.breweryLogoUrl">
+       <img src="../assets/images/Breweries/breweryARS.png"/>
       </div>
       <div id="brewery-info" class="text-box" >
-        <p>{{ brewery.description }}</p>
+        <p>Brewery ARS is a small garage brewery in South Philadelphia and the brainchild of Andy and Sean Arsenault, who began their brewing career as engineers with curiosity. After spending Friday evenings at the Foodery at 10th and Pine with a 6 pack of Yuengling and one craft beer from around the world each week, the brothers realized that they both were fond of the Belgian styles and grew an affinity for yeast-forward beers. After years of planning and tinkering recipes, the brewery officially opened its doors on December 17, 2016. Since then, the duo have brewed over 70 different batches of 56 different beers, including collaborations with Highway Manor Brewing and Kurant Ciders, exploring the endless flavor profiles craft beer has to offer.</p>
       </div>
     </div>
     </div>

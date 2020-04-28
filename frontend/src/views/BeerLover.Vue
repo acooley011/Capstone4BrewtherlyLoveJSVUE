@@ -8,7 +8,7 @@
   
   <div id="review">
   <form class="form-register" @submit.prevent="reviews">
-   <strong> <h3 class=" h3 mb-3 font-weight-normal" id="review">Submit a Beer Review</h3></strong>
+   
     <create-review v-if="showCreate"></create-review>
      <list-reviews v-else v-on:addReview="showCreate = true"></list-reviews>
     <div class="alert alert-danger" role="alert" v-if="reviewErrors">
@@ -23,10 +23,21 @@
       </div> 
 
 <main class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
+  <strong><h3 style="font-weight: bold; text-decoration: underline;" id="review">Submit a Beer Review</h3></strong><br/>
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
   <div class="control">
     <input v-model="review.subject" class="input" type="text" placeholder="Text input" required autofocus/>
+  </div>
+  <label class="label"><strong>Rating:</strong></label>
+  <div class="select">
+  <select required v-model="review.rating">
+    <option>1</option>
+    <option>2</option>
+    <option>3</option>
+    <option>4</option>
+    <option>5</option>
+    </select>
   </div>
 </div>
 <div class="field is-center" id="review">
@@ -135,15 +146,18 @@
 <br/>
 <div class="field is-grouped is-grouped-centered" id="review">
   <div class="control">
-    <button class="button is-success" v-bind:disabled="!isValidForm" v-on:click="saveReview">Submit</button>
+    <!--v-bind:disabled="!isValidForm"--> 
+    <button class="button is-success" v-on:click="saveReview">Submit</button>
   </div>
   <div>
     <button class="button is-link">Cancel</button>
   </div>
   </div>
+    <router-link :to="{ name: 'reviews' }" class="link-text"><strong>Go to Reviews</strong></router-link><br/><br/>
  </main>
 </form>
-</div>
+</div><br/>
+
   <button class="button is-link">Go to Brewery List</button>
   </section>
 </template>
@@ -154,7 +168,6 @@ export default {
   data () {
     return {
         subject: '',
-        username: '',
         beer_name: '',
         rating: '',
         review: '',
