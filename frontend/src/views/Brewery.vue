@@ -32,7 +32,8 @@
   <div class="tile is-parent is-4"  v-for="beer in breweryDetails.beerList" v-bind:key="beer.id">
      <article class="tile is-child box">
           <p class="title">{{beer.name}}</p>
-          <p class="subtitle">Beer ABV: {{beer.abv}}</p>
+          <p class="subtitle">{{beer.type}}</p>
+          <p class="subtitle">ABV: {{beer.abv}}%</p>
           <p class="subsubtitle">{{beer.description}}</p><br/>
           <figure>
             <img :src="beer.imgUrl">
