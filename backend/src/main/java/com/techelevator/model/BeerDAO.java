@@ -18,7 +18,7 @@ public interface BeerDAO {
 	//Displaying the Beer List for Brewery to update its beer list
 	public List<Beer> getAllBeersInBeerList(long breweryId); 
 	
-	public void saveBeer(Beer newBeer);
+	public Beer saveBeer(Beer newBeer);
 		
 	public void deleteBeer(long beerId);
 	

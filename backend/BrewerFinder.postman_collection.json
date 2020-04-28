@@ -143,7 +143,7 @@
 					"raw": " {\r\n    \t\"id\": 100000,\r\n        \"name\": \"New Brew\",\r\n        \"address\": \"a place\",\r\n        \"city\": \"Philadelphia\",\r\n        \"zip\": \"19145\",\r\n        \"neighborhood\": \"Philadelphia\",\r\n        \"contact\": \"666-666-6666\",\r\n        \"description\": \"We brew\",\r\n        \"breweryLogoUrl\": \"https://imgur.com/Eo9C2F5\",\r\n        \"businessHours\": \"Wed-Fri 4pm to 8pm Sat-Sun: 2pm to 7pm\"\r\n       \r\n    }"
 				},
 				"url": {
-					"raw": "http://localhost:8080/AuthenticationApplication/api/admin",
+					"raw": "http://localhost:8080/AuthenticationApplication/api/admin/brewery",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -152,7 +152,30 @@
 					"path": [
 						"AuthenticationApplication",
 						"api",
-						"admin"
+						"admin",
+						"brewery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new beer form on brewer page",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/brewer/addBeer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"brewer",
+						"addBeer"
 					]
 				}
 			},

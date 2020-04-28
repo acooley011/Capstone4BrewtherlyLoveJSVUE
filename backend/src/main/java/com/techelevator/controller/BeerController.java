@@ -5,16 +5,21 @@ import java.util.List;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.techelevator.authentication.AuthProvider;
+import com.techelevator.authentication.UnauthorizedException;
 import com.techelevator.model.Beer;
 import com.techelevator.model.BeerDAO;
 import com.techelevator.model.BeerDetailResponse;
+import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryDAO;
 import com.techelevator.model.Review;
 import com.techelevator.model.ReviewDAO;
+import com.techelevator.model.User;
 
 //TODO add Review model objects 
 //import com.techelevator.model.ReviewDAO
@@ -26,6 +31,10 @@ import com.techelevator.model.ReviewDAO;
 @RequestMapping("/api")
 public class BeerController {
 	
+
+	 @Autowired
+	 private AuthProvider authProvider;
+	
 	 @Autowired
 	 BeerDAO beerDAO;
 	 
@@ -35,19 +44,6 @@ public class BeerController {
 		
 	 @Autowired
 	 ReviewDAO reviewDAO;
-	 
-//	 //Returning the beer list
-//	 @RequestMapping(path="beer-list", method=RequestMethod.GET)
-//		public String showAllBeers(ModelMap modelHolder) {
-//			List<Beer> beerList = beerDAO.getAllBeers();
-//			List<Brewery> breweries = breweryDAO.getAllBreweries();
-//			
-//			modelHolder.put("allBeers", beerList);
-//			modelHolder.put("allBreweries", breweries);
-//			return "beerlist";
-//		}
-	 
-	
 	 
 	 //Getting beer details page by beer id - THIS WORKS IN POSTMAN
 	 @RequestMapping(path="/beerDetails/{id}", method=RequestMethod.GET)
@@ -67,25 +63,27 @@ public class BeerController {
 			
 			return response;
 		}
-	 
-	 //Getting form to add Beer if a brewer
-//	 @RequestMapping(path="/addBeer", method=RequestMethod.GET)
-//		public String showAddBeer(ModelMap modelHolder, HttpSession session){
-//			User currentUser= (User) session.getAttribute("currentUser");
-//			
-//			if(currentUser == null || currentUser.getRole() != "beer-lover" || currentUser.getRole() != "administrator") {
-//				return "redirect:/beer-list";
-//			}
-//			if( ! modelHolder.containsAttribute("newBeer")){
-//				modelHolder.put("newBeer", new Beer());
-//			}
-//			
-//			Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
-//			modelHolder.put("brewery", currentBrewery);
-//			
-//			return "addBeer";
-//	
-//	 }
+	
+	 //Getting form to add Beer if a brewer- THIS WORKS IN POSTMAN
+	 @RequestMapping(path="brewer/{id}", method=RequestMethod.POST)
+		public Beer showAddBeer(@RequestBody Beer newBeer, @PathVariable long id) throws UnauthorizedException{
+		 
+		 User currentUser = authProvider.getCurrentUser();
+		 Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
+		 
+		 //Load the brewery by id, then make sure user id on brewery is the current user id or that
+		 //the current user is an brewer (role) and that they are the brewer for the brewery matching the beer
+		 
+		 if(currentUser == null || currentUser.getId() != currentBrewery.getUserId()||!authProvider.userHasRole(new String[] {"brewer"})) {
+			 throw new UnauthorizedException();
+		 }
+		 
+		 //Load the brewery object, check roles and throw exception/ check if null
+		 
+		
+		 return beerDAO.saveBeer(newBeer);
+	
+	 }
 	 
 	 //Add a beer
 	 
