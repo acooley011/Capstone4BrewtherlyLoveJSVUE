@@ -58,12 +58,12 @@ public class BreweryController {
 	 
 	 //
 	 
-	 @RequestMapping(path = "/admin", method = RequestMethod.POST)
-	 public Brewery createBrewery(@Valid @RequestBody Brewery newBrewery, Binding result) {
-		 breweryDao.saveBrewery(newBrewery.getName(), newBrewery.getAddress(), newBrewery.getCity(),newBrewery.getNeighborhood(),  
-					 newBrewery.getZip(), newBrewery.getContact(), newBrewery.getDescription(), newBrewery.getBreweryLogoUrl(), newBrewery.getBusinessHours());
-			return null;
-	 }
+//	 @RequestMapping(path = "/admin", method = RequestMethod.POST)
+//	 public Brewery createBrewery(@Valid @RequestBody Brewery newBrewery, Binding result) {
+//		 breweryDao.saveBrewery(newBrewery.getName(), newBrewery.getAddress(), newBrewery.getCity(),newBrewery.getNeighborhood(),  
+//					 newBrewery.getZip(), newBrewery.getContact(), newBrewery.getDescription(), newBrewery.getBreweryLogoUrl(), newBrewery.getBusinessHours());
+//			return null;
+//	 }
 	 
 	 @RequestMapping(path="/breweryDetails/{id}", method=RequestMethod.GET)
 		public BreweryDetailResponse showBreweryDetails(@PathVariable long id) {
@@ -80,5 +80,7 @@ public class BreweryController {
 			
 			return response;
 		}
+	 
+	 
 
 }

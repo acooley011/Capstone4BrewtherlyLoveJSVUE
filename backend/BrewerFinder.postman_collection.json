@@ -17,7 +17,7 @@
 					}
 				],
 				"url": {
-					"raw": "http://localhost:8080/AuthenticationApplication/api/breweryDetails/1",
+					"raw": "http://localhost:8080/AuthenticationApplication/api/breweryDetails/2",
 					"protocol": "http",
 					"host": [
 						"localhost"
@@ -27,7 +27,7 @@
 						"AuthenticationApplication",
 						"api",
 						"breweryDetails",
-						"1"
+						"2"
 					]
 				}
 			},

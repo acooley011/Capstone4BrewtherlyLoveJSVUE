@@ -33,46 +33,30 @@ public class ReviewController {
     @Autowired
     BeerDAO beerDAO;
     
-    
+    //THIS WORKS IN POSTMAN
     @RequestMapping(path="/reviews", method = RequestMethod.GET)
-    public List<Review> showReviews(@PathVariable long id) {
+    public List<Review> showReviews() {
     	//TODO add method for getting all reviews
     	
-    	return null;
+    	List<Review> allReviews = reviewDAO.getAllReviews();
+    	
+    	return allReviews;
     }
+   
     
+
+//    @RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.GET)
+//    public String showBreweryDetails(@PathVariable("id") long beerId, ModelMap modelHolder, HttpSession session) {
+//       
+//        if ( ! modelHolder.containsAttribute("newReview")) {
+//            modelHolder.put("newReview", new Review());
+//        }
+//
+//        Beer beer = beerDAO.getBeerById(beerId);
+//        modelHolder.addAttribute("beer", beer);
+//
+//        return "addReview";
+//    }
+
     
-
-    @RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.GET)
-    public String showBreweryDetails(@PathVariable("id") long beerId, ModelMap modelHolder, HttpSession session) {
-       // if (beerDAO.getBeerById(beerId) == null) {
-       //     throw new NotFoundException();
-       // }
-
-        if ( ! modelHolder.containsAttribute("newReview")) {
-            modelHolder.put("newReview", new Review());
-        }
-
-        Beer beer = beerDAO.getBeerById(beerId);
-        modelHolder.addAttribute("beer", beer);
-
-        return "addReview";
-    }
-
-    @RequestMapping(path="/beerDetails/{id}/review", method=RequestMethod.POST)
-    public String createNewMessage(@PathVariable("id") long beerId, @Valid @ModelAttribute("newReview") Review review, BindingResult result, RedirectAttributes flash) {
-        flash.addFlashAttribute("newReview", review);
-
-        //if (beerDAO.getBeerById(beerId) == null) {
-        //    throw new NotFoundException();
-        //}
-
-        if(result.hasErrors()) {
-            flash.addFlashAttribute(BindingResult.MODEL_KEY_PREFIX + "newReview", result);
-            return "redirect://beerDetails/{id}/review";
-        }
-
-
-        return "redirect:/beerDetails/" + beerId;
-    }
 }

@@ -79,4 +79,19 @@ public class JDBCReviewDAO implements ReviewDAO {
         return allReviews;
     }
 
+	@Override
+	public Review getReviewById(Long id) {
+		Review review = null;
+		
+		String sqlGetReviewById = "SELECT * from reviews WHERE review.review_id=? " 
+				+ "GROUP BY reviews.review_id ORDER BY rating DESC";
+		SqlRowSet result = jdbcTemplate.queryForRowSet(sqlGetReviewById, id);
+		
+		while(result.next()) {
+			review = mapRowToReview(result);
+		}
+		
+		return review;
+	}
+
 }

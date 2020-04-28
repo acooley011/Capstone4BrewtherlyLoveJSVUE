@@ -19,8 +19,10 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.techelevator.model.BeerDAO;
+import com.techelevator.model.BeerDetailResponse;
 import com.techelevator.model.Brewery;
 import com.techelevator.model.BreweryDao;
+import com.techelevator.model.BreweryDetailResponse;
 import com.techelevator.model.Review;
 import com.techelevator.model.ReviewDAO;
 import com.techelevator.model.User;
@@ -46,63 +48,68 @@ public class BeerController {
 	 @Autowired
 	 ReviewDAO reviewDAO;
 	 
-	 //Returning the beer list
-	 @RequestMapping(path="beer-list", method=RequestMethod.GET)
-		public String showAllBeers(ModelMap modelHolder) {
-			List<Beer> beerList = beerDAO.getAllBeers();
-			List<Brewery> breweries = breweryDAO.getAllBreweries();
-			
-			modelHolder.put("allBeers", beerList);
-			modelHolder.put("allBreweries", breweries);
-			return "beerlist";
-		}
+//	 //Returning the beer list
+//	 @RequestMapping(path="beer-list", method=RequestMethod.GET)
+//		public String showAllBeers(ModelMap modelHolder) {
+//			List<Beer> beerList = beerDAO.getAllBeers();
+//			List<Brewery> breweries = breweryDAO.getAllBreweries();
+//			
+//			modelHolder.put("allBeers", beerList);
+//			modelHolder.put("allBreweries", breweries);
+//			return "beerlist";
+//		}
 	 
 	
 	 
-	 //Getting beer details page by beer id
+	 //Getting beer details page by beer id - THIS WORKS IN POSTMAN
 	 @RequestMapping(path="/beerDetails/{id}", method=RequestMethod.GET)
-		public Beer showBeerDetails(@PathVariable long id){
+		
+	 public BeerDetailResponse showBeerDetails(@PathVariable long id){
 			
-		/*
-		 * if (beerDAO.getBeerById(id) == null) { return "redirect:/beer-list"; }
-		 */
-		 
 			Beer beer = beerDAO.getBeerById(id);
 			
+			List<Review> beerReviewList = reviewDAO.searchReviewsByBeerId(id);
+			
+			//Response object- made separate java object for BeerDetailResponse
+			
+			BeerDetailResponse response = new BeerDetailResponse();
+			response.setReviewList(beerReviewList);
+			response.setBeer(beer);
 		
-			return beer;
+			
+			return response;
 		}
 	 
 	 //Getting form to add Beer if a brewer
-	 @RequestMapping(path="/addBeer", method=RequestMethod.GET)
-		public String showAddBeer(ModelMap modelHolder, HttpSession session){
-			User currentUser= (User) session.getAttribute("currentUser");
-			
-			if(currentUser == null || currentUser.getRole() != "beer-lover" || currentUser.getRole() != "administrator") {
-				return "redirect:/beer-list";
-			}
-			if( ! modelHolder.containsAttribute("newBeer")){
-				modelHolder.put("newBeer", new Beer());
-			}
-			
-			Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
-			modelHolder.put("brewery", currentBrewery);
-			
-			return "addBeer";
-	
-	 }
+//	 @RequestMapping(path="/addBeer", method=RequestMethod.GET)
+//		public String showAddBeer(ModelMap modelHolder, HttpSession session){
+//			User currentUser= (User) session.getAttribute("currentUser");
+//			
+//			if(currentUser == null || currentUser.getRole() != "beer-lover" || currentUser.getRole() != "administrator") {
+//				return "redirect:/beer-list";
+//			}
+//			if( ! modelHolder.containsAttribute("newBeer")){
+//				modelHolder.put("newBeer", new Beer());
+//			}
+//			
+//			Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
+//			modelHolder.put("brewery", currentBrewery);
+//			
+//			return "addBeer";
+//	
+//	 }
 	 
 	 //Add a beer
 	 
-	 @RequestMapping(path="/addBeer", method=RequestMethod.POST)
-		public String addNewBeer(@Valid @ModelAttribute("newBeer") Beer newBeer,
-				BindingResult result, @RequestParam int breweryId, HttpSession session) {
-		 	
-		 	newBeer.setBreweryId((long) breweryId);
-			beerDAO.saveBeer(newBeer);
-			return "redirect:/breweryBeers";
-	 }
-}
+//	 @RequestMapping(path="/addBeer", method=RequestMethod.POST)
+//		public String addNewBeer(@Valid @ModelAttribute("newBeer") Beer newBeer,
+//				BindingResult result, @RequestParam int breweryId, HttpSession session) {
+//		 	
+//		 	newBeer.setBreweryId((long) breweryId);
+//			beerDAO.saveBeer(newBeer);
+//			return "redirect:/breweryBeers";
+//	 }
+ }
 	 
 	 
 	 
