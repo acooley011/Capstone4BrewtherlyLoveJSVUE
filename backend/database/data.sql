@@ -1,4 +1,3 @@
-'COMMIT TRANSACTION;
 
 BEGIN TRANSACTION;
 
@@ -9,6 +8,13 @@ INSERT INTO users ("username", "email", "password", "salt", "role") VALUES
 'FjZDm+sndmsdEDwNtfr6NA==',
 'kidcasB0te7i0jK0fmRIGHSm0mYhdLTaiGkEAiEvLp7dAEHWnuT8n/5bd2V/mqjstQ198iImm1xCmEFu+BHyOz1Mf7vm4LILcrr17y7Ws40Xyx4FOCt8jD03G+jEafpuVJnPiDmaZQXJEpEfekGOvhKGOCtBnT5uatjKEuVWuDA=',
 'user');
+
+INSERT INTO users ("username", "email", "password", "salt", "role") VALUES
+('admin',
+'fakeemail1@yahoo.com',
+'FjZDm+sndmsdEDwNtfr6NA==',
+'kidcasB0te7i0jK0fmRIGHSm0mYhdLTaiGkEAiEvLp7dAEHWnuT8n/5bd2V/mqjstQ198iImm1xCmEFu+BHyOz1Mf7vm4LILcrr17y7Ws40Xyx4FOCt8jD03G+jEafpuVJnPiDmaZQXJEpEfekGOvhKGOCtBnT5uatjKEuVWuDA=',
+'admin');
 
 -- YARDS --
 INSERT INTO breweries (brewery_id, name, address, city, zipcode, neighborhood, contact, business_hours, description, brewery_img)

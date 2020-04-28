@@ -1,9 +1,10 @@
 BEGIN TRANSACTION;
 
+
+DROP TABLE IF EXISTS reviews;
 DROP TABLE IF EXISTS beers;
 DROP TABLE IF EXISTS breweries;
 DROP TABLE IF EXISTS users;
-DROP TABLE IF EXISTS reviews;
 
 CREATE TABLE users (
   id serial PRIMARY KEY,
@@ -12,6 +13,7 @@ CREATE TABLE users (
   password varchar(32) NOT NULL,      -- Password
   salt varchar(256) NOT NULL,          -- Password Salt
   role varchar(255) NOT NULL default('beer-lover')
+  
 );
 
 CREATE TABLE breweries (
@@ -52,7 +54,7 @@ CREATE TABLE reviews (
     date DATE NOT NULL,
     username varchar(255) NOT NULL,
     CONSTRAINT pk_review_review_id PRIMARY KEY (review_id),
-    CONSTRAINT fk_beer_beer_id FOREIGN KEY (beer_id) REFERENCES beers(beer_id),
+    CONSTRAINT fk_beer_beer_id FOREIGN KEY (beer_id) REFERENCES beers(beer_id)
 
 );
 
