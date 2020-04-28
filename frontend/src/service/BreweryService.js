@@ -11,7 +11,7 @@ export default {
   },
 
   get(breweryId) {
-    return fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryDetails/${this.breweryId}`)
+    return fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryDetails/${breweryId}`)
     .then((response) => {
       return response.json();
     });
