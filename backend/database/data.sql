@@ -202,7 +202,7 @@ VALUES (7,
 'Tart Fruit Beer', 
 5.5, 
 'The people have spoken. We are pleased to announce that PYNK is now available all year-round! Each sip of PYNK starts with a crisp, fruity zing and finishes refreshingly dry. The delightful pink hue comes from heaps of fresh raspberries and cherries in every batch. It�s no wonder PYNK is called the ros� of beer. So let�s raise our bottles and pints to the good things in life � like family, friends, and beer � that bring us all together.',
-'https://imgur.com/YWNdddk');
+'https://i.imgur.com/Me3r83E.png');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
 VALUES (8, 
@@ -211,7 +211,7 @@ VALUES (8,
 'Extra Special Ale', 
 6.0, 
 'Our first-ever and most-beloved brew, ESA helped establish a following for cask-conditioned beer in the United States back in the �90s. East Kent Golding hops give this British-inspired ale a subtle spiciness, which complements the strong malt backbone. ESA is floral, earthy and smooth with hints of chocolate and caramel, rounding out this deep chestnut-colored ale.',
-'https://imgur.com/YWNdddk');
+'https://i.imgur.com/hPtIR5z.png');
 
 -- PBC BEERS --
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
