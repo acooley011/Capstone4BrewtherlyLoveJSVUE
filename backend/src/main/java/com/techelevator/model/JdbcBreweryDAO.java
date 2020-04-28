@@ -10,11 +10,11 @@ import org.springframework.jdbc.support.rowset.SqlRowSet;
 import org.springframework.stereotype.Component;
 
 @Component
-public class JdbcBreweryDao implements BreweryDao{
+public class JdbcBreweryDAO implements BreweryDAO{
 
     private JdbcTemplate jdbcTemplate;
 
-	public JdbcBreweryDao(DataSource dataSource) {
+	public JdbcBreweryDAO(DataSource dataSource) {
 		this.jdbcTemplate = new JdbcTemplate(dataSource);
 	}
    
@@ -49,7 +49,7 @@ public class JdbcBreweryDao implements BreweryDao{
     	brewery.setDescription(results.getString("description"));
     	brewery.setBreweryLogoUrl(results.getString("brewery_img"));
     	brewery.setBusinessHours(results.getString("business_hours")); 
-    	brewery.setUserId(results.getLong("user_id"));
+    	
         return brewery;
     }
 

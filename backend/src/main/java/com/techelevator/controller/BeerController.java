@@ -2,31 +2,19 @@ package com.techelevator.controller;
 
 import java.util.List;
 
-import javax.servlet.http.HttpSession;
-import javax.validation.Valid;
-
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.ui.ModelMap;
-import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.annotation.CrossOrigin;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
-import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.techelevator.model.Beer;
 import com.techelevator.model.BeerDAO;
 import com.techelevator.model.BeerDetailResponse;
-import com.techelevator.model.Brewery;
-import com.techelevator.model.BreweryDao;
-import com.techelevator.model.BreweryDetailResponse;
+import com.techelevator.model.BreweryDAO;
 import com.techelevator.model.Review;
 import com.techelevator.model.ReviewDAO;
-import com.techelevator.model.User;
-import com.techelevator.model.Beer;
 
 //TODO add Review model objects 
 //import com.techelevator.model.ReviewDAO
@@ -43,7 +31,7 @@ public class BeerController {
 	 
 //TODO eventually may need to connect with brewery and review for beer list and ratings 
 	 @Autowired
-	 BreweryDao breweryDAO;
+	 BreweryDAO breweryDAO;
 		
 	 @Autowired
 	 ReviewDAO reviewDAO;
