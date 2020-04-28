@@ -46,9 +46,10 @@ public class JdbcBreweryDAO implements BreweryDAO{
     	brewery.setZip(results.getString("zipcode"));
     	brewery.setNeighborhood(results.getString("neighborhood"));
     	brewery.setContact(results.getString("contact"));
+    	brewery.setBusinessHours(results.getString("business_hours")); 
     	brewery.setDescription(results.getString("description"));
     	brewery.setBreweryLogoUrl(results.getString("brewery_img"));
-    	brewery.setBusinessHours(results.getString("business_hours")); 
+    	
     	
         return brewery;
     }
@@ -68,8 +69,13 @@ public class JdbcBreweryDAO implements BreweryDAO{
 
 	@Override
 	public Brewery saveBrewery(Brewery newBrewery) {
-		jdbcTemplate.update("INSERT INTO breweries(name, address, city, neighborhood, zip, contact, description, brewery_logo_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-				newBrewery);
+		
+		String sqlSaveBrewery = "INSERT INTO breweries(name, address, city, neighborhood, zipcode, contact, business_hours, description, brewery_logo_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)";
+		jdbcTemplate.update(sqlSaveBrewery, newBrewery.getName(),newBrewery.getAddress(), newBrewery.getCity(),
+				newBrewery.getNeighborhood(),newBrewery.getZip(),newBrewery.getContact(),newBrewery.getBusinessHours(),
+				newBrewery.getDescription(), newBrewery.getBreweryLogoUrl());
+		
+		
 		return newBrewery;
 	}
 
