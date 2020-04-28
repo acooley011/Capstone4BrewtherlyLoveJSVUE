@@ -192,7 +192,7 @@ VALUES (6,
 'Love Stout', 
 'Dry Stout', 
 5.5, 
-'Our brewers have poured their hearts and roasted malts into this rich, well-rounded stout. Luscious notes of coffee and chocolate accent Love Stout`s smooth, creamy mouth feel. We will not apologize for any amorous affairs resulting from the consumption of this beverage!',
+'Our brewers have poured their hearts and roasted malts into this rich, well-rounded stout. Luscious notes of coffee and chocolate accent Love Stouts smooth, creamy mouth feel. We will not apologize for any amorous affairs resulting from the consumption of this beverage!',
 'https://imgur.com/YWNdddk');
 
 INSERT INTO beers (beer_id, brewery_id, name, type, abv, description, img_url)
