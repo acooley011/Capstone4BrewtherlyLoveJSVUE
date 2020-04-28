@@ -1,5 +1,6 @@
 <template>
-<main class="main" v-if="breweryDetails !== null">
+<main class="main" >
+  <!-- add to main if we ever get this fetch to work v-if="breweryDetails !== null" -->
   
   <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
   v-for="brewery in breweryDetails" v-bind:key="brewery.id">
