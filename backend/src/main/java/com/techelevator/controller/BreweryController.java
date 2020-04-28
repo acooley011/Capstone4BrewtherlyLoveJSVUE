@@ -79,7 +79,9 @@ public class BreweryController {
 	 		}
 	 	
 	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.POST)
-	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) {
+	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) throws UnauthorizedException {
+	 		
+	 	 
 			 breweryDAO.saveBrewery(newBrewery);
 			 return newBrewery;
 	 	}
