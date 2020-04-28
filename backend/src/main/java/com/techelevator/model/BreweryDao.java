@@ -18,8 +18,7 @@ import java.util.List;
 	    
 	    
 	    //save a new brewery done by Administrator
-	    public void saveBrewery(String name, String address, String city, 
-	    		String neighborhood, String zip, String contact, String description, String breweryLogoUrl, String businessHours);
+	    public Brewery saveBrewery(Brewery newBrewery);
 	    
 	    //Brewer can update brewery info
 	    public void updateBrewery(String name, String address, String city, 

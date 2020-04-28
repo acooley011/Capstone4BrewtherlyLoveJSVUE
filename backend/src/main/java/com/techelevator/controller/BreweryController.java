@@ -56,15 +56,8 @@ public class BreweryController {
 //		 	return "RESULT ==> " + result + "\n" + jsonBreweries;
 //		 }
 	 
-	 //
 	 
-//	 @RequestMapping(path = "/admin", method = RequestMethod.POST)
-//	 public Brewery createBrewery(@Valid @RequestBody Brewery newBrewery, Binding result) {
-//		 breweryDao.saveBrewery(newBrewery.getName(), newBrewery.getAddress(), newBrewery.getCity(),newBrewery.getNeighborhood(),  
-//					 newBrewery.getZip(), newBrewery.getContact(), newBrewery.getDescription(), newBrewery.getBreweryLogoUrl(), newBrewery.getBusinessHours());
-//			return null;
-//	 }
-	 
+	 //THIS WORKS IN POSTMAN
 	 @RequestMapping(path="/breweryDetails/{id}", method=RequestMethod.GET)
 		public BreweryDetailResponse showBreweryDetails(@PathVariable long id) {
 			Brewery brewery = breweryDao.getBreweryById(id);
@@ -79,7 +72,33 @@ public class BreweryController {
 		
 			
 			return response;
+			
+			
 		}
+	 
+	 	@RequestMapping(path="/admin", method = RequestMethod.GET)
+	 	public List<Brewery> showBreweries(){
+	 		List<Brewery> allBreweries = breweryDao.getAllBreweries();
+			return allBreweries;
+	 		}
+	 	
+	 	@RequestMapping(path="/admin", method = RequestMethod.POST)
+	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) {
+			return breweryDao.saveBrewery(newBrewery); 		
+	 	}
+	 	
+	 
+//	 @RequestMapping(path = "/admin", method = RequestMethod.GET)
+//	 public Brewery createBrewery(@PathVariable long id) {
+//		 
+//		 Brewery newBrewery = new Brewery();
+//		
+//		 breweryDao.saveBrewery(newBrewery.getName(), newBrewery.getAddress(), newBrewery.getCity(),
+//				 newBrewery.getNeighborhood(), newBrewery.getZip(), newBrewery.getContact(), 
+//				 newBrewery.getDescription(), newBrewery.getBreweryLogoUrl(), newBrewery.getBusinessHours());
+//			
+//		 return newBrewery;
+//	 }
 	 
 	 
 

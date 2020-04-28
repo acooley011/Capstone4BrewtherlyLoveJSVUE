@@ -67,10 +67,10 @@ public class JdbcBreweryDao implements BreweryDao{
 	}
 
 	@Override
-	public void saveBrewery(String name, String address, String city, String neighborhood, String zip,
-			String contact, String description, String breweryLogoUrl, String businessHours) {
+	public Brewery saveBrewery(Brewery newBrewery) {
 		jdbcTemplate.update("INSERT INTO breweries(name, address, city, neighborhood, zip, contact, description, brewery_logo_url) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?)",
-				name, address, city, neighborhood, zip, contact, description, breweryLogoUrl, businessHours);
+				newBrewery);
+		return newBrewery;
 	}
 
 	@Override

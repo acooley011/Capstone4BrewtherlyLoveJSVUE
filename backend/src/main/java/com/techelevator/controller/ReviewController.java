@@ -36,7 +36,6 @@ public class ReviewController {
     //THIS WORKS IN POSTMAN
     @RequestMapping(path="/reviews", method = RequestMethod.GET)
     public List<Review> showReviews() {
-    	//TODO add method for getting all reviews
     	
     	List<Review> allReviews = reviewDAO.getAllReviews();
     	
