@@ -25,10 +25,6 @@
 </template>
 
 <script>
-<<<<<<< HEAD
-=======
-
->>>>>>> f0f8ca2e1ada9c483b917e89cdfa32c6e791374e
 import auth from "../auth.js";
 
 export default {
@@ -67,10 +63,6 @@ export default {
       this.fetchBrewery(); 
   }
 
-<<<<<<< HEAD
-=======
-  
->>>>>>> f0f8ca2e1ada9c483b917e89cdfa32c6e791374e
 }
 </script>
 
