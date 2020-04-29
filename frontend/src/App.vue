@@ -25,7 +25,7 @@
         <span class="icon is-small"><i class="fa fa-beer" aria-hidden="true"></i></span><span> Brewery List</span></router-link></a>
       <!--<a class="navbar-item"><router-link :to="{name: 'beer-list'}">
         <span class="icon is-small"><i class="fa fa-beer" aria-hidden="true"></i></span><span> Beer List</span></router-link></a>-->
-      <a class="navbar-item"><router-link :to="{name: 'beer-lover'}">
+      <a class="navbar-item"><router-link :to="{name: 'reviews'}">
         <span class="icon is-small"><i class="fas fa-edit" aria-hidden="true"></i></span><span> Reviews</span></router-link></a>
       <a class="navbar-item"><router-link :to="{name: 'login'}">
       <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span><span> Login/Register</span></router-link></a>

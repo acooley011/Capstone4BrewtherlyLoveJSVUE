@@ -19,7 +19,7 @@
         </ul>
         </main>
         <router-link to="/brewery-list"><img src="../assets/images/brewtherlyBREWERIES.png" width="100%" /></router-link><br/> 
-        <router-link to="/beer-lover"><img src="../assets/images/brewtherlyREVIEWS.png" width="100%" /></router-link><br>
+        <router-link to="/reviews"><img src="../assets/images/brewtherlyREVIEWS.png" width="100%" /></router-link><br>
         <router-link to="/login"><img src="../assets/images/brewtherlyLOGIN.png" width="50%" /></router-link>
         <router-link to="/register"><img src="../assets/images/brewtherlyREGISTER.png" width="50%" /></router-link>
       <section id="about" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
