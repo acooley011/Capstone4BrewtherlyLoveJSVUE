@@ -8,7 +8,7 @@
   
   <div id="review">
   <form class="form-register" @submit.prevent="reviews">
-   
+    
     <create-review v-if="showCreate"></create-review>
      <list-reviews v-else v-on:addReview="showCreate = true"></list-reviews>
     <div class="alert alert-danger" role="alert" v-if="reviewErrors">
