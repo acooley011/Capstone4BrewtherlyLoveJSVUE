@@ -157,7 +157,7 @@
  </main>
 </form>
 </div><br/>
-  <button class="button is-link">Go to Brewery List</button>
+  <router-link :to="{ name: 'brewery-list' }"><button class="button is-link">Go to Brewery List</button></router-link>
   </section>
 </template>
 
