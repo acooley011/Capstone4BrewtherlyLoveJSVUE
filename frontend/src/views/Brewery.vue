@@ -4,24 +4,23 @@
 <div class="tile is-ancestor">
   <div class="tile is-parent">
     <article class="tile is-child box">
-     <img src="../assets/images/Breweries/breweryYards.png" width="500vw" style="margin-right: 15vw;"/>
-     <p>500 Spring Garden St.</p>
-      <p>Philadelphia</p>
-      <p>19123</p>
-      <p>Northern Liberties</p>
-      <p>info@yardsbrewing.com</p>
-      <p>Sun: 11am to 10pm.</p>
-      <p>Mon-Fri: 11:30am to 11pm.</p>
-      <p>Sat: 11am to 11pm.</p>
+      <!-- TODO change DB to add '.png' to img urls-->
+     <img :src="breweryDetails.brewery.breweryLogoUrl + '.png'" width="500vw" style="margin-right: 15vw;"/>
+      <p>{{brewery.address}}</p>
+      <p>{{brewery.city}}</p>
+      <p>{{brewery.zip}}</p>
+      <p>{{brewery.neighborhood}}</p>
+      <p>{{brewery.contact}}</p>
+      <p>{{brewery.businessHours}}</p>
+      
     </article>
   </div>
   <div class="tile is-parent is-8">
     <article class="tile is-child box">
-      <p class="title">Yards Brewing Company</p>
+      <p class="title">{{breweryDetails.brewery.name}}</p>
       
       <div class="content">
-        <p>Yards has been brewing Philly's beer since 1994. We’ve grown from a garage-sized operation in Manayunk all the way up to our current location at 500 Spring Garden Street in Northern Liberties. And we couldn't have done it without your support through the years. Our beers always have and always will be brewed, bottled, kegged, and canned for the hard working people of Philadelphia and beyond.</p>
-        <p>You can FIND YARDS throughout the Mid-Atlantic Region in Pennsylvania, New Jersey, Delaware, and Maryland. Or you can visit our TAPROOM to go on a BREWERY TOUR and try specialty beers only available at Yards. PHILADELPHIA PALE ALE and BRAWLER, both nationally recognized ales, lead our balanced portfolio of quality, handcrafted beers including nine year-round offerings and several seasonal and limited releases.</p>
+        <p>{{breweryDetails.brewery.description}}</p>
       </div>
     </article>
   </div>
@@ -36,7 +35,7 @@
           <p class="subtitle">ABV: {{beer.abv}}%</p>
           <p class="subsubtitle">{{beer.description}}</p><br/>
           <figure>
-            <img :src="beer.imgUrl">
+            <img :src="beer.imgUrl + '.png'">
           </figure>
         </article>
   </div>
@@ -49,16 +48,14 @@
 <script>
 
 import auth from "../auth.js";
-import breweryService from '@/service/BreweryService';
-
 
 export default {
 
   data(){
     return {
       breweryDetails: null,
-      breweryId: 1, //TODO during the create method, get the brewery id out of the url, see catalog HW
-      //I TRIED. /brewery will not display if i change 1 to this.id
+      brewery: null,
+      breweryId: 1, 
     };
   },
 
@@ -74,22 +71,18 @@ export default {
       };
     fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryDetails/${this.breweryId}`,options) 
     .then(response => response.json())
-    .then(details => this.breweryDetails = details)
+    .then(details => {
+      this.breweryDetails = details;
+      this.brewery = this.breweryDetails.brewery;
+      })
     .catch(err => console.error(err));
     },
-
-    getBrewery(id) {
-            breweryService.get(id)
-                .then(user => this.user = user); 
-        }
 
   },
 
   created(){
-      //TODO Set brewery id here
-        const id = this.$route.params.id
-
-      this.fetchBrewery(id); 
+      this.breweryId = this.$route.params.id
+      this.fetchBrewery(); 
   }
 
   
