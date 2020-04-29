@@ -11,17 +11,21 @@
          <div>
       <img :src="review.imgUrl"/>
       </div><br/>
-      <h3><strong>Beer:</strong> {{review.beerName}}</h3><br/>
-      <h2><strong>Title:</strong> {{review.subject}}</h2><br/>
-      
-      <p>Rating: {{review.rating}}</p>
-      <div id="review-info" class="text-box">
-        <p>{{review.review}}</p>
-      </div><br/>
+      <ul>
+      <li><h3><strong>Beer:</strong> {{review.beerName}}</h3></li><br/>
+      <li><h2><strong>Title:</strong> {{review.subject}}</h2></li><br/>
+      <li><strong>Rating:</strong> {{review.rating}} stars</li><br/>
+      <li><h5>{{review.username}} | {{review.date}}</h5></li>
+      </ul>
+      <ul>
+     <li><div id="review-info" class="text-box">
+        <p style="font-size: 18px; font-weight: bold;">{{review.review}}</p>
+      </div></li><br/>
+      </ul>
       <div>
-      <h5>{{review.username}}</h5>
-      <h5>{{review.date}}</h5>
+      
       </div>
+      
     </div>
     </div>
     </main>
@@ -80,11 +84,13 @@ export default {
 
 #review-info {
 font-size: 14px;
+margin-right: 18vw;
 }
 
 p {
-  width: 25vw;
+  width: 15vw;
   font-size: 14px;
+  padding-top: 6vw;
   padding-bottom: 2vw;
   margin-left: 20vw;
 }

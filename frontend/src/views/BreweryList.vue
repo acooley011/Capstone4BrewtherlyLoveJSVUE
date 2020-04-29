@@ -96,7 +96,7 @@ p {
 }
 
 img {
-  max-width: 50vw;
+  max-width: 40vw;
   min-width: 30vw;
 
 }

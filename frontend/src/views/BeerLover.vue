@@ -3,7 +3,7 @@
 <section class="section">
   <!-- add a way to read and print their username in the welcome -->
     <div class="beer-lover">
-      <h1>Welcome Beer Lover</h1>
+      <h1 id="review">Welcome Beer Lover</h1>
  </div>
   
   <div id="review">
@@ -213,15 +213,12 @@ section {
 }
 
 .main-content {
-margin-left: 32.3vw;
+margin-left: 33vw;
 min-width: 225px;
 justify-content: center;
 padding: 4vw;
 
 }
 
-h1 {
-  margin-left: 32.3vw;
-}
 
 </style>

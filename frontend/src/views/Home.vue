@@ -36,7 +36,7 @@
     <p><strong>TODAY'S FEATURE</strong></p><br/>
     <div class="columns is-mobile">
       <div>
-       <router-link to="/brewery"><img src="../assets/images/Breweries/breweryYards.png" width="500vw" style="margin-right: 15vw;"/></router-link>
+       <router-link to="/brewery/1"><img src="../assets/images/Breweries/breweryYards.png" width="500vw" style="margin-right: 15vw;"/></router-link>
       </div>
       <div class="text-box">
        <p style="width: 25vw; font-size: 16px; font-weight:bold; ">TAPROOM PICKUP <br/>• Yards is proud to offer curbside and contactless pickup.<br/>• Curbside or contactless pickup are available 11:30am - 8pm daily. <br/>• If you have placed an order for pickup, your order will be ready 15 minutes after placing it, you will also receive an email notification when your order is ready.</p>
