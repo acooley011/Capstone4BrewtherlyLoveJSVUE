@@ -64,9 +64,9 @@ public class BeerController {
 			return response;
 		}
 	
-	 //Getting form to add Beer if a brewer- THIS WORKS IN POSTMAN
+	 // THIS WORKS IN POSTMAN
 	 @RequestMapping(path="brewer/addBeer", method=RequestMethod.POST)
-		public Beer createBeer(@RequestBody Beer newBeer, @PathVariable long id) throws UnauthorizedException{
+		public Beer createBeer(@RequestBody Beer newBeer) throws UnauthorizedException{
 		 
 		 //User currentUser = authProvider.getCurrentUser();
 		 //Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
