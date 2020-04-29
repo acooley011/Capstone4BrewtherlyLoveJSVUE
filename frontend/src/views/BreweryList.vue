@@ -104,7 +104,7 @@
     <h3><strong>Tired Hands Brewing Company</strong></h3><br/>
     <div class="columns">
       <div>
-       <img src="../assets/images/Breweries/breweryTiredHands.png"/>
+      <router-link to="/brewery/4"><img src="../assets/images/Breweries/breweryTiredHands.png"/></router-link>
       </div>
       <div id="brewery-info" class="text-box" >
         <p>Philly based fans of Tired Hands Brewing Company won't have to trek out to Ardmore to sip a wide selection of the cult favorite craft brewer's beers any more: over the weekend, the Tired Hands Biergarten began pouring at 2213 Frankford Avenue.The 7,000-square foot seasonal outdoor space is kicking off with a hay bale-festooned High Harvest theme for fall. On tap will be 12 different drafts ' from their Fermentaria and Brewcafe in addition to oak-aged varieties stored in their Dispensary plus their sought-after Alien Church in cans, bottles of 333 Kombucha, and snacks.</p>
@@ -116,7 +116,7 @@
     <h3><strong>Yards Brewing Company</strong></h3><br/>
     <div class="columns">
       <div>
-       <router-link to="/brewery"><img src="../assets/images/Breweries/breweryYards.png"  /></router-link>
+       <router-link to="/brewery/1"><img src="../assets/images/Breweries/breweryYards.png"  /></router-link>
       </div>
       <div id="brewery-info" class="text-box" >
         <p>Yards has been brewing Philly's beer since 1994. We've grown from a garage-sized operation in Manayunk all the way up to our current location at 500 Spring Garden Street in Northern Liberties. And we couldn't have done it without your support through the years. Our beers always have and always will be brewed, bottled, kegged, and canned for the hard working people of Philadelphia and beyond.</p>
