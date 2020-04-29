@@ -26,8 +26,46 @@
 </template>
 
 <script>
+
+import auth from "../auth.js";
+
 export default {
-  name: 'beer-details'
+
+  data(){
+    return {
+      breweryDetails: null,
+      brewery: null,
+      breweryId: 1, 
+    };
+  },
+
+  methods: {
+    fetchBrewery() {
+      const options = {
+        method: "GET",
+        headers:{
+          "Authorization" : `Bearer ${auth.getToken()}`
+          //If you are posting/putting want to add "Content-Type: application/json" -> setting the content type when sending content
+        },
+        //If doing post/put then body: json.stringify would go here
+      };
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryDetails/${this.breweryId}`,options) 
+    .then(response => response.json())
+    .then(details => {
+      this.breweryDetails = details;
+      this.brewery = this.breweryDetails.brewery;
+      })
+    .catch(err => console.error(err));
+    },
+
+  },
+
+  created(){
+      this.breweryId = this.$route.params.id
+      this.fetchBrewery(); 
+  }
+
+  
 }
 </script>
 
