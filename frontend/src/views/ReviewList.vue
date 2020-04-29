@@ -1,3 +1,5 @@
+<!--
+
 <template>
 <section class="section">
   <div id="register">
@@ -115,7 +117,7 @@
     </div>
   </div>
 
-<!--stars/bottles selector should go here -->
+<!--stars/bottles selector should go here 
 
 <div class="field is-center" id="review">
   <label class="label">Review:</label>
@@ -141,7 +143,9 @@
  
 </template>
 
+
 <script>
+
 import CreateReview from "../components/CreateReview";
 import ListReviews from "../components/ListReviews";
 

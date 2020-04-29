@@ -14,6 +14,7 @@ import com.techelevator.authentication.AuthProvider;
 import com.techelevator.model.BeerDAO;
 import com.techelevator.model.Review;
 import com.techelevator.model.ReviewDAO;
+import com.techelevator.model.ReviewListResponse;
 
 @RestController
 @CrossOrigin
@@ -32,11 +33,11 @@ public class ReviewController {
     
     //THIS WORKS IN POSTMAN
     @RequestMapping(path="/reviews", method = RequestMethod.GET)
-    public List<Review> showReviews() {
-    	
-    	List<Review> allReviews = reviewDAO.getAllReviews();
-    	
-    	return allReviews;
+    public ReviewListResponse showReviews() {
+    	ReviewListResponse response = new ReviewListResponse();
+    	List<Review> reviewList = reviewDAO.getAllReviews();
+    	response.setBreweries(reviewList);
+    	return response;
     }
     
     //TODO  we don't need to get the sorted reviews on the review page
