@@ -48,10 +48,15 @@ public class ReviewController {
     	return allReviewsById;
     }
     
-    @RequestMapping(path="/beerDetails/{id}", method = RequestMethod.POST)
+    //TODO this is failing due to 400 error
+    //Did we add date to the database schema?
+    @RequestMapping(path="/beer-lover/review", method = RequestMethod.POST)
     public Review createReview(@RequestBody Review newReview) {
     	
-    	
+    	//Form should only show for logged in beer-lover user
+// 		if(!authProvider.userHasRole(new String[] {"beer-lover"})) {
+//			throw new UnauthorizedException();
+//		}
     	reviewDAO.saveReview(newReview);
     	return newReview;
     }

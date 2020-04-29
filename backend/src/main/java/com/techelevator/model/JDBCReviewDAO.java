@@ -24,12 +24,10 @@ public class JDBCReviewDAO implements ReviewDAO {
 
     @Override
     public Review saveReview(Review newReview) {
-        
     	
-    	
-           String sqlSaveReview= "INSERT INTO reviews(username, subject, beer_name, rating, review) VALUES(?,?,?,?,?) RETURNING id";
-           jdbcTemplate.update(sqlSaveReview, newReview.getUsername(),newReview.getSubject(),  newReview.getBeerName(),
-        		   newReview.getRating(), newReview.getReview());
+           String sqlSaveReview= "INSERT INTO reviews( beer_name, subject, review, rating, date,username) VALUES(?,?,?,?,?,?)";
+           jdbcTemplate.update(sqlSaveReview,newReview.getBeerName() ,newReview.getSubject(), newReview.getReview(),
+        		   newReview.getRating(), newReview.getDate(), newReview.getUsername());
        
 
         return newReview;
@@ -59,6 +57,7 @@ public class JDBCReviewDAO implements ReviewDAO {
 		review.setReview(row.getString("review"));
         review.setRating(row.getInt("rating"));
         review.setUsername(row.getString("username"));
+        review.setDate(row.getDate("date"));
 
         return review;
     }

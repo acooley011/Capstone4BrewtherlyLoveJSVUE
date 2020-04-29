@@ -65,18 +65,19 @@ public class BeerController {
 		}
 	
 	 //Getting form to add Beer if a brewer- THIS WORKS IN POSTMAN
-	 @RequestMapping(path="brewer/{id}", method=RequestMethod.POST)
-		public Beer showAddBeer(@RequestBody Beer newBeer, @PathVariable long id) throws UnauthorizedException{
+	 @RequestMapping(path="brewer/addBeer", method=RequestMethod.POST)
+		public Beer createBeer(@RequestBody Beer newBeer, @PathVariable long id) throws UnauthorizedException{
 		 
-		 User currentUser = authProvider.getCurrentUser();
-		 Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
+		 //User currentUser = authProvider.getCurrentUser();
+		 //Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());
 		 
 		 //Load the brewery by id, then make sure user id on brewery is the current user id or that
 		 //the current user is an brewer (role) and that they are the brewer for the brewery matching the beer
 		 
-		 if(currentUser == null || currentUser.getId() != currentBrewery.getUserId()||!authProvider.userHasRole(new String[] {"brewer"})) {
-			 throw new UnauthorizedException();
-		 }
+		 //Commenting this out for now, need to check that user is logged in and id for brewer matches
+//		 if(currentUser == null || currentUser.getId() != currentBrewery.getUserId()||!authProvider.userHasRole(new String[] {"brewer"})) {
+//			 throw new UnauthorizedException();
+//		 }
 		 
 		 //Load the brewery object, check roles and throw exception/ check if null
 		 

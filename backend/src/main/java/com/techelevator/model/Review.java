@@ -2,6 +2,9 @@ package com.techelevator.model;
 
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Min;
+
+import java.sql.Date;
+
 import javax.validation.constraints.Max;
 
 import org.hibernate.validator.constraints.NotBlank;
@@ -25,6 +28,8 @@ public class Review {
     private long beerId;
     private String beerName;
     private String username;
+    
+    private Date date;
 
     public long getId() {
         return id;
@@ -81,4 +86,12 @@ public class Review {
     public void setUsername(String username) {
         this.username = username;
     }
+
+	public Date getDate() {
+		return date;
+	}
+
+	public void setDate(Date date) {
+		this.date = date;
+	}
 }
