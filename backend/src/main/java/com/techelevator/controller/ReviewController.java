@@ -2,6 +2,8 @@ package com.techelevator.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -51,15 +53,15 @@ public class ReviewController {
     
     //TODO this is failing due to 400 error
     //Did we add date to the database schema?
-    @RequestMapping(path="/beer-lover/review", method = RequestMethod.POST)
-    public Review createReview(@RequestBody Review newReview) {
+    @RequestMapping(path="/beer-lover", method = RequestMethod.POST)
+    public String createReview(@Valid @RequestBody Review newReview) {
     	
     	//Form should only show for logged in beer-lover user
 // 		if(!authProvider.userHasRole(new String[] {"beer-lover"})) {
 //			throw new UnauthorizedException();
 //		}
     	reviewDAO.saveReview(newReview);
-    	return newReview;
+    	return "{\"success\":true}";
     }
 
 

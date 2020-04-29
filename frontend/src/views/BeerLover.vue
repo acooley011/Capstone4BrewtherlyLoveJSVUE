@@ -7,7 +7,7 @@
  </div>
   
   <div id="review">
-  <form class="form-register" @submit.prevent="">
+  <form class="form-register" @submit.prevent="reviews">
     <div class="alert alert-danger" role="alert" v-if="reviewErrors">
       There were problems submitting your review.
       </div>
@@ -16,10 +16,10 @@
   <strong><h3 style="font-weight: bold; text-decoration: underline;" id="review">Submit a Beer Review</h3></strong><br/>
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
-  <div class="control">
+  <div class="form-control">
     <input v-model="review.subject" class="input" type="text" placeholder="Text input" required autofocus/>
   </div>
-  <label class="label"><strong>Rating:</strong></label>
+  <label for="rating" class="label"><strong>Rating:</strong></label>
   <div class="select">
   <select required v-model="review.rating">
     <option>1</option>
@@ -33,7 +33,7 @@
 <div class="field is-center" id="review">
   <label class="label"><strong>Beer:</strong></label>
     <div class="select">
-      <select required v-model="review.beer_name">
+      <select required v-model="review.beerName">
 
 
         <option style="font-weight: bold;">--ARS--</option>
@@ -152,13 +152,15 @@
 </template>
 
 <script>
+import auth from "../auth.js";
+
 export default {
-  name: 'beer-lover',
+  name: 'reviews',
   data () {
     return {
       review: {
         subject: '',
-        beer_name: '',
+        beerName: '',
         rating: '',
         review: '',
         username: '',
@@ -172,6 +174,7 @@ export default {
       fetch(`${process.env.VUE_APP_REMOTE_API}/beer-lover/review`, {
         method: 'POST',
         headers: {
+          "Authorization" : `Bearer ${auth.getToken()}`,
           Accept: 'application/json',
           'Content-Type' : 'application/json',
         },
@@ -179,7 +182,7 @@ export default {
       })
       .then((response) => {
         if (response.ok) {
-          this.$router.push({path: '/reviews'});
+          this.$router.push({path: '/reviews', query: {review: 'success'} });
         } else {
           this.reviewErrors = true;
         }
