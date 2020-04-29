@@ -7,15 +7,26 @@
         <main id="main-content" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
         <p><strong>Welcome!</strong></p>
         <ul>
-        <li>• We keep track of all the breweries in Philadelphia so you don't have to!</li>
+          <li>Fans of craft beer have a lot to be excited about in the Philadelphia area. The region is experiencing a surge of craft brewery openings and expansions, including new taprooms, craft breweries, and beer gardens. We keep track of them so you don't have to!</li>
+        <!--<li>• We keep track of all the breweries in Philadelphia so you don't have to!</li>
         <li>• Browse our website and you will find a list of all the breweries and cider distilleries in Center City and surrounding neighborhoods.</li>
         <li>• Make an account as a beer lover and you will be able to review any beers you try, along with interact with fellow beer lovers.</li>
         <li>• Check out the review page for a list of all the reviewed beers sorted by average rating.</li> 
         <li>• Find out which breweries and beers are most popular at a glance.</li>
         <li>• Own a brewery? Make a profile page if we don't already have one and keep track of your delicious brew stock for the public to see.</li>
         <li>• Respond to customer questions on the message board too! Philadelphia has so many great places to go and now we can drink up together in the City of Brew-therly Love.</li>
+        -->
         </ul>
         </main>
+        <router-link to="/brewery-list"><img src="../assets/images/brewtherlyBREWERIES.png" width="100%" /></router-link><br/> 
+        <router-link to="/reviews"><img src="../assets/images/brewtherlyREVIEWS.png" width="100%" /></router-link><br>
+        <router-link to="/login"><img src="../assets/images/brewtherlyLOGIN.png" width="50%" /></router-link>
+        <router-link to="/register"><img src="../assets/images/brewtherlyREGISTER.png" width="50%" /></router-link>
+      <section id="about" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
+        <ul>
+          <li> Login or Register to leave a review!</li>
+        </ul>
+      </section>
       </div>
       <div class="column">
         <router-link to="/brewery-list"><img src="../assets/images/brewmap.png" width="100%" /></router-link>
