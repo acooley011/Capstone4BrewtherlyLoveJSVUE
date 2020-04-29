@@ -7,20 +7,10 @@
  </div>
   
   <div id="review">
-  <form class="form-register" @submit.prevent="reviews">
-    
-    <create-review v-if="showCreate"></create-review>
-     <list-reviews v-else v-on:addReview="showCreate = true"></list-reviews>
+  <form class="form-register" @submit.prevent="">
     <div class="alert alert-danger" role="alert" v-if="reviewErrors">
       There were problems submitting your review.
       </div>
-    <div v-for="review in reviews" v-bind:key="review.id">
-        <h2>{{review.subject}}</h2>
-        <span>{{review.username}} | {{formatDate(review.createdAt)}}</span>
-        <h3>{{review.beer_name}}</h3>
-        <h4>{{review.rating}}</h4>
-        <p class="feedback">{{review.review}}</p>
-      </div> 
 
 <main class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
   <strong><h3 style="font-weight: bold; text-decoration: underline;" id="review">Submit a Beer Review</h3></strong><br/>
@@ -146,8 +136,8 @@
 <br/>
 <div class="field is-grouped is-grouped-centered" id="review">
   <div class="control">
-     
-    <button class="button is-success" v-bind:disabled="!isValidForm" v-on:click="saveReview">Submit</button>
+     <!--v-bind:disabled="!isValidForm"--> 
+    <button class="button is-success" type="submit">Submit</button>
   </div>
   <div>
     <button class="button is-link">Cancel</button>
@@ -166,25 +156,38 @@ export default {
   name: 'beer-lover',
   data () {
     return {
+      review: {
         subject: '',
         beer_name: '',
         rating: '',
         review: '',
-
-    }
+        username: '',
+        date: ''
+      },
+      reviewErrors: false,
+    };
   },
-   computed: {
-    isValidForm() {
-      return (
-        this.review.subject != '' &&
-        this.review.rating != '' &&
-        this.review.beer_name != '' || '--ARS--' || '--Crime and Punishment--' || '--Dock Street--' || '--Evil Genius--' || '--Love City--' || 
-        '--Original 13 Ciderworks--' || '--Philadelphia Brewing Co--' || '--Separatist--' || '--Tired Hands--' || '--Yards--' &&
-        this.review.review != ''
-      );
-    }
-   }
-}
+  methods: {
+    addReview() {
+      fetch(`${process.env.VUE_APP_REMOTE_API}/beer-lover/review`, {
+        method: 'POST',
+        headers: {
+          Accept: 'application/json',
+          'Content-Type' : 'application/json',
+        },
+        body: JSON.stringify(this.review),
+      })
+      .then((response) => {
+        if (response.ok) {
+          this.$router.push({path: '/reviews'});
+        } else {
+          this.reviewErrors = true;
+        }
+      })
+      .then((err) => console.error(err));
+    },
+  },   
+};
 </script>
 
 <style scoped>
