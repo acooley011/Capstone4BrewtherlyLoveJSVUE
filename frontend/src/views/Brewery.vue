@@ -33,9 +33,9 @@
           <p class="subtitle">{{beer.type}}</p>
           <p class="subtitle">ABV: {{beer.abv}}%</p>
           <p class="subsubtitle">{{beer.description}}</p><br/>
-          <figure>
-            <img :src="beer.imgUrl">
-          </figure>
+          
+          <router-link :to="'/beer-details/'+beer.id"><img :src="beer.imgUrl"></router-link>
+          
         </article>
   </div>
  
