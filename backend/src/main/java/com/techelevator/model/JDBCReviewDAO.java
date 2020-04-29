@@ -61,6 +61,7 @@ public class JDBCReviewDAO implements ReviewDAO {
         review.setId(row.getLong("review_id"));
         review.setBeerId(row.getLong("beer_id"));
         review.setSubject(row.getString("subject"));
+        review.setBeerName(row.getString("beer_name"));
 		review.setReview(row.getString("review"));
         review.setRating(row.getInt("rating"));
         review.setUsername(row.getString("username"));
