@@ -23,20 +23,14 @@ public class JDBCReviewDAO implements ReviewDAO {
     }
 
     @Override
-    public Review saveReview(String username, String subject, String beer_name, Integer rating, String review) {
+    public Review saveReview(Review newReview) {
         
     	
-    	long newId = jdbcTemplate.queryForObject(
-            "INSERT INTO reviews(username, subject, beer_name, rating, review) VALUES(?,?,?,?,?) RETURNING id", Long.class,
-            username, subject, beer_name, rating, review);
-        
-        Review newReview = new Review();
-        newReview.setId(newId);
-        newReview.setUsername(username);
-        newReview.setSubject(subject);
-        newReview.setBeerName(beer_name);
-        newReview.setRating(rating);
-        newReview.setReview(review);
+    	
+           String sqlSaveReview= "INSERT INTO reviews(username, subject, beer_name, rating, review) VALUES(?,?,?,?,?) RETURNING id";
+           jdbcTemplate.update(sqlSaveReview, newReview.getUsername(),newReview.getSubject(),  newReview.getBeerName(),
+        		   newReview.getRating(), newReview.getReview());
+       
 
         return newReview;
      

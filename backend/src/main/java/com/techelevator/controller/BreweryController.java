@@ -34,6 +34,7 @@ public class BreweryController {
 	 @Autowired
 	 private BeerDAO beerDAO;
 	 
+	 //THIS WORKS IN POSTMAN
 	 @RequestMapping(value="/breweryList", method=RequestMethod.GET)
 		 public BreweryListResponse getBreweryList()
 		 {
@@ -66,7 +67,7 @@ public class BreweryController {
 			
 			
 		}
-	 
+	 //THIS WORKS IN POSTMAN
 	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.GET)
 	 	public List<Brewery> showBreweries() throws UnauthorizedException{
 
@@ -78,7 +79,7 @@ public class BreweryController {
 	 		List<Brewery> allBreweries = breweryDAO.getAllBreweries();
 			return allBreweries;
 	 		}
-	 	
+	  //THIS WORKS IN POSTMAN	
 	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.POST)
 	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) throws UnauthorizedException {
 	 		
