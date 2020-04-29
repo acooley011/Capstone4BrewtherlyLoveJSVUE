@@ -4,8 +4,7 @@
 <div class="tile is-ancestor">
   <div class="tile is-parent">
     <article class="tile is-child box">
-      <!-- TODO change DB to add '.png' to img urls-->
-     <img :src="breweryDetails.brewery.breweryLogoUrl + '.png'" width="500vw" style="margin-right: 15vw;"/>
+     <img :src="breweryDetails.brewery.breweryLogoUrl" width="500vw" style="margin-right: 15vw;"/>
       <p>{{brewery.address}}</p>
       <p>{{brewery.city}}</p>
       <p>{{brewery.zip}}</p>
@@ -35,7 +34,7 @@
           <p class="subtitle">ABV: {{beer.abv}}%</p>
           <p class="subsubtitle">{{beer.description}}</p><br/>
           <figure>
-            <img :src="beer.imgUrl + '.png'">
+            <img :src="beer.imgUrl">
           </figure>
         </article>
   </div>
