@@ -18,6 +18,7 @@ public class Review {
     private String subject;
 
     private String review;
+    private String imgUrl;
 
     @NotNull
     @Min(value = 1, message="Rate Me Between 1 and 5!")
@@ -93,5 +94,13 @@ public class Review {
 
 	public void setDate(Date date) {
 		this.date = date;
+	}
+
+	public String getImgUrl() {
+		return imgUrl;
+	}
+
+	public void setImgUrl(String imgUrl) {
+		this.imgUrl = imgUrl;
 	}
 }

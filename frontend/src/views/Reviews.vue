@@ -1,23 +1,31 @@
 <template>
 <main class="main" >
+  
+    <h1 style="text-align: center;"><strong>Reviews</strong></h1><br/>
   <!-- add to main if we ever get this fetch to work v-if="reviewDetails !== null" -->
 <!-- this chunk of code was saved -->
-      <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
-      v-for="review in reviews.reviewList" v-bind:key="review.id">
+  <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
+      v-for="review in reviewList.reviews" v-bind:key="review.id">
     
-    
-    <h1><strong>Reviews</strong></h1><br/>
     <div class="columns">
-      <h2>{{review.subject}}</h2>
-      <h3>{{review.beerName}}</h3>
-      <p>{{review.rating}}</p>
-      <div id="review-info" class="text-box">
-        <p>{{review.review}}</p>
-      </div>
+         <div>
+      <img :src="review.imgUrl"/>
+      </div><br/>
+      <ul>
+      <li><h3><strong>Beer:</strong> {{review.beerName}}</h3></li><br/>
+      <li><h2><strong>Title:</strong> {{review.subject}}</h2></li><br/>
+      <li><strong>Rating:</strong> {{review.rating}} stars</li><br/>
+      <li><h5>{{review.username}} | {{review.date}}</h5></li>
+      </ul>
+      <ul>
+     <li><div id="review-info" class="text-box">
+        <p style="font-size: 18px; font-weight: bold;">{{review.review}}</p>
+      </div></li><br/>
+      </ul>
       <div>
-      <h5>{{review.username}}</h5>
-      <h5>{{review.date}}</h5>
+      
       </div>
+      
     </div>
     </div>
     </main>
@@ -28,11 +36,11 @@
 import auth from "../auth.js";
 
 export default {
-  name: 'review-list',
+  name: 'reviews',
 
   data(){
     return {
-      reviews: null,
+      reviewList: null,
       reviewId: 1, //TODO during the create method, get the review id out of the url, see catalog HW
     };
   },
@@ -47,11 +55,11 @@ export default {
         },
         //If doing post/put then body: json.stringify would go here
       };
-    fetch(`${process.env.VUE_APP_REMOTE_API}/api/reviews/`,options) 
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/reviews/`, options) 
     .then(response => response.json())
     .then(details => {
-      this.reviews = details;
-      this.review = this.reviews.review;
+      this.reviewList = details;
+      this.review = this.reviewList.review;
       })
     .catch(err => console.error(err));
     }
@@ -76,18 +84,20 @@ export default {
 
 #review-info {
 font-size: 14px;
+margin-right: 18vw;
 }
 
 p {
-  width: 25vw;
+  width: 15vw;
   font-size: 14px;
+  padding-top: 6vw;
   padding-bottom: 2vw;
   margin-left: 20vw;
 }
 
 img {
-  max-width: 50vw;
-  min-width: 30vw;
+  max-width: 25vw;
+  min-width: 25vw;
 
 }
 

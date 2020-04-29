@@ -913,3 +913,7 @@ COMMIT TRANSACTION;
 
 SELECT * FROM breweries_brewery_id_seq;
 SELECT setval('breweries_brewery_id_seq', 10, true);
+SELECT * FROM beers_beer_id_seq;
+SELECT setval('beers_beer_id_seq', 74, true);
+SELECT * FROM reviews_review_id_seq;
+SELECT setval('reviews_review_id_seq', 50, true);

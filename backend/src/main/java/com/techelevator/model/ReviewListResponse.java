@@ -9,7 +9,7 @@ public class ReviewListResponse {
 		return reviewList;
 	}
 	
-	public void setBreweries(List<Review> reviewList) {
+	public void setReviews(List<Review> reviewList) {
 		this.reviewList = reviewList;
 	}
 

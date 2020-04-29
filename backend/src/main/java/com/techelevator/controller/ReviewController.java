@@ -36,7 +36,7 @@ public class ReviewController {
     public ReviewListResponse showReviews() {
     	ReviewListResponse response = new ReviewListResponse();
     	List<Review> reviewList = reviewDAO.getAllReviews();
-    	response.setBreweries(reviewList);
+    	response.setReviews(reviewList);
     	return response;
     }
     

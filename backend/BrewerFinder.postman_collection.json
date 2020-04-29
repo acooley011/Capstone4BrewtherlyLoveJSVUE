@@ -163,7 +163,27 @@
 			"name": "Create new beer form on brewer page",
 			"request": {
 				"method": "POST",
-				"header": [],
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\":\"100000\",\r\n        \"name\": \"new beer\",\r\n        \"description\": \"People drink it\",\r\n        \"abv\": 6.5,\r\n        \"type\": \"IPA\",\r\n        \"imgUrl\": \"https://imgur.com/OjGdv5d\",\r\n        \"breweryId\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
 				"url": {
 					"raw": "http://localhost:8080/AuthenticationApplication/api/brewer/addBeer",
 					"protocol": "http",
@@ -199,7 +219,7 @@
 				],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n        \r\n        \"subject\": \"it's a beer\",\r\n        \"review\": \"drink it\",\r\n        \"rating\": 5,\r\n        \"beerId\": 1,\r\n        \"beerName\": null,\r\n        \"username\": \"user\"\r\n    }"
+					"raw": "{\r\n        \"id\": 100001,\r\n        \"subject\": \"it's a beer\",\r\n        \"review\": \"drink it\",\r\n        \"rating\": 5,\r\n        \"beerId\": 1,\r\n        \"beerName\": \"NewBeer\",\r\n        \"username\": \"user\",\r\n        \"date\": \"2020-04-21\"\r\n    }"
 				},
 				"url": {
 					"raw": "http://localhost:8080/AuthenticationApplication/api/beer-lover/review",
@@ -213,44 +233,6 @@
 						"api",
 						"beer-lover",
 						"review"
-					]
-				}
-			},
-			"response": []
-		},
-		{
-			"name": "Create beer",
-			"request": {
-				"method": "POST",
-				"header": [
-					{
-						"key": "Accept",
-						"value": "application/json",
-						"type": "text"
-					},
-					{
-						"key": "Content-Type",
-						"value": "application/json",
-						"type": "text"
-					}
-				],
-				"body": {
-					"mode": "raw",
-					"raw": "{\n\t\"id\": 1,\n        \"name\": \"newBeer\",\n        \"description\": \"People drink it\",\n        \"abv\": 6.5,\n        \"type\": \"Stout\",\n        \"imgUrl\": \"https://imgur.com/OjGdv5d\",\n        \"breweryId\": 0\n}"
-				},
-				"url": {
-					"raw": "http://localhost:8080/AuthenticationApplication/api/brewer/0/addBeer",
-					"protocol": "http",
-					"host": [
-						"localhost"
-					],
-					"port": "8080",
-					"path": [
-						"AuthenticationApplication",
-						"api",
-						"brewer",
-						"0",
-						"addBeer"
 					]
 				}
 			},
@@ -382,6 +364,61 @@
 				}
 			},
 			"response": []
+		},
+		{
+			"name": "Get reviews on beer details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/beerDetails/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"beerDetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get brewery List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/breweryList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"breweryList"
+					]
+				}
+			},
+			"response": []
 		}
 	],
 	"auth": {
@@ -389,7 +426,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1ODgwODUxOTcsInN1YiI6InVzZXIiLCJyb2wiOiJ1c2VyIiwiZXhwIjoxNTg4MTA2Nzk3fQ.gLW6p3PmAY4vx-r5NHWKyCryZrV0QqWN-qQzGFHaEKd4dwByFfrEcBrXi8FRXbpfIx7WXNpXIqX1WzKGh8SHAg",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1ODgxOTYxMDEsInN1YiI6InVzZXIiLCJyb2wiOiJ1c2VyIiwiZXhwIjoxNTg4MjE3NzAxfQ._DOcUULcyISILIwVp_a9pcny7GlLeFbY6z0xbttfNkGuJt2Nx0tjRLm7hR-rqf8HN0a4UOZ138_9NJBNImGMCQ",
 				"type": "string"
 			}
 		]

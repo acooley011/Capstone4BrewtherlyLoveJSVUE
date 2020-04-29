@@ -54,6 +54,7 @@ public class JDBCReviewDAO implements ReviewDAO {
         review.setBeerId(row.getLong("beer_id"));
         review.setSubject(row.getString("subject"));
         review.setBeerName(row.getString("beer_name"));
+        review.setImgUrl(row.getString("img_url"));
 		review.setReview(row.getString("review"));
         review.setRating(row.getInt("rating"));
         review.setUsername(row.getString("username"));
@@ -64,7 +65,7 @@ public class JDBCReviewDAO implements ReviewDAO {
 
     @Override
     public List<Review> getAllReviews() {
-        String sqlGetAllReviews = "SELECT * FROM reviews";
+        String sqlGetAllReviews = "SELECT reviews.*,beers.img_url FROM reviews LEFT OUTER JOIN beers ON reviews.beer_id = beers.beer_id";
         List<Review> allReviews = new ArrayList<>();
         SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllReviews);
         
