@@ -108,7 +108,7 @@
         <option style="font-weight: bold;">--Separatist--</option>
         <option>Classic Cream Ale</option>
         <option>PineApple Smoosh Smoothie IPA</option>
-        <option>Good Good Doulbe IPA</option>
+        <option>Good Good Double IPA</option>
         <option>Sketches of Cascade Wild Pale Ale</option>
         <option>Jung Love German-style Kellerbier</option>
         <option style="font-weight: bold;">--Tired Hands--</option>

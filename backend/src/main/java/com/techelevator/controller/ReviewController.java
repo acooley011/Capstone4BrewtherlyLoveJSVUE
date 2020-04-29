@@ -30,13 +30,15 @@ public class ReviewController {
     BeerDAO beerDAO;
     
     //THIS WORKS IN POSTMAN
-    @RequestMapping(path="/beerReview", method = RequestMethod.GET)
+    @RequestMapping(path="/reviews", method = RequestMethod.GET)
     public List<Review> showReviews() {
     	
     	List<Review> allReviews = reviewDAO.getAllReviews();
     	
     	return allReviews;
     }
+    
+    
     @RequestMapping(path="/reviews/{id}", method = RequestMethod.GET)
     public List<Review> showReviewsById(@PathVariable long id) {
     	System.out.println("showReviewsById(" + id + ")");
