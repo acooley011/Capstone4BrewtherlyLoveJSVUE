@@ -220,5 +220,8 @@ padding: 4vw;
 
 }
 
+h1 {
+  margin-left: 32.3vw;
+}
 
 </style>
