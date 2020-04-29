@@ -2,8 +2,8 @@
 <template>
 <section class="section">
   <!-- add a way to read and print their username in the welcome -->
-    <div class="beer-lover"><h1>Welcome Beer Lover</h1>
-
+    <div class="beer-lover">
+      <h1>Welcome Beer Lover</h1>
  </div>
   
   <div id="review">
@@ -146,8 +146,8 @@
 <br/>
 <div class="field is-grouped is-grouped-centered" id="review">
   <div class="control">
-    <!--v-bind:disabled="!isValidForm"--> 
-    <button class="button is-success" v-on:click="saveReview">Submit</button>
+     
+    <button class="button is-success" v-bind:disabled="!isValidForm" v-on:click="saveReview">Submit</button>
   </div>
   <div>
     <button class="button is-link">Cancel</button>
@@ -157,7 +157,6 @@
  </main>
 </form>
 </div><br/>
-
   <button class="button is-link">Go to Brewery List</button>
   </section>
 </template>
@@ -173,8 +172,18 @@ export default {
         review: '',
 
     }
-  }
-
+  },
+   computed: {
+    isValidForm() {
+      return (
+        this.review.subject != '' &&
+        this.review.rating != '' &&
+        this.review.beer_name != '' || '--ARS--' || '--Crime and Punishment--' || '--Dock Street--' || '--Evil Genius--' || '--Love City--' || 
+        '--Original 13 Ciderworks--' || '--Philadelphia Brewing Co--' || '--Separatist--' || '--Tired Hands--' || '--Yards--' &&
+        this.review.review != ''
+      );
+    }
+   }
 }
 </script>
 
