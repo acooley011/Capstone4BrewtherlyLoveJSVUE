@@ -4,16 +4,20 @@
     <h1 style="text-align: center;"><strong>Reviews</strong></h1><br/>
   <!-- add to main if we ever get this fetch to work v-if="reviewDetails !== null" -->
 <!-- this chunk of code was saved -->
-      <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
-      v-for="review in reviews.reviewList" v-bind:key="review.id">
+  <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
+      v-for="review in reviewList.reviews" v-bind:key="review.id">
     
     <div class="columns">
-      <h2>{{review.subject}}</h2>
-      <h3>{{review.beerName}}</h3>
-      <p>{{review.rating}}</p>
+         <div>
+      <img :src="review.imgUrl"/>
+      </div><br/>
+      <h3><strong>Beer:</strong> {{review.beerName}}</h3><br/>
+      <h2><strong>Title:</strong> {{review.subject}}</h2><br/>
+      
+      <p>Rating: {{review.rating}}</p>
       <div id="review-info" class="text-box">
         <p>{{review.review}}</p>
-      </div>
+      </div><br/>
       <div>
       <h5>{{review.username}}</h5>
       <h5>{{review.date}}</h5>
@@ -32,7 +36,7 @@ export default {
 
   data(){
     return {
-      reviews: null,
+      reviewList: null,
       reviewId: 1, //TODO during the create method, get the review id out of the url, see catalog HW
     };
   },
@@ -50,8 +54,8 @@ export default {
     fetch(`${process.env.VUE_APP_REMOTE_API}/api/reviews/`, options) 
     .then(response => response.json())
     .then(details => {
-      this.reviews = details;
-      this.review = this.reviews.review;
+      this.reviewList = details;
+      this.review = this.reviewList.review;
       })
     .catch(err => console.error(err));
     }
@@ -86,8 +90,8 @@ p {
 }
 
 img {
-  max-width: 50vw;
-  min-width: 30vw;
+  max-width: 25vw;
+  min-width: 25vw;
 
 }
 
