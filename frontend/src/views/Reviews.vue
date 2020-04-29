@@ -1,12 +1,12 @@
 <template>
 <main class="main" >
+  
+    <h1 style="text-align: center;"><strong>Reviews</strong></h1><br/>
   <!-- add to main if we ever get this fetch to work v-if="reviewDetails !== null" -->
 <!-- this chunk of code was saved -->
       <div class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
       v-for="review in reviews.reviewList" v-bind:key="review.id">
     
-    
-    <h1><strong>Reviews</strong></h1><br/>
     <div class="columns">
       <h2>{{review.subject}}</h2>
       <h3>{{review.beerName}}</h3>
@@ -28,7 +28,7 @@
 import auth from "../auth.js";
 
 export default {
-  name: 'review-list',
+  name: 'reviews',
 
   data(){
     return {
@@ -47,7 +47,7 @@ export default {
         },
         //If doing post/put then body: json.stringify would go here
       };
-    fetch(`${process.env.VUE_APP_REMOTE_API}/api/reviews/`,options) 
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/reviews/`, options) 
     .then(response => response.json())
     .then(details => {
       this.reviews = details;
