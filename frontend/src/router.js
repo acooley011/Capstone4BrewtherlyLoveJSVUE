@@ -67,7 +67,7 @@ const router = new Router({
       requiresAuth: false
     }
   },
-  {
+ {
     path: "/beer-lover",
     name: "beer-lover",
     component: BeerLover,
