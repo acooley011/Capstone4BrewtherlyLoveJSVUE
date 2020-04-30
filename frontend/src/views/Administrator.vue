@@ -165,7 +165,7 @@ export default {
       })
       .then((response) => {
         if (response.ok) {
-        this.$router.push({ path: '/breweryList', query: { brewery: 'success' } });
+        this.$router.push({ path: '/brewery-list', query: { brewery: 'success' } });
         }
       })
       .then((err) => console.error(err));
