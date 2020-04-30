@@ -84,7 +84,7 @@
         <option>Sir Charles Strawberry Valkyrie</option>
         <option>Atacama Bone Dry English Dry</option>
         <option>Atacama Hopped Hopped Dry</option>
-        <option>Sir Charles Ol’ Scrumpy</option>
+        <option>Sir Charles Ol Scrumpy</option>
         <option>Sir Charles Irish Scrumpy</option>
         <option style="font-weight: bold;">--Philadelphia Brewing Co--</option>
         <option>Harvest From the Hood Wet Hopped Ale</option>
@@ -161,10 +161,9 @@ export default {
       review: {
         subject: '',
         beerName: '',
-        rating: '',
+        rating: 0,
         review: '',
         username: '',
-        date: ''
       },
       reviewErrors: false,
     };
@@ -176,7 +175,7 @@ export default {
         headers: {
 
          "Authorization" : `Bearer ${auth.getToken()}`,
-         "Access-Control-Allow-Origin" : "*",
+         "Access-Control-Allow-Origin" : `*`,
           Accept: 'application/json',
           'Content-Type' : 'application/json',
           

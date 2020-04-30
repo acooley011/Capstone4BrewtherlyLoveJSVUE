@@ -24,21 +24,12 @@ public class JDBCReviewDAO implements ReviewDAO {
     }
 
     @Override
-    public Review saveReview(String subject, String review, String beerName, Date date, String username, int rating, String imgUrl) {
-    
-   long newId =  jdbcTemplate.queryForObject("INSERT INTO reviews(beer_name, subject, review, rating, date, username) VALUES(?, ?, ?, ?, ?, ?) RETURNING id", Long.class,
-       subject, review, beerName, date, username, rating);
+    public Review saveReview(Review newReview) {
+    												//INSERT INTO reviews (review_id, beer_id, beer_name, subject, review, rating, username) SELECT 7, beers.beer_id, 'beer', 'fgbfb', 'fgn', 5, 'fgbfgn' 
+    												//FROM beers WHERE beers.name = 'Kenzinger' LIMIT 1;
+    jdbcTemplate.update("INSERT INTO reviews(beer_name, subject, review, rating, username) VALUES(?, ?, ?, ?, ?)",
+       newReview.getBeerName(), newReview.getSubject(), newReview.getReview(), newReview.getRating(), newReview.getUsername());
        
-       Review newReview = new Review();
-       
-       newReview.setId(newId);
-       newReview.setSubject(subject);
-       newReview.setReview(review);
-       newReview.setBeerName(beerName);
-       newReview.setDate((java.sql.Date) date);
-       newReview.setUsername(username);
-       newReview.setRating(rating);
-
         return newReview;
      
     }
@@ -75,7 +66,7 @@ public class JDBCReviewDAO implements ReviewDAO {
     @Override
     public List<Review> getAllReviews() {
         String sqlGetAllReviews = "SELECT reviews.*,beers.img_url FROM reviews LEFT OUTER JOIN beers ON reviews.beer_id = beers.beer_id";
-        List<Review> allReviews = new ArrayList<>();
+        List<Review> allReviews = new ArrayList<>();							
         SqlRowSet results = jdbcTemplate.queryForRowSet(sqlGetAllReviews);
         
         while(results.next()) {

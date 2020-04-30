@@ -5,7 +5,7 @@ import java.util.List;
 
 public interface ReviewDAO {
 
-    public Review saveReview(String subject, String review, String beerName, Date date, String username, int rating, String imgUrl );
+    public Review saveReview(Review newReview);
    
     public List<Review> searchReviewsByBeerId(long beerId);
     //public int getReviewCount(long beerId);

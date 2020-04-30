@@ -1,0 +1,1 @@
+ALTER TABLE reviews ALTER COLUMN date set default now();
