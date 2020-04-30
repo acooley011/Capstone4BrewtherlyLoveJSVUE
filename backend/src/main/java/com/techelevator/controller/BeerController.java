@@ -2,6 +2,8 @@ package com.techelevator.controller;
 
 import java.util.List;
 
+import javax.validation.Valid;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -66,7 +68,7 @@ public class BeerController {
 	
 	 // THIS WORKS IN POSTMAN
 	 @RequestMapping(path="/brewer", method=RequestMethod.POST)
-		public Beer createBeer(@RequestBody Beer newBeer) throws UnauthorizedException{
+		public Beer createBeer(@Valid @RequestBody Beer newBeer){
 		 
 		 //User currentUser = authProvider.getCurrentUser();
 		 //Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());

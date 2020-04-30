@@ -78,8 +78,8 @@ public class JDBCBeerDAO implements BeerDAO {
 
 	@Override
 	public Beer saveBeer(Beer newBeer) {
-		jdbcTemplate.update("INSERT INTO beers(brewery_id, name, type, abv, description, img_url) VALUES (?,?,?,?,?,?)",
-				newBeer.getBreweryId(), newBeer.getName(),  newBeer.getType(), newBeer.getAbv(), newBeer.getDescription(), newBeer.getImgUrl());
+		jdbcTemplate.update("INSERT INTO beers(beer_id, name, type, abv, description) VALUES (?,?,?,?,?)",
+				 newBeer.getName(),  newBeer.getType(), newBeer.getAbv(), newBeer.getDescription());
 		return newBeer;
 	}
 	
