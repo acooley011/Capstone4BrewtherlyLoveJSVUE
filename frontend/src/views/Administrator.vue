@@ -90,7 +90,7 @@ export default {
 
   methods: {
    createBrewery() {
-      fetch(`${process.env.VUE_APP_REMOTE_API}/admin`,{
+      fetch(`${process.env.VUE_APP_REMOTE_API}/admin/brewery/`,{
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -100,7 +100,7 @@ export default {
       })
       .then((response) => {
         if (response.ok) {
-        this.$router.push({ path: '/admin', query: { registration: 'success' } });
+        this.$router.push({ path: '/admin/brewery/', query: { registration: 'success' } });
         }
       })
       .then((err) => console.error(err));

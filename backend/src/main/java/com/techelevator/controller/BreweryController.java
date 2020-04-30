@@ -93,17 +93,25 @@ public class BreweryController {
 	 	
 	 	
 	
-	 	//TODO need to test updating brewery info
+	 	
 	 	@RequestMapping(path="/brewer/{id}", method = RequestMethod.GET)
-	 	public Brewery getBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {
-	 		return breweryDAO.getBreweryById(id);
+	 	public BreweryDetailResponse getBreweryInfoOnBrewerPage(@PathVariable long id) {
+	 		
+	 		//Get the brewery by user id instead of brewery id
+	 		Brewery brewery = breweryDAO.getBreweryByUserId(id);
+			List<Beer> breweryBeerList = beerDAO.getAllBeersInBeerList(id);
+			BreweryDetailResponse response = new BreweryDetailResponse();
+			response.setBeerList(breweryBeerList);
+			response.setBrewery(brewery);
+	 		
+	 		return response;
 	 	}
 	 
-	 	
-	 	@RequestMapping(path="/brewer/{id}", method = RequestMethod.PUT)
-	 	public Brewery updateBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {
-	 		return breweryDAO.saveBrewery(brewery);
-	 	}
+	 	//TODO need to add updating brewery info (PUT)
+//	 	@RequestMapping(path="/brewer/{id}/updateBrewery", method = RequestMethod.PUT)
+//	 	public Brewery updateBreweryInfo(@RequestBody Brewery brewery, @PathVariable long id) {
+//	 		return breweryDAO.updateBrewery();
+//	 	}
 	 
 
 }

@@ -89,10 +89,11 @@ export default {
   },
   methods: {
     saveBeer(){
-        fetch(`${process.env.VUE_APP_REMOTE_API}/brewer/addBeer`, {
+        fetch(`${process.env.VUE_APP_REMOTE_API}/api/brewer`, {
         method: 'POST',
         headers: {
           "Authorization" : `Bearer ${auth.getToken()}`,
+          "Access-Control-Allow-Origin" : `*`,
           Accept: 'application/json',
           'Content-Type' : 'application/json',
         },
@@ -100,7 +101,7 @@ export default {
       })
       .then((response) => {
         if (response.ok) {
-          this.$router.push({path: '/brewer/addBeer', query: {saveBeer: 'success'} });
+          this.$router.push({path: '/brewery/{id}', query: {saveBeer: 'success'} });
         } else {
           this.reviewErrors = true;
         }

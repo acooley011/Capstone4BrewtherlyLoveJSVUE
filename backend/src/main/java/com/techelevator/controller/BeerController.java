@@ -65,7 +65,7 @@ public class BeerController {
 		}
 	
 	 // THIS WORKS IN POSTMAN
-	 @RequestMapping(path="brewer/addBeer", method=RequestMethod.POST)
+	 @RequestMapping(path="/brewer", method=RequestMethod.POST)
 		public Beer createBeer(@RequestBody Beer newBeer) throws UnauthorizedException{
 		 
 		 //User currentUser = authProvider.getCurrentUser();
@@ -86,15 +86,13 @@ public class BeerController {
 	
 	 }
 	 
-	 //Add a beer
+	 //TODO Delete a beer
 	 
-//	 @RequestMapping(path="/addBeer", method=RequestMethod.POST)
-//		public String addNewBeer(@Valid @ModelAttribute("newBeer") Beer newBeer,
-//				BindingResult result, @RequestParam int breweryId, HttpSession session) {
+//	 @RequestMapping(path="brewer/deleteBeer", method=RequestMethod.DELETE)
+//		public String deleteBeer(@RequestBody long beerId) {
 //		 	
-//		 	newBeer.setBreweryId((long) breweryId);
-//			beerDAO.saveBeer(newBeer);
-//			return "redirect:/breweryBeers";
+//			beerDAO.deleteBeer(newBeer);
+//			return "{\"success\"true}";
 //	 }
  }
 	 
