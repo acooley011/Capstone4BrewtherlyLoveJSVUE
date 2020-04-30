@@ -90,7 +90,7 @@ export default {
 
   methods: {
    createBrewery() {
-      fetch(`${process.env.VUE_APP_REMOTE_API}/admin/brewery/`,{
+      fetch(`${process.env.VUE_APP_REMOTE_API}/admin`,{
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
@@ -100,12 +100,13 @@ export default {
       })
       .then((response) => {
         if (response.ok) {
-        this.$router.push({ path: '/admin/brewery/', query: { registration: 'success' } });
+        this.$router.push({ path: '/brewerList', query: { registration: 'success' } });
         }
       })
       .then((err) => console.error(err));
     },
 
+//TODO 
     saveBrewery(){
       this.breweryId === 0 ? this.createBrewery() : this.updateBrewery();
     },
