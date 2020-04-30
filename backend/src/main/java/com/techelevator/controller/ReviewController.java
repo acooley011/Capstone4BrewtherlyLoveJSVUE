@@ -23,8 +23,8 @@ import com.techelevator.model.ReviewListResponse;
 @RequestMapping("/api")
 public class ReviewController {
 	 
-	//@Autowired
-	//private AuthProvider authProvider;
+	@Autowired
+	private AuthProvider auth;
 	
 
     @Autowired
@@ -60,7 +60,7 @@ public class ReviewController {
 // 		if(!authProvider.userHasRole(new String[] {"beer-lover"})) {
 //			throw new UnauthorizedException();
 //		}
-    	reviewDAO.saveReview(newReview.getSubject(), newReview.getReview(), newReview.getBeerName(), newReview.getDate(), newReview.getUsername(), newReview.getRating());
+    	reviewDAO.saveReview(newReview.getSubject(), newReview.getReview(), newReview.getBeerName(), newReview.getDate(), newReview.getUsername(), newReview.getRating(), newReview.getImgUrl());
     	return "{\"success\":true}";
     }
 

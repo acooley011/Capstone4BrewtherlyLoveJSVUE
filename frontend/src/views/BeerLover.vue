@@ -171,12 +171,15 @@ export default {
   },
   methods: {
     addReview() {
-      fetch(`${process.env.VUE_APP_REMOTE_API}/beer-lover/`, {
+      fetch(`${process.env.VUE_APP_REMOTE_API}/api/beer-lover`, {
         method: 'POST',
         headers: {
-          "Authorization" : `Bearer ${auth.getToken()}`,
+
+         "Authorization" : `Bearer ${auth.getToken()}`,
+         "Access-Control-Allow-Origin" : "*",
           Accept: 'application/json',
           'Content-Type' : 'application/json',
+          
         },
         body: JSON.stringify(this.review),
       })
