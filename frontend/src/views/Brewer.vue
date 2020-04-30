@@ -109,9 +109,9 @@ export default {
       .then((err) => console.error(err));
     },
     //TODO add logic for updating/deleting beer methods
-    updateBeer(){},
+    //updateBeer(){},
 
-    deleteBeer() {}
+    //deleteBeer() {}
 
 
   }
