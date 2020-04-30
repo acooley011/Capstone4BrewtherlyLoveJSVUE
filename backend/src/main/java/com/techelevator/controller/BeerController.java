@@ -81,8 +81,8 @@ public class BeerController {
 		 
 		 //Load the brewery object, check roles and throw exception/ check if null
 		 
-		
-		 return beerDAO.saveBeer(newBeer);
+		 beerDAO.saveBeer(newBeer);
+		 return newBeer;
 	
 	 }
 	 
