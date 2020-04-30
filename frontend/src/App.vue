@@ -33,7 +33,7 @@
       <!-- add eventuealllyyyyyyy :disabled="isBeerLover" -->
       <a class="navbar-item"><router-link :to="{name: 'beer-lover'}">
       <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
-      <span> Beer Lover (LOG IN ONLY)</span></router-link></a>
+      <span> Beer Lover </span></router-link></a>
 
     </div>
     </div>
