@@ -13,6 +13,7 @@ import BeerList from './views/BeerList.vue'
 import Brewery from './views/Brewery.vue'
 import BeerDetails from './views/BeerDetails.vue'
 import TestPage from './views/TestPage.vue'
+import Beers from './views/Beers.vue'
 
 Vue.use(Router)
 
@@ -129,8 +130,15 @@ const router = new Router({
     meta: {
       requiresAuth: false
     }
-  }
-
+  },
+  {
+    path: "/beers",
+    name: "beers",
+    component: Beers,
+    meta: {
+      requiresAuth: false
+    }
+  },
 
   ]
 })
