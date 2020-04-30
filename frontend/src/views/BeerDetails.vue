@@ -1,4 +1,6 @@
 <template>
+<main v-if="beerDetails !== null">
+
 <div class="tile is-ancestor">
     <div class="tile is-parent is-8" v-for="beer in beerDetails.beerList" v-bind:key="beer.id">
     <article class="tile is-child box">
@@ -21,24 +23,23 @@
   </div>
 </div>-->
 </div>
-
+</main>
 </template>
 
 <script>
 import auth from "../auth.js";
 
 export default {
-
   data(){
     return {
-      breweryDetails: null,
-      brewery: null,
-      breweryId: 1, 
+      beerDetails: null,
+      beer: null,
+      beerId: 1, 
     };
   },
 
   methods: {
-    fetchBrewery() {
+    fetchBeer() {
       const options = {
         method: "GET",
         headers:{
@@ -47,11 +48,11 @@ export default {
         },
         //If doing post/put then body: json.stringify would go here
       };
-    fetch(`${process.env.VUE_APP_REMOTE_API}/api/breweryDetails/${this.breweryId}`,options) 
+    fetch(`${process.env.VUE_APP_REMOTE_API}/api/beerDetails/${this.beerId}`,options) 
     .then(response => response.json())
     .then(details => {
-      this.breweryDetails = details;
-      this.brewery = this.breweryDetails.brewery;
+      this.beerDetails = details;
+      this.beer = this.beerDetails.beer;
       })
     .catch(err => console.error(err));
     },
@@ -59,8 +60,8 @@ export default {
   },
 
   created(){
-      this.breweryId = this.$route.params.id
-      this.fetchBrewery(); 
+      this.beerId = this.$route.params.id
+      this.fetchBeer(); 
   }
 
 }
