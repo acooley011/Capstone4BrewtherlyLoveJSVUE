@@ -72,6 +72,9 @@
 </template>
 
 <script>
+
+import auth from "../auth.js";
+
 export default {
   name: 'brewer',
    data () {
@@ -86,11 +89,23 @@ export default {
   },
   methods: {
     saveBeer(){
-       // note that JSON.stringify is a built in function which takes a javascript object
-      // and turns it into a json string!
-      const json = JSON.stringify(this.beer);
-      //TODO issue a fetch request to submit the data to the server
-      console.log(`We submitted the data to the server: ${json}`);
+        fetch(`${process.env.VUE_APP_REMOTE_API}/brewer/addBeer`, {
+        method: 'POST',
+        headers: {
+          "Authorization" : `Bearer ${auth.getToken()}`,
+          Accept: 'application/json',
+          'Content-Type' : 'application/json',
+        },
+        body: JSON.stringify(this.beer),
+      })
+      .then((response) => {
+        if (response.ok) {
+          this.$router.push({path: '/brewer/addBeer', query: {saveBeer: 'success'} });
+        } else {
+          this.reviewErrors = true;
+        }
+      })
+      .then((err) => console.error(err));
     },
     //TODO add logic for updating/deleting beer methods
     updateBeer(){},
@@ -99,7 +114,7 @@ export default {
 
 
   }
-}
+};
 
 </script>
 
