@@ -1,19 +1,17 @@
 <template>
 <main v-if="beerDetails !== null">
 
-<div class="tile is-ancestor">
-    <div class="tile is-parent is-8" v-for="beer in beerDetails.beerList" v-bind:key="beer.id">
-    <article class="tile is-child box">
-        <p class="title">{{beer.name}}</p>
-        <p class="subtitle">{{beer.type}}</p>
-        <p class="subtitle">ABV: {{beer.abv}}%</p>
-        <p class="subsubtitle">{{beer.description}}</p><br/>
-        
-    </article>
+
+    <div class="tile is-parent is-8" 
+    v-for="beer in beerDetails.beerList" v-bind:key="beer.id">
   </div>
   <div class="tile is-parent">
     <article class="tile is-child box">
       <img :src="beer.imgUrl" />
+      <p class="title">{{beer.name}}</p>
+        <p class="subtitle">{{beer.type}}</p>
+        <p class="subtitle">ABV: {{beer.abv}}%</p>
+        <p class="subsubtitle">{{beer.description}}</p><br/>
     </article>
   </div>
 <!--  <div class="field is-center" id="review">
@@ -22,7 +20,7 @@
     <textarea name="review" id="reivew" cols="60" rows="10" v-model="review.review" class="textarea" placeholder="Your text here" required></textarea>
   </div>
 </div>-->
-</div>
+
 </main>
 </template>
 
