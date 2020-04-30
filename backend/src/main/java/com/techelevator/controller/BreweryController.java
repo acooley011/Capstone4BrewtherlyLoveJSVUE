@@ -68,7 +68,7 @@ public class BreweryController {
 			
 		}
 	 //THIS WORKS IN POSTMAN
-	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.GET)
+	 	@RequestMapping(path="/admin", method = RequestMethod.GET)
 	 	public List<Brewery> showBreweries() throws UnauthorizedException{
 
 	 		//Commenting this out until we get admin user creating done
@@ -80,7 +80,7 @@ public class BreweryController {
 			return allBreweries;
 	 		}
 	  //THIS WORKS IN POSTMAN	
-	 	@RequestMapping(path="/admin/brewery", method = RequestMethod.POST)
+	 	@RequestMapping(path="/admin", method = RequestMethod.POST)
 	 	public Brewery createBrewery(@RequestBody Brewery newBrewery) throws UnauthorizedException {
 	 		
 //	 		if(!authProvider.userHasRole(new String[] {"admin"})) {
