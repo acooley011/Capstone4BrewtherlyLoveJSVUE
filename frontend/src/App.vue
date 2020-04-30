@@ -35,6 +35,14 @@
       <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
       <span> Beer Lover </span></router-link></a>
 
+      <a class="navbar-item"><router-link :to="{name: 'admin'}">
+      <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+      <span> Administrator </span></router-link></a>
+
+      <a class="navbar-item"><router-link :to="{name: 'brewer'}">
+      <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+      <span> Brewer </span></router-link></a>
+
     </div>
     </div>
   </navbar>
