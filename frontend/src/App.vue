@@ -29,7 +29,12 @@
         <span class="icon is-small"><i class="fas fa-edit" aria-hidden="true"></i></span><span> Reviews</span></router-link></a>
       <a class="navbar-item"><router-link :to="{name: 'login'}">
       <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span><span> Login/Register</span></router-link></a>
-    
+      
+      <!-- add eventuealllyyyyyyy :disabled="isBeerLover" -->
+      <a class="navbar-item"><router-link :to="{name: 'beer-lover'}">
+      <span class="icon is-small"><i class="fa fa-user-circle" aria-hidden="true"></i></span>
+      <span> Beer Lover (LOG IN ONLY)</span></router-link></a>
+
     </div>
     </div>
   </navbar>
@@ -48,12 +53,15 @@
 </template>
 
 <script>
+//import auth from "@/auth.js";
+
 export default {
   data() {
     return {
         hamburgerOpen : false
+        //isBeerLover: auth.userHasRole('beer-lover'),
     };
-  }
+  },
 
 }
 </script>
