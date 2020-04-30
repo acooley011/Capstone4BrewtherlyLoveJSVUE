@@ -11,6 +11,7 @@ import org.springframework.stereotype.Component;
 
 import java.math.RoundingMode;
 import java.util.ArrayList;
+import java.util.Date;
 
 @Component
 public class JDBCReviewDAO implements ReviewDAO {
@@ -23,12 +24,20 @@ public class JDBCReviewDAO implements ReviewDAO {
     }
 
     @Override
-    public Review saveReview(Review newReview) {
-    	
-           String sqlSaveReview= "INSERT INTO reviews( beer_name, subject, review, rating, date,username) VALUES(?,?,?,?,?,?)";
-           jdbcTemplate.update(sqlSaveReview,newReview.getBeerName() ,newReview.getSubject(), newReview.getReview(),
-        		   newReview.getRating(), newReview.getDate(), newReview.getUsername());
+    public Review saveReview(String subject, String review, String beerName, Date date, String username, int rating) {
+    
+   long newId =  jdbcTemplate.queryForObject("INSERT INTO reviews(beer_name, subject, review, rating, date, username) VALUES(?, ?, ?, ?, ?, ?) RETURNING id", Long.class,
+       subject, review, beerName, date, username, rating);
        
+       Review newReview = new Review();
+       
+       newReview.setId(newId);
+       newReview.setSubject(subject);
+       newReview.setReview(review);
+       newReview.setBeerName(beerName);
+       newReview.setDate((java.sql.Date) date);
+       newReview.setUsername(username);
+       newReview.setRating(rating);
 
         return newReview;
      

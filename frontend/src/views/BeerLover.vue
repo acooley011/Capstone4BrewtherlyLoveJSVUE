@@ -7,7 +7,7 @@
  </div>
   
   <div id="review">
-  <form class="form-register" @submit.prevent="reviews">
+  <form class="form-register" @submit.prevent="addReview">
     <div class="alert alert-danger" role="alert" v-if="reviewErrors">
       There were problems submitting your review.
       </div>
@@ -155,7 +155,7 @@
 import auth from "../auth.js";
 
 export default {
-  name: 'reviews',
+  name: 'addReview',
   data () {
     return {
       review: {
@@ -171,7 +171,7 @@ export default {
   },
   methods: {
     addReview() {
-      fetch(`${process.env.VUE_APP_REMOTE_API}/beer-lover/review`, {
+      fetch(`${process.env.VUE_APP_REMOTE_API}/beer-lover/`, {
         method: 'POST',
         headers: {
           "Authorization" : `Bearer ${auth.getToken()}`,

@@ -23,8 +23,8 @@ import com.techelevator.model.ReviewListResponse;
 @RequestMapping("/api")
 public class ReviewController {
 	 
-	@Autowired
-	 private AuthProvider authProvider;
+	//@Autowired
+	//private AuthProvider authProvider;
 	
 
     @Autowired
@@ -54,13 +54,13 @@ public class ReviewController {
     //TODO this is failing due to 400 error
     //Did we add date to the database schema?
     @RequestMapping(path="/beer-lover", method = RequestMethod.POST)
-    public String createReview(@Valid @RequestBody Review newReview) {
+    public String saveReview(@Valid @RequestBody Review newReview) {
     	
     	//Form should only show for logged in beer-lover user
 // 		if(!authProvider.userHasRole(new String[] {"beer-lover"})) {
 //			throw new UnauthorizedException();
 //		}
-    	reviewDAO.saveReview(newReview);
+    	reviewDAO.saveReview(newReview.getSubject(), newReview.getReview(), newReview.getBeerName(), newReview.getDate(), newReview.getUsername(), newReview.getRating());
     	return "{\"success\":true}";
     }
 
