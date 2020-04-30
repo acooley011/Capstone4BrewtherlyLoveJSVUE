@@ -4,6 +4,8 @@ import java.util.List;
 
 import javax.sql.DataSource;
 
+import com.techelevator.authentication.AuthProvider;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.support.rowset.SqlRowSet;
@@ -19,16 +21,24 @@ public class JDBCReviewDAO implements ReviewDAO {
     private JdbcTemplate jdbcTemplate;
 
     @Autowired
+    private AuthProvider auth;
+
+
+    @Autowired
     public JDBCReviewDAO(DataSource dataSource) {
         this.jdbcTemplate = new JdbcTemplate(dataSource);
     }
 
     @Override
     public Review saveReview(Review newReview) {
-    												//INSERT INTO reviews (review_id, beer_id, beer_name, subject, review, rating, username) SELECT 7, beers.beer_id, 'beer', 'fgbfb', 'fgn', 5, 'fgbfgn' 
-    												//FROM beers WHERE beers.name = 'Kenzinger' LIMIT 1;
-    jdbcTemplate.update("INSERT INTO reviews(beer_name, subject, review, rating, username) VALUES(?, ?, ?, ?, ?)",
-       newReview.getBeerName(), newReview.getSubject(), newReview.getReview(), newReview.getRating(), newReview.getUsername());
+    //INSERT INTO reviews (review_id, beer_id, beer_name, subject, review, rating, username) SELECT 7, beers.beer_id, 'beer', 'fgbfb', 'fgn', 5, 'fgbfgn' 
+    //FROM beers WHERE beers.name = 'Kenzinger' LIMIT 1;
+ 
+    jdbcTemplate.update("INSERT INTO reviews (beer_id, beer_name, subject, review, rating, username) SELECT beers.beer_id, beers.name, ?, ?, ?, ? FROM beers WHERE beers.name = ? LIMIT 1;", 
+    newReview.getSubject(), newReview.getReview(), newReview.getRating(), auth.getCurrentUser().getUsername(), newReview.getBeerName());
+
+    // jdbcTemplate.update("INSERT INTO reviews(beer_name, subject, review, rating, username) VALUES(?, ?, ?, ?, ?)",
+    //    newReview.getSubject(), newReview.getReview(), newReview.getRating(), newReview.getUsername(), newReview.getBeerName());
        
         return newReview;
      
