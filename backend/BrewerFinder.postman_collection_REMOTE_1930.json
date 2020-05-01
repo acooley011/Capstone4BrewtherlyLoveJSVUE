@@ -1,0 +1,482 @@
+{
+	"info": {
+		"_postman_id": "050566ea-0a49-4ab5-b85b-7e02a5ec8e4a",
+		"name": "BrewerFinder",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Get brewery details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/breweryDetails/2",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"breweryDetails",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get beer details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/beerDetails/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"beerDetails",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reviews",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get admin add brewery",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new brewery form on Admin page",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \t\"id\": 100000,\r\n        \"name\": \"New Brew\",\r\n        \"address\": \"a place\",\r\n        \"city\": \"Philadelphia\",\r\n        \"zip\": \"19145\",\r\n        \"neighborhood\": \"Philadelphia\",\r\n        \"contact\": \"666-666-6666\",\r\n        \"description\": \"We brew\",\r\n        \"breweryLogoUrl\": \"https://imgur.com/Eo9C2F5\",\r\n        \"businessHours\": \"Wed-Fri 4pm to 8pm Sat-Sun: 2pm to 7pm\"\r\n       \r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/admin",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"admin"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create new beer form on brewer page",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\":\"100002\",\r\n        \"name\": \"BeerTest\",\r\n        \"description\": \"Test it. Drink it\",\r\n        \"abv\": 9001.0,\r\n        \"type\": \"Porter\",\r\n        \"imgUrl\": \"https://imgur.com/OjGdv5d\",\r\n        \"breweryId\": 1\r\n    }",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/brewer",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"brewer"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create review on beer lover page",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n        \"id\": 100001,\r\n        \"subject\": \"it's a beer\",\r\n        \"review\": \"drink it\",\r\n        \"rating\": 5,\r\n        \"beerId\": 1,\r\n        \"beerName\": \"NewBeer\",\r\n        \"username\": \"user\",\r\n       \r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/beer-lover",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"beer-lover"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get brewery form on admin page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/admin/brewery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"admin",
+						"brewery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "get reviews on reviews page",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/reviews",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"reviews"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get beer details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/beerDetails/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"beerDetails",
+						"1"
+					],
+					"query": [
+						{
+							"key": "Accept",
+							"value": "application/json",
+							"disabled": true
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Create brewery /admin/brewery",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"type": "text",
+						"value": "application/json"
+					},
+					{
+						"key": "Content-Type",
+						"type": "text",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": " {\r\n    \t\"id\": 100000,\r\n        \"name\": \"New Brew\",\r\n        \"address\": \"a place\",\r\n        \"city\": \"Philadelphia\",\r\n        \"zip\": \"19145\",\r\n        \"neighborhood\": \"Philadelphia\",\r\n        \"contact\": \"666-666-6666\",\r\n        \"description\": \"We brew\",\r\n        \"breweryLogoUrl\": \"https://imgur.com/Eo9C2F5\",\r\n        \"businessHours\": \"Wed-Fri 4pm to 8pm Sat-Sun: 2pm to 7pm\"\r\n       \r\n    }"
+				},
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/admin/brewery",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"admin",
+						"brewery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get reviews on beer details",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/beerDetails/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"beerDetails",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get brewery List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/breweryList",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"breweryList"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get brewery details on brewer page (brewer/:id)",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://localhost:8080/AuthenticationApplication/api/brewer/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"AuthenticationApplication",
+						"api",
+						"brewer",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJpYXQiOjE1ODgyNzYzMTksInN1YiI6ImFkbWluIiwicm9sIjoiYWRtaW4iLCJleHAiOjE1ODgyOTc5MTl9.fiKMcYlR-56XXOundVmn_6A5sRVU3Jr8jJnFe2sG9G10HlBAOgiil3UXpzeVWRPIM5P-6fowlLoV8Coyf25mHA",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"id": "2e8c5a2b-3ff8-43a6-b6da-63809c07c4a8",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"id": "6a20c298-e10a-415c-beb4-e665c586dbfd",
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"protocolProfileBehavior": {}
+}
