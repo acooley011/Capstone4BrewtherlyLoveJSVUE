@@ -17,7 +17,7 @@
     <div class="field is-center" id="review">
   <label class="label"><strong>Review Title:</strong></label>
   <div class="form-control">
-    <input v-model="review.subject" class="input" type="text" placeholder="Text input" required autofocus/>
+    <input v-model="review.subject" class="input" type="text" placeholder="Review Title" required autofocus/>
   </div>
   <label for="rating" class="label"><strong>Rating:</strong></label>
   <div class="select">
@@ -130,7 +130,7 @@
 <div class="field is-center" id="review">
   <label class="label">Review:</label>
   <div class="control">
-    <textarea name="review" id="reivew" cols="60" rows="10" v-model="review.review" class="textarea" placeholder="Your text here" required></textarea>
+    <textarea name="review" id="reivew" cols="60" rows="10" v-model="review.review" class="textarea" placeholder="What say you?" required></textarea>
   </div>
 </div>
 <br/>

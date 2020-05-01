@@ -7,9 +7,9 @@
       There were problems submitting your review.
       </div>
 <main class="is-size-20 has-text-weight-semibold box has-text-centered text-box main-content">
-<button class="button is-link" type="submit">View Brewery Information</button>
+
       <div class="field is-center" id="brewer">
-           <label class="label" for="name"><strong>Beer Name: </strong></label><br/>
+           <label class="label" for="name"><strong>Beer Name: </strong></label>
            <div class="form-control">
             <input
               type="text"
@@ -21,7 +21,7 @@
             />
          </div> 
         <div class="field is-center" id="brewer">
-  <label class="label" for="type"><strong>Type: </strong></label><br/>
+  <label class="label" for="type"><strong>Type: </strong></label>
         <div class="select">
              <select required v-model="beer.type">
               <option selected>Pilsner</option>

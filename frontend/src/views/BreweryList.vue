@@ -19,7 +19,7 @@
           </router-link>
         </div>
         <div id="brewery-info" class="text-box" >
-          <p style="width: 50vw;">{{ brewery.description }}</p>
+          <p style="width: 30vw;">{{ brewery.description }}</p>
         </div>
       </div>
     </div>
