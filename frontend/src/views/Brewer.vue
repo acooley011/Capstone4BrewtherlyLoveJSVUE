@@ -142,8 +142,8 @@ section {
 }
 
 .main-content {
-margin-left: 30vw;
-margin-right: 30vw;
+margin-left: 21vw;
+margin-right: 21vw;
 min-width: 225px;
 justify-content: center;
 align-items:center;
