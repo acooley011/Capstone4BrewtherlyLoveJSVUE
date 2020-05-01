@@ -77,13 +77,11 @@ public class JDBCBeerDAO implements BeerDAO {
 	
 
 	@Override
-	public Beer saveBeer(Beer newBeer) {
-		jdbcTemplate.update("INSERT INTO beers(brewery_id, name, type, abv, description, img_url) VALUES (?,?,?,?,?,?)",
-				newBeer.getBreweryId(), newBeer.getName(),  newBeer.getType(), newBeer.getAbv(), newBeer.getDescription(), newBeer.getImgUrl());
-		return newBeer;
-	}
-	
-	
+    public Beer saveBeer(Beer newBeer) {
+        jdbcTemplate.update("INSERT INTO beers(brewery_id, name, type, abv, description, img_url) VALUES (?,?,?,?,?,?)",
+                newBeer.getBreweryId(), newBeer.getName(),  newBeer.getType(), newBeer.getAbv(), newBeer.getDescription(), newBeer.getImgUrl());
+        return newBeer;
+    }
 
 	@Override
 	public void deleteBeer(long beerId) {
@@ -98,7 +96,7 @@ public class JDBCBeerDAO implements BeerDAO {
 		
 		newBeer.setId(row.getLong("beer_id"));
 		newBeer.setName(row.getString("name").toUpperCase());
-		newBeer.setAbv(row.getBigDecimal("abv"));
+		newBeer.setAbv(row.getDouble("abv"));
 		newBeer.setType(row.getString("type"));
 		newBeer.setDescription(row.getString("description"));
 		newBeer.setImgUrl(row.getString("img_url"));

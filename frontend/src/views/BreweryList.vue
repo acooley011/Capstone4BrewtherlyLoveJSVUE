@@ -1,4 +1,5 @@
 <template>
+<body>
   <main class="main">
     <!-- add to main if we ever get this fetch to work v-if="breweryDetails !== null" -->
     <!-- this chunk of code was saved -->
@@ -23,6 +24,7 @@
       </div>
     </div>
   </main>
+  </body>
 </template>
 
 <!--<template>
@@ -88,15 +90,28 @@ export default {
   font-size: 14px;
 }
 
+body {
+  background-color: linear-gradient(rgba(255, 255, 255, 0.9), rgba(255, 255, 255, 0.7));
+  width: 100vw; 
+  height: 100%;
+
+}
+
 p {
   width: 25vw;
-  font-size: 14px;
-  padding-bottom: 2vw;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 5vw;
+  padding-top: 5vw;
   margin-left: 20vw;
 }
 
 img {
   max-width: 40vw;
+  max-height: 40vw;
   min-width: 30vw;
+ padding-bottom: 5vw;
+  padding-top: 5vw;
+  padding-left: 2vw;
 }
 </style>

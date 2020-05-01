@@ -216,7 +216,7 @@ color: blue;
 }
 
 section {
-  align-content: center;
+  align-items: center;
   justify-content: center;
 }
 

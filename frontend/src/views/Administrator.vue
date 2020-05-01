@@ -8,7 +8,7 @@
     <h2><strong>Add New Brewery</strong></h2><br/>
     <div class='form'>
       <form v-on:submit.prevent="saveBrewery">
-         <div class="form-group">
+         <div class="field is-center">
            <label for="name">Brewery Name: </label><br/>
             <input
               type="text"
@@ -20,19 +20,94 @@
               autofocus/>
          </div>  
          <br/>
-         <div class="form-group">
-           <label for="brewer">Brewer Username: </label><br/>
+         <div class="field is-center">
+           <label for="address">Address: </label><br/>
             <input
               type="text"
               class="input"
-              id="brewer"
-              placeholder="Enter brewer username"
-              v-model="brewery.brewer"
+              id="address"
+              placeholder="Enter address"
+              v-model="brewery.address"
+              required
+            />
+         </div> 
+ <div class="field is-center">
+           <label for="city">City: </label><br/>
+            <input
+              type="text"
+              class="input"
+              id="city"
+              placeholder="Enter city"
+              v-model="brewery.city"
               required
             />
          </div>      
-          <br/>
-        <button class="button is-link" type="submit" v-on:click="saveBrewery">Add New Brewery</button>
+ <div class="field is-center">
+           <label for="neighborhood">Neighborhood: </label><br/>
+            <input
+              type="text"
+              class="input"
+              id="neighborhood"
+              placeholder="Enter neighborhood"
+              v-model="brewery.neighborhood"
+              required
+            />
+         </div>   
+
+         <div class="field is-center">
+           <label for="zip">Zipcode: </label><br/>
+            <input
+              type="text"
+              class="input"
+              id="zip"
+              placeholder="Enter zipcode"
+              v-model="brewery.zip"
+              required
+            />
+         </div>  
+         <div class="field is-center">
+           <label for="contact">Contact Number: </label><br/>
+            <input
+              type="text"
+              class="input"
+              id="contact"
+              placeholder="Enter contact"
+              v-model="brewery.contact"
+              required
+            />
+         </div>     
+          <div class="field is-center">
+           <label for="businessHours">Business Hour: </label><br/>
+            <input
+              type="text"
+              class="input"
+              id="businessHours"
+              placeholder="Enter business hours"
+              v-model="brewery.businessHours"
+              required
+            />
+         </div> 
+
+         <div class="field is-center">
+           
+           <label for="description">Description: </label><br/>
+            <textarea name="description" 
+              type="text"
+              class="textarea"
+              id="description"
+              placeholder="Enter description"
+              v-model="brewery.description"
+              required
+            />
+         </div>                
+
+        <div class="default-brewery-img"> 
+          <img scr="../assets/images/Breweries/defaultbreweryimg.png" />
+        </div>
+
+
+
+        <button class="button is-link" type="submit" v-on:click="createBrewery">Add New Brewery</button>
 <!-- change to real buttons? -->
         <div>
           <a href="#" v-on:click="editBrewery(parseInt(brewery.id))">
@@ -46,13 +121,6 @@
 
 
       </form>
-       <hr />
-       
-      <div class="confirmation">
-        <h3><strong> Brewery Information</strong></h3>
-        <p>Title: {{ brewery.name }}</p>
-        <p>Brewer: {{ brewery.brewer }}</p>
-      </div>
 
     </div>    
     
@@ -73,81 +141,70 @@
 import auth from '../auth.js'
 
 export default {
-  name: 'admin',
-  props: {
-    apiURL: String,
-    breweryId: Number
-  },
-
+  name: 'createBrewery',
   data () {
     return {
       brewery: {
         name:   '',
-        brewer: ''
+        address: '',
+        city: '',
+        neighborhood: '',
+        zip: '',
+        contact: '',
+        businessHours: '',
+        description: '',
+        breweryLogoUrl: ''
       }
     };
   },
 
   methods: {
    createBrewery() {
-      fetch(`${process.env.VUE_APP_REMOTE_API}/admin`,{
+      fetch(`${process.env.VUE_APP_REMOTE_API}/api/admin`,{
         method: 'POST',
         headers: {
           "Content-Type": "application/json",
+          "Access-Control-Allow-Origin" : `*`,
+          Accept: 'application/json',
           "Authorization": `Bearer ${auth.getToken()}`
         },
         body: JSON.stringify(this.brewery)
       })
       .then((response) => {
         if (response.ok) {
-        this.$router.push({ path: '/brewerList', query: { registration: 'success' } });
+        this.$router.push({ path: '/brewery-list', query: { brewery: 'success' } });
         }
       })
       .then((err) => console.error(err));
     },
 
-//TODO 
-    saveBrewery(){
-      this.breweryId === 0 ? this.createBrewery() : this.updateBrewery();
-    },
+// //TODO 
+//     saveBrewery(){
+//       this.breweryId === 0 ? this.createBrewery() : this.updateBrewery();
+//     },
 
-    updateBrewery(id) {
-      this.$emit('updateBrewery',id)
-    },
+//     updateBrewery(id) {
+//       this.$emit('updateBrewery',id)
+//     },
 
-    deleteBrewery() {
-      fetch(`${this.apiURL}/${this.breweryId}`,{
-        method: 'DELETE',
-        headers: { 
-          "Authorization": `Bearer ${auth.getToken()}`
-        }
-      }
+//     deleteBrewery() {
+//       fetch(`${this.apiURL}/${this.breweryId}`,{
+//         method: 'DELETE',
+//         headers: { 
+//           "Authorization": `Bearer ${auth.getToken()}`
+//         }
+//       }
 
-      )
-      .then((response) => {
-        if( response.ok ) {
-          this.brewery.splice();
-        }
-      })
-      .catch((err) => console.error(err));
-    },
-  
-  computed: {
-      created() {
-        if( this.breweryId != 0 ) {
-          fetch(this.apiURL + '/' + this.breweryId)
-            .then((response) => {
-          return response.json();
-        })
-        .then((brewery) => {
-          this.brewery = brewery;
-        })
-        .catch((err) => console.error(err));
-      }
-      }
+//       )
+//       .then((response) => {
+//         if( response.ok ) {
+//           this.brewery.splice();
+//         }
+//       })
+//       .catch((err) => console.error(err));
+//     },
   }
-  }
-}
+};
   
 </script>
 
