@@ -68,7 +68,7 @@ public class BeerController {
 	
 	 // THIS WORKS IN POSTMAN
 	 @RequestMapping(path="/brewer", method=RequestMethod.POST)
-		public Beer createBeer(@Valid @RequestBody Beer newBeer){
+		public Beer createBeer(@RequestBody Beer newBeer) throws UnauthorizedException{
 		 
 		 //User currentUser = authProvider.getCurrentUser();
 		 //Brewery currentBrewery = breweryDAO.getBreweryByUserId(currentUser.getId());

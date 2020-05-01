@@ -101,6 +101,12 @@
             />
          </div>                
 
+        <div class="default-brewery-img"> 
+          <img scr="../assets/images/Breweries/defaultbreweryimg.png" />
+        </div>
+
+
+
         <button class="button is-link" type="submit" v-on:click="createBrewery">Add New Brewery</button>
 <!-- change to real buttons? -->
         <div>
@@ -146,7 +152,8 @@ export default {
         zip: '',
         contact: '',
         businessHours: '',
-        description: ''
+        description: '',
+        breweryLogoUrl: ''
       }
     };
   },

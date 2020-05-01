@@ -1,6 +1,7 @@
 package com.techelevator.model;
 
-import java.math.BigDecimal;
+
+
 
 import org.hibernate.validator.constraints.NotBlank;
 
@@ -15,7 +16,7 @@ public class Beer {
 	@NotBlank(message="required")
 	private String description;
 	@NotBlank(message="required")
-	private BigDecimal abv;
+	private double abv;
 	private String type;
 	private String imgUrl;
 
@@ -61,11 +62,11 @@ public class Beer {
 		this.description = description;
 	}
 
-	public BigDecimal getAbv() {
+	public double getAbv() {
 		return abv;
 	}
 
-	public void setAbv(BigDecimal abv) {
+	public void setAbv(double abv) {
 		this.abv = abv;
 	}
 

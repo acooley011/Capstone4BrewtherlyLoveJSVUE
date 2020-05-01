@@ -92,7 +92,7 @@ export default {
         name:   '',
         abv: 0,
         type: '',
-        description: '',
+        description: ''
       },
       beerErrors: false,
     };
