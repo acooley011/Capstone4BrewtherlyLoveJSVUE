@@ -29,7 +29,8 @@
 					<list>
 						<value>/login</value>
 						<value>/register</value>
-						<value>/api/breweryList</value>
+						<value>/api/brewery</value>
+						<value>/api/reviews</value>
 					</list>
 				</property>
 			</bean>
