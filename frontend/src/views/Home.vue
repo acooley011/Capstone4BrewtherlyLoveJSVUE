@@ -18,10 +18,11 @@
         -->
         </ul>
         </main>
-        <router-link to="/brewery-list"><img src="../assets/images/brewtherlyBREWERIES.png" width="100%" /></router-link><br/> 
-        <router-link to="/reviews"><img src="../assets/images/brewtherlyREVIEWS.png" width="100%" /></router-link><br>
-        <router-link to="/login"><img src="../assets/images/brewtherlyLOGIN.png" width="50%" /></router-link>
-        <router-link to="/register"><img src="../assets/images/brewtherlyREGISTER.png" width="50%" /></router-link>
+        <!--<router-link to="/brewery-list"><img src="../assets/images/brewtherlyBREWERIES.png" width="100%" /></router-link><br/> -->
+        <!--<router-link to="/reviews"><img src="../assets/images/brewtherlyREVIEWS.png" width="100%" /></router-link><br>-->
+        <router-link to="/brewery-list"><img src="../assets/images/brewtherlyBREWERIES.png" width="75%" style="padding-left: 10vw;"/></router-link><br/>
+        <router-link to="/login"><img src="../assets/images/brewtherlyLOGIN.png" width="75%" style="padding-left: 10vw;"/></router-link><br/>
+        <router-link to="/register"><img src="../assets/images/brewtherlyREGISTER.png" width="75%" style="padding-left: 10vw;" /></router-link><br/>
       <section id="about" class="is-size-4 has-text-weight-semibold box has-text-centered text-box">
         <ul>
           <li> Login or Register to leave a review!</li>
@@ -39,8 +40,8 @@
        <router-link to="/brewery/1"><img src="../assets/images/Breweries/breweryYards.png" width="500vw" style="margin-right: 15vw;"/></router-link>
       </div>
       <div class="text-box">
-       <p style="width: 25vw; font-size: 16px; font-weight:bold; ">TAPROOM PICKUP <br/>• Yards is proud to offer curbside and contactless pickup.<br/>• Curbside or contactless pickup are available 11:30am - 8pm daily. <br/>• If you have placed an order for pickup, your order will be ready 15 minutes after placing it, you will also receive an email notification when your order is ready.</p>
-        <p style="width: 25vw; font-size: 16px; font-weight: bold;">YARDS DELIVERS <br/>• Delivery is currently available!<br/>• We will do our very best to deliver same day. The earlier in the day you order the better the chances we’ll be able to get to you that day. All orders will be fulfilled by next day at the latest. If you place your order the night before next day is a sure bet.<br/>• Delivery window - 11:30am - 8pm, 7 days per week. More details at bottom of page.</p>
+       <p style="width: 50vw; font-size: 16px; font-weight:bold; ">TAPROOM PICKUP <br/>• Yards is proud to offer curbside and contactless pickup.<br/>• Curbside or contactless pickup are available 11:30am - 8pm daily. <br/>• If you have placed an order for pickup, your order will be ready 15 minutes after placing it, you will also receive an email notification when your order is ready.</p>
+        <p style="width: 50vw; font-size: 16px; font-weight: bold;">YARDS DELIVERS <br/>• Delivery is currently available!<br/>• We will do our very best to deliver same day. The earlier in the day you order the better the chances we’ll be able to get to you that day. All orders will be fulfilled by next day at the latest. If you place your order the night before next day is a sure bet.<br/>• Delivery window - 11:30am - 8pm, 7 days per week. More details at bottom of page.</p>
       </div>
     </div>
     </main>

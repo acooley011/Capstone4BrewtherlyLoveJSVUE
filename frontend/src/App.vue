@@ -66,7 +66,7 @@
 export default {
   data() {
     return {
-        hamburgerOpen : false
+        hamburgerOpen : true
         //isBeerLover: auth.userHasRole('beer-lover'),
     };
   },

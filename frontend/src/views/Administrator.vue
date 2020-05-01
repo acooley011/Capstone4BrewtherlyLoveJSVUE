@@ -1,6 +1,5 @@
 
 <template>
-
   <div class="admin"><h1>Administrator</h1>
   <section class="section">
     <main class="is-size-20 has-text-weight-semibold bos has-text-centered text-box main-content">
@@ -101,9 +100,8 @@
             />
          </div>                
 
-        <div class="default-brewery-img"> 
-          <img scr="../assets/images/Breweries/defaultbreweryimg.png" />
-        </div>
+        <!-- <img scr="../assets/images/Breweries/defaultbreweryimg.png" width="100%"/> -->
+        
 
 
 
@@ -125,7 +123,7 @@
     </div>    
     
  </div>
- 
+
  </main>
  </section>
 
@@ -134,6 +132,7 @@
  </div>
 
 
+ 
 
 </template>
 

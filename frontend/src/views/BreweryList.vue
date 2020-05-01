@@ -4,7 +4,7 @@
     <!-- add to main if we ever get this fetch to work v-if="breweryDetails !== null" -->
     <!-- this chunk of code was saved -->
     <div
-      class="is-size-4 has-text-weight-semibold box has-text-centered text-box"
+      class="is-size-4 has-text-weight-semibold box has-text-centered text-box" 
       v-for="brewery in breweryList.breweries"
       v-bind:key="brewery.id"
     >
@@ -12,14 +12,14 @@
         <strong>{{brewery.name}}</strong>
       </h3>
       <br />
-      <div class="columns">
-        <div>
+      <div class="columns" >
+        <div >
           <router-link :to="'/brewery/'+brewery.id">
             <img :src="brewery.breweryLogoUrl" />
           </router-link>
         </div>
-        <div id="brewery-info" class="text-box">
-          <p>{{ brewery.description }}</p>
+        <div id="brewery-info" class="text-box" >
+          <p style="width: 50vw;">{{ brewery.description }}</p>
         </div>
       </div>
     </div>

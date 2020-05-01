@@ -1,18 +1,29 @@
 <template>
 <main v-if="beerDetails !== null">
 
-
-    <div class="tile is-parent is-8" 
-    v-for="beer in beerDetails.beerList" v-bind:key="beer.id">
-  </div>
-  <div class="tile is-parent">
+  
+<div class="tile is-ancestor">
+  <div class="tile is-parent" >
     <article class="tile is-child box">
-      <img :src="beer.imgUrl" />
-      <p class="title">{{beer.name}}</p>
+      <img :src="beer.imgUrl" width="100%"/>
+    </article>
+  </div>
+  <div class="tile is-parent is-8">
+    <article class="tile is-child box">
+        <p class="title">{{beer.name}}</p>
         <p class="subtitle">{{beer.type}}</p>
         <p class="subtitle">ABV: {{beer.abv}}%</p>
         <p class="subsubtitle">{{beer.description}}</p><br/>
+        <router-link to="/beer-lover"><button class="button is-primary">Leave a Review!</button></router-link>
     </article>
+  </div>
+</div>
+
+
+
+
+    <div class="tile is-parent is-8" 
+    v-for="beer in beerDetails.beerList" v-bind:key="beer.id">
   </div>
 <!--  <div class="field is-center" id="review">
   <label class="label">Review:</label>
@@ -98,6 +109,9 @@ padding: 4vw;
 
 }
 
+footer {
+  margin-top: 50vw;
+}
 
 </style>
 
