@@ -879,35 +879,6 @@ VALUES(5, 15, 'Working Cat Pale Ale',
 'I love this beer. Its super easy to drink and they go down like delicious water. Plus Im a big fan of cats so that makes me enjoy it more. Even though I love it so much Im giving it one star because its seasonal and I want it EVERY DAY.',
 1, '2020-04-22', 'user');
 
-INSERT INTO reviews(review_id, beer_id, beer_name, subject, review, rating, date, username)
-VALUES(6, 1, 'Philthy Unfiltered Hazy IPA',
-'This was a digustingly good beer',
-'Reminds me of the dirty streets of Filthadelphia..but in a good way! I drank over 100 of these in one day.',
-5, '2020-04-27', 'user');
-
-INSERT INTO reviews(review_id, beer_id, beer_name, subject, review, rating, date, username)
-VALUES(7, 1, 'Philthy Unfiltered Hazy IPA',
-'This was a digustingly good beer',
-'Reminds me of the dirty streets of Filthadelphia..but in a good way! I drank over 100 of these in one day.',
-5, '2020-04-27', 'user');
-
-INSERT INTO reviews(review_id, beer_id, beer_name, subject, review, rating, date, username)
-VALUES(8, 1, 'Philthy Unfiltered Hazy IPA',
-'This was a digustingly good beer',
-'Reminds me of the dirty streets of Filthadelphia..but in a good way! I drank over 100 of these in one day.',
-5, '2020-04-27', 'user');
-
-INSERT INTO reviews(review_id, beer_id, beer_name, subject, review, rating, date, username)
-VALUES(9, 1, 'Philthy Unfiltered Hazy IPA',
-'This was a digustingly good beer',
-'Reminds me of the dirty streets of Filthadelphia..but in a good way! I drank over 100 of these in one day.',
-5, '2020-04-27', 'user');
-
-INSERT INTO reviews(review_id, beer_id, beer_name, subject, review, rating, date, username)
-VALUES(10, 1, 'Philthy Unfiltered Hazy IPA',
-'This was a digustingly good beer',
-'Reminds me of the dirty streets of Filthadelphia..but in a good way! I drank over 100 of these in one day.',
-5, '2020-04-27', 'user');
 
 COMMIT TRANSACTION;
 
